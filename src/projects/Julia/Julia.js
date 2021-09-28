@@ -7,15 +7,18 @@ const Julia = ({ showJulia }) => {
     <>
       <ContentContainer id="julia-container">
         {showJulia && (
-          <iframe
-            id="julia-iframe"
-            title="julia"
-            className="iframe-size"
-            src="https://rogierderuijter.github.io/julia/"
-            frameBorder="0"
-          ></iframe>
+          <>
+            <iframe
+              id="julia-iframe"
+              title="julia"
+              className="iframe-size"
+              src="https://rogierderuijter.github.io/julia/"
+              frameBorder="0"
+            ></iframe>
+            {/* TODO: make spacing constent between the bottom line of the project and the waveform */}
+            <Waveform project="julia" />
+          </>
         )}
-        <Waveform project="julia" />
       </ContentContainer>
     </>
   );

@@ -15,6 +15,7 @@ function FishRace({ showFishRace }) {
             loading="lazy"
             frameBorder="0"
           ></iframe>
+          {/* TODO: make spacing constent between the bottom line of the project and the waveform */}
           <Waveform project="fish-race" />
         </>
       )}

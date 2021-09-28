@@ -7,19 +7,18 @@ function SleepingTumblrSeals({ showSleepingTumblrSeals }) {
   return (
     <ContentWithDescriptionContainer id="sleeping-seals-container">
       {showSleepingTumblrSeals && (
-        <iframe
-          id="sleeping-tumblr-seals-iframe"
-          title="sleeping-tumblr-seals"
-          className="iframe-size"
-          src="https://sleepingsealswithcelebrityquotes.com"
-          frameBorder="0"
-        ></iframe>
+        <>
+          <iframe
+            id="sleeping-tumblr-seals-iframe"
+            title="sleeping-tumblr-seals"
+            className="iframe-size"
+            src="https://sleepingsealswithcelebrityquotes.com"
+            frameBorder="0"
+          ></iframe>
+          {/* TODO: make spacing constent between the bottom line of the project and the waveform */}
+          <Waveform project="sleeping-tumblr-seals" />
+        </>
       )}
-      <Waveform project="sleeping-tumblr-seals" />
-      {/* <Description>
-        These are memes for sleeping seals. Thanks Jonna for creating this with
-        me and eating way too much candy for one night.
-      </Description> */}
     </ContentWithDescriptionContainer>
   );
 }

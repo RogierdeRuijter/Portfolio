@@ -1,18 +1,21 @@
 import "./ContentWithDescriptionContainer.css";
 
 // TODO: rename this component to something more matching
-// TODO: deconstruct the props
-function ContentWithDescriptionContainer(props) {
+function ContentWithDescriptionContainer({
+  id,
+  noFixedHeightContent,
+  children,
+}) {
   return (
     <div
-      id={props.id}
+      id={id}
       className="content-container-with-description"
       style={{
-        height: props.noFixedHeightContent ? "" : "100vh",
-        gridTemplateRows: props.noFixedHeightContent ? "auto 20%" : "80% 20%",
+        height: noFixedHeightContent ? "" : "100vh",
+        gridTemplateRows: noFixedHeightContent ? "auto 20%" : "80% 20%",
       }}
     >
-      {props.children}
+      {children}
     </div>
   );
 }

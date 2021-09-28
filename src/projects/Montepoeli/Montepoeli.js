@@ -29,16 +29,9 @@ function Montepoeli() {
         ></img>
       </div>
       <div id="description">
+        {/* TODO: make spacing constent between the bottom line of the project and the waveform */}
         <Waveform project="montepoeli" />
       </div>
-      {/* <Description>
-        A website build for the chess club. The chess club was founded in
-        Montepulciano, Italy. The website is an attempt to keep the spirit from
-        this vacation alive. It is mainly used as a PWA and is my breeding
-        ground for exploring non functional features. Semantic release, you will
-        always be my favourite piece of software ever. Even if no one else
-        thinks so.
-      </Description> */}
     </ContentWithDescriptionContainer>
   );
 }

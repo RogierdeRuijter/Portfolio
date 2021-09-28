@@ -16,21 +16,20 @@ function GetLow({ showGetLow }) {
         </DelayedLoadingFade>
       </div>
       {showGetLow && (
-        <iframe
-          id="get-low-iframe"
-          title="get-low"
-          className="iframe-size"
-          src="https://rogierderuijter.github.io/get-low/"
-          loading="lazy"
-          frameBorder="0"
-          style={{ borderRadius: "10px" }}
-        ></iframe>
+        <>
+          <iframe
+            id="get-low-iframe"
+            title="get-low"
+            className="iframe-size"
+            src="https://rogierderuijter.github.io/get-low/"
+            loading="lazy"
+            frameBorder="0"
+            style={{ borderRadius: "10px" }}
+          ></iframe>
+          {/* TODO: make spacing constent between the bottom line of the project and the waveform */}
+          <Waveform project="get-low" />
+        </>
       )}
-      <Waveform project="get-low" />
-      {/* <Description>
-        Dedication to the performance that makes me believe I can do anything. ©
-        Kanye West - All day [Brit Awards]
-      </Description> */}
     </ContentWithDescriptionContainer>
   );
 }

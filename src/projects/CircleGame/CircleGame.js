@@ -16,17 +16,21 @@ function CircleGame({ showCircleGame }) {
         </DelayedLoadingFade>
       </div>
       {showCircleGame && (
-        <iframe
-          id="circle-game-iframe"
-          title="circle-game"
-          className="iframe-size"
-          src="https://circle-ga.me"
-          loading="lazy"
-          frameBorder="0"
-          style={{ borderRadius: "10px" }}
-        ></iframe>
+        <>
+          <iframe
+            id="circle-game-iframe"
+            title="circle-game"
+            className="iframe-size"
+            src="https://circle-ga.me"
+            loading="lazy"
+            frameBorder="0"
+            style={{ borderRadius: "10px" }}
+          ></iframe>
+          {/* TODO: make spacing constent between the bottom line of the project
+          and the waveform  */}
+          <Waveform project="circle-game" />
+        </>
       )}
-      <Waveform project="circle-game" />
     </ContentWithDescriptionContainer>
   );
 }
