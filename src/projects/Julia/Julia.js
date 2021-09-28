@@ -1,5 +1,6 @@
 import "./Julia.css";
 import ContentContainer from "../../helpers/ContentContainer/ContentContainer";
+import Waveform from "../../helpers/Waveform/Waveform";
 
 const Julia = ({ showJulia }) => {
   return (
@@ -14,6 +15,7 @@ const Julia = ({ showJulia }) => {
             frameBorder="0"
           ></iframe>
         )}
+        <Waveform project="julia" />
       </ContentContainer>
     </>
   );

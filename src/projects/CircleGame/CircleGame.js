@@ -1,8 +1,8 @@
 import "./CircleGame.css";
 import Loader from "../../helpers/Loader/Loader";
 import DelayedLoadingFade from "../../helpers/DelayedLoadingFade/DelayedLoadingFade";
-import Description from "../../helpers/Description/Description";
 import ContentWithDescriptionContainer from "../../helpers/ContentWithDescriptionContainer/ContentWithDescriptionContainer";
+import Waveform from "../../helpers/Waveform/Waveform";
 
 function CircleGame({ showCircleGame }) {
   return (
@@ -26,9 +26,7 @@ function CircleGame({ showCircleGame }) {
           style={{ borderRadius: "10px" }}
         ></iframe>
       )}
-      <Description>
-        The iterations have been endless. Thanks for the helping hand Lotte.
-      </Description>
+      <Waveform project="circle-game" />
     </ContentWithDescriptionContainer>
   );
 }

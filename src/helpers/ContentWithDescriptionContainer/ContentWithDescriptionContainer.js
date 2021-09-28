@@ -1,5 +1,7 @@
 import "./ContentWithDescriptionContainer.css";
 
+// TODO: rename this component to something more matching
+// TODO: deconstruct the props
 function ContentWithDescriptionContainer(props) {
   return (
     <div

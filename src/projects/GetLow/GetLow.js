@@ -1,8 +1,8 @@
 import "./GetLow.css";
 import Loader from "../../helpers/Loader/Loader";
 import DelayedLoadingFade from "../../helpers/DelayedLoadingFade/DelayedLoadingFade";
-import Description from "../../helpers/Description/Description";
 import ContentWithDescriptionContainer from "../../helpers/ContentWithDescriptionContainer/ContentWithDescriptionContainer";
+import Waveform from "../../helpers/Waveform/Waveform";
 
 function GetLow({ showGetLow }) {
   return (
@@ -26,10 +26,11 @@ function GetLow({ showGetLow }) {
           style={{ borderRadius: "10px" }}
         ></iframe>
       )}
-      <Description>
+      <Waveform project="get-low" />
+      {/* <Description>
         Dedication to the performance that makes me believe I can do anything. ©
         Kanye West - All day [Brit Awards]
-      </Description>
+      </Description> */}
     </ContentWithDescriptionContainer>
   );
 }

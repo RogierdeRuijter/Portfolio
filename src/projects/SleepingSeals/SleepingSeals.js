@@ -1,6 +1,7 @@
 import "./SleepingSeals.css";
 import Description from "../../helpers/Description/Description";
 import ContentWithDescriptionContainer from "../../helpers/ContentWithDescriptionContainer/ContentWithDescriptionContainer";
+import Waveform from "../../helpers/Waveform/Waveform";
 
 function SleepingTumblrSeals({ showSleepingTumblrSeals }) {
   return (
@@ -14,10 +15,11 @@ function SleepingTumblrSeals({ showSleepingTumblrSeals }) {
           frameBorder="0"
         ></iframe>
       )}
-      <Description>
+      <Waveform project="sleeping-tumblr-seals" />
+      {/* <Description>
         These are memes for sleeping seals. Thanks Jonna for creating this with
         me and eating way too much candy for one night.
-      </Description>
+      </Description> */}
     </ContentWithDescriptionContainer>
   );
 }
