@@ -1,18 +1,22 @@
 import "./ContentWithDescriptionContainer.css";
 
-function ContentWithDescriptionContainer(props) {
+function ContentWithAudioContainer({
+  id,
+  noFixedHeightContent,
+  children,
+}) {
   return (
     <div
-      id={props.id}
+      id={id}
       className="content-container-with-description"
       style={{
-        height: props.noFixedHeightContent ? "" : "100vh",
-        gridTemplateRows: props.noFixedHeightContent ? "auto 20%" : "80% 20%",
+        height: noFixedHeightContent ? "" : "100vh",
+        gridTemplateRows: noFixedHeightContent ? "auto 20%" : "80% 20%",
       }}
     >
-      {props.children}
+      {children}
     </div>
   );
 }
 
-export default ContentWithDescriptionContainer;
+export default ContentWithAudioContainer;

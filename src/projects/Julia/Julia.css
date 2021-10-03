@@ -1,5 +1,10 @@
 #julia-container .iframe-size {
   width: 100%;
-  /* TODO: find a dynamic way to get this size */
-  height: 700vh;
+  /* TODO: find a dynamic way to get this size,
+   *  this is difficult beacuse we can get the size of the iframe
+   *  due to security reason.
+   *  This is only a problem when the screen becomes smaller 
+   * */
+
+  height: 635vh;
 }
