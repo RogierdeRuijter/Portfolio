@@ -1,7 +1,6 @@
 import "./ContentWithDescriptionContainer.css";
 
-// TODO: rename this component to something more matching
-function ContentWithDescriptionContainer({
+function ContentWithDepContainer({
   id,
   noFixedHeightContent,
   children,
@@ -20,4 +19,4 @@ function ContentWithDescriptionContainer({
   );
 }
 
-export default ContentWithDescriptionContainer;
+export default ContentWithDepContainer;

@@ -2,12 +2,12 @@ import montepoeliHome from "../../assets/montepoeli_home.png";
 import montepoeliAddGame from "../../assets/montepoeli_add_game.png";
 import montepoeliAddGameFilled from "../../assets/montepoeli_add_game_filled.png";
 import "./Montepoeli.css";
-import ContentWithDescriptionContainer from "../../helpers/ContentWithDescriptionContainer/ContentWithDescriptionContainer";
+import ContentWithDepContainer from "../../helpers/ContentWithDescriptionContainer/ContentWithDescriptionContainer";
 import Waveform from "../../helpers/Waveform/Waveform";
 
 function Montepoeli() {
   return (
-    <ContentWithDescriptionContainer
+    <ContentWithDepContainer
       id="montepoeli-content-container"
       noFixedHeightContent={true}
     >
@@ -29,10 +29,9 @@ function Montepoeli() {
         ></img>
       </div>
       <div id="description">
-        {/* TODO: make spacing constent between the bottom line of the project and the waveform */}
         <Waveform project="montepoeli" />
       </div>
-    </ContentWithDescriptionContainer>
+    </ContentWithDepContainer>
   );
 }
 

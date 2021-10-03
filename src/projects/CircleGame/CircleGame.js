@@ -1,12 +1,12 @@
 import "./CircleGame.css";
 import Loader from "../../helpers/Loader/Loader";
 import DelayedLoadingFade from "../../helpers/DelayedLoadingFade/DelayedLoadingFade";
-import ContentWithDescriptionContainer from "../../helpers/ContentWithDescriptionContainer/ContentWithDescriptionContainer";
+import ContentWithDepContainer from "../../helpers/ContentWithDescriptionContainer/ContentWithDescriptionContainer";
 import Waveform from "../../helpers/Waveform/Waveform";
 
 function CircleGame({ showCircleGame }) {
   return (
-    <ContentWithDescriptionContainer
+    <ContentWithDepContainer
       id="circle-game-container"
       loading={!showCircleGame}
     >
@@ -31,7 +31,7 @@ function CircleGame({ showCircleGame }) {
           <Waveform project="circle-game" />
         </>
       )}
-    </ContentWithDescriptionContainer>
+    </ContentWithDepContainer>
   );
 }
 
