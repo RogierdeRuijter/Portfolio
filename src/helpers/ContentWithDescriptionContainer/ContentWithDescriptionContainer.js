@@ -1,6 +1,6 @@
 import "./ContentWithDescriptionContainer.css";
 
-function ContentWithDepContainer({
+function ContentWithAudioContainer({
   id,
   noFixedHeightContent,
   children,
@@ -19,4 +19,4 @@ function ContentWithDepContainer({
   );
 }
 
-export default ContentWithDepContainer;
+export default ContentWithAudioContainer;

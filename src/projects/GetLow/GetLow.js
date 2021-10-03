@@ -1,12 +1,12 @@
 import "./GetLow.css";
 import Loader from "../../helpers/Loader/Loader";
 import DelayedLoadingFade from "../../helpers/DelayedLoadingFade/DelayedLoadingFade";
-import ContentWithDepContainer from "../../helpers/ContentWithDescriptionContainer/ContentWithDescriptionContainer";
+import ContentWithAudioContainer from "../../helpers/ContentWithDescriptionContainer/ContentWithDescriptionContainer";
 import Waveform from "../../helpers/Waveform/Waveform";
 
 function GetLow({ showGetLow }) {
   return (
-    <ContentWithDepContainer
+    <ContentWithAudioContainer
       id="get-low-container"
       loading={!showGetLow}
     >
@@ -29,7 +29,7 @@ function GetLow({ showGetLow }) {
           <Waveform project="get-low" />
         </>
       )}
-    </ContentWithDepContainer>
+    </ContentWithAudioContainer>
   );
 }
 

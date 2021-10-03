@@ -1,10 +1,10 @@
 import "./FishRace.css";
-import ContentWithDepContainer from "../../helpers/ContentWithDescriptionContainer/ContentWithDescriptionContainer";
+import ContentWithAudioContainer from "../../helpers/ContentWithDescriptionContainer/ContentWithDescriptionContainer";
 import Waveform from "../../helpers/Waveform/Waveform";
 
 function FishRace({ showFishRace }) {
   return (
-    <ContentWithDepContainer id="fish-race-container">
+    <ContentWithAudioContainer id="fish-race-container">
       {showFishRace && (
         <>
           <iframe
@@ -18,7 +18,7 @@ function FishRace({ showFishRace }) {
           <Waveform project="fish-race" />
         </>
       )}
-    </ContentWithDepContainer>
+    </ContentWithAudioContainer>
   );
 }
 

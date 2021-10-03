@@ -2,12 +2,12 @@ import montepoeliHome from "../../assets/montepoeli_home.png";
 import montepoeliAddGame from "../../assets/montepoeli_add_game.png";
 import montepoeliAddGameFilled from "../../assets/montepoeli_add_game_filled.png";
 import "./Montepoeli.css";
-import ContentWithDepContainer from "../../helpers/ContentWithDescriptionContainer/ContentWithDescriptionContainer";
+import ContentWithAudioContainer from "../../helpers/ContentWithDescriptionContainer/ContentWithDescriptionContainer";
 import Waveform from "../../helpers/Waveform/Waveform";
 
 function Montepoeli() {
   return (
-    <ContentWithDepContainer
+    <ContentWithAudioContainer
       id="montepoeli-content-container"
       noFixedHeightContent={true}
     >
@@ -31,7 +31,7 @@ function Montepoeli() {
       <div id="description">
         <Waveform project="montepoeli" />
       </div>
-    </ContentWithDepContainer>
+    </ContentWithAudioContainer>
   );
 }
 

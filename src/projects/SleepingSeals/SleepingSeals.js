@@ -1,10 +1,10 @@
 import "./SleepingSeals.css";
-import ContentWithDepContainer from "../../helpers/ContentWithDescriptionContainer/ContentWithDescriptionContainer";
+import ContentWithAudioContainer from "../../helpers/ContentWithDescriptionContainer/ContentWithDescriptionContainer";
 import Waveform from "../../helpers/Waveform/Waveform";
 
 function SleepingTumblrSeals({ showSleepingTumblrSeals }) {
   return (
-    <ContentWithDepContainer id="sleeping-seals-container">
+    <ContentWithAudioContainer id="sleeping-seals-container">
       {showSleepingTumblrSeals && (
         <>
           <iframe
@@ -17,7 +17,7 @@ function SleepingTumblrSeals({ showSleepingTumblrSeals }) {
           <Waveform project="sleeping-tumblr-seals" />
         </>
       )}
-    </ContentWithDepContainer>
+    </ContentWithAudioContainer>
   );
 }
 
