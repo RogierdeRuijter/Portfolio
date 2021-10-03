@@ -19,10 +19,7 @@ function Info() {
                   soul in many ways I can't describe. Thanks for giving me the
                   love for updates.
                 </li>
-                <li>
-                  Menno, for being a dog and scaring me into making beautiful
-                  things.
-                </li>
+                <li>Menno, for scaring me into making beautiful things.</li>
                 <li>
                   Harry, for having a beautiful passion for doing the right
                   thing.
