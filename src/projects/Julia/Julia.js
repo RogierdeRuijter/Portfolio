@@ -15,7 +15,6 @@ const Julia = ({ showJulia }) => {
               src="https://rogierderuijter.github.io/julia/"
               frameBorder="0"
             ></iframe>
-            {/* TODO: make spacing constent between the bottom line of the project and the waveform */}
             <Waveform project="julia" />
           </>
         )}

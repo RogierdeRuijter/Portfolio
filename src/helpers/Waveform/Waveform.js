@@ -20,12 +20,8 @@ const Waveform = ({ project }) => {
         progressColor: "palegreen",
       })
     );
-
     // TODO: find a way to offload the wavelength dom element.
     //  When the component hot reloads a duplicate of the waveform occurs
-    // return () => {
-    //   wavesurfer.destroy();
-    // };
   }, []);
 
   useEffect(() => {

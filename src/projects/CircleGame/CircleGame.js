@@ -26,8 +26,6 @@ function CircleGame({ showCircleGame }) {
             frameBorder="0"
             style={{ borderRadius: "10px" }}
           ></iframe>
-          {/* TODO: make spacing constent between the bottom line of the project
-          and the waveform  */}
           <Waveform project="circle-game" />
         </>
       )}

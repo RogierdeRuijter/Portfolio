@@ -92,7 +92,6 @@ const App = () => {
     }
   }, []);
 
-  // TODO: refactor this into custom hooks to remove some spagetti
   const scrollHandler = useCallback(() => {
     const element = welcomeTextRef.current;
     if (element) {

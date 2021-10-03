@@ -14,7 +14,6 @@ function SleepingTumblrSeals({ showSleepingTumblrSeals }) {
             src="https://sleepingsealswithcelebrityquotes.com"
             frameBorder="0"
           ></iframe>
-          {/* TODO: make spacing constent between the bottom line of the project and the waveform */}
           <Waveform project="sleeping-tumblr-seals" />
         </>
       )}
