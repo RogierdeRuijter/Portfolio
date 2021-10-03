@@ -65,7 +65,6 @@ const Waveform = ({ project }) => {
         <button
           className={`play-pause-button ${playing ? "pause" : ""}`}
         ></button>
-        {/* {} */}
       </a>
       <div
         id={"waveform-" + project}
