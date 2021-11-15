@@ -32,7 +32,7 @@ function Info() {
               drive to give us whatever we needed.
             </div>
             <div style={{ marginTop: "15px" }}>
-              You have made me to what I am.
+              You have made me into what I am.
             </div>
           </div>
         </div>
