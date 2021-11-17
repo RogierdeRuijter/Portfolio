@@ -14,7 +14,7 @@ jobs:
         run: |
           yarn install
           yarn prettier . -c
-          yarn test
+          yarn test --passWithNoTests
           yarn build
 
       - name: Deploy 🚀
