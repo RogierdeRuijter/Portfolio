@@ -22,7 +22,7 @@ const Waveform = ({ project }) => {
     );
     // TODO: find a way to offload the wavelength dom element.
     //  When the component hot reloads a duplicate of the waveform occurs
-  }, []);
+  }, [project]);
 
   useEffect(() => {
     wavesurfer?.on("finish", () => {
