@@ -6,10 +6,7 @@ import Waveform from "../../helpers/Waveform/Waveform";
 
 function GetLow({ showGetLow }) {
   return (
-    <ContentWithAudioContainer
-      id="get-low-container"
-      loading={!showGetLow}
-    >
+    <ContentWithAudioContainer id="get-low-container" loading={!showGetLow}>
       <div className="iframe-size">
         <DelayedLoadingFade removeLoader={showGetLow}>
           <Loader />
