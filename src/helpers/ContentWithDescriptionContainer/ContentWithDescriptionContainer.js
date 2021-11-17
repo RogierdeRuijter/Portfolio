@@ -1,10 +1,6 @@
 import "./ContentWithDescriptionContainer.css";
 
-function ContentWithAudioContainer({
-  id,
-  noFixedHeightContent,
-  children,
-}) {
+function ContentWithAudioContainer({ id, noFixedHeightContent, children }) {
   return (
     <div
       id={id}
