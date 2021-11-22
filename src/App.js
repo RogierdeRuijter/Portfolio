@@ -194,20 +194,25 @@ const App = () => {
         </div>
         <div className="empty-spacing" id={sections.circleGame}>
           <CircleGame showCircleGame={showCircleGame} />
+          <div style={{ width: "100%", height: "100vh" }}></div>
         </div>
         <div className="empty-spacing" id={sections.montepoeli}>
           <Montepoeli />
+          <div style={{ width: "100%", height: "100vh" }}></div>
         </div>
         <div className="empty-spacing" id={sections.getLow}>
           <GetLow showGetLow={showGetLow} />
+          <div style={{ width: "100%", height: "100vh" }}></div>
         </div>
         <div className="empty-spacing" id={sections.sleepingTumblrSeals}>
           <SleepingTumblrSeals
             showSleepingTumblrSeals={showSleepingTumblrSeals}
           />
+          <div style={{ width: "100%", height: "100vh" }}></div>
         </div>
         <div className="empty-spacing" id={sections.julia}>
           <Julia showJulia={showJulia} />
+          <div style={{ width: "100%", height: "100vh" }}></div>
         </div>
         <div className="empty-spacing" id={sections.info}>
           <Info />
