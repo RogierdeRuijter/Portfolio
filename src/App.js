@@ -190,7 +190,7 @@ const App = () => {
         </div>
         <div className="empty-spacing" id={sections.fishRace}>
           <FishRace showFishRace={showFishRace} />
-          <div style={{width: '100%', height: '100vh'}}></div>
+          <div style={{ width: '100%', height: '100vh' }}></div>
         </div>
         <div className="empty-spacing" id={sections.circleGame}>
           <CircleGame showCircleGame={showCircleGame} />
