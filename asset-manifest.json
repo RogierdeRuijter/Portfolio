@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.26f345b0.chunk.css",
+    "main.css": "/static/css/main.0e7338ea.chunk.css",
     "main.js": "/static/js/main.ba875e9a.chunk.js",
     "main.js.map": "/static/js/main.ba875e9a.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.3f01bb75.js",
@@ -10,7 +10,7 @@
     "static/js/3.5a7f34ad.chunk.js": "/static/js/3.5a7f34ad.chunk.js",
     "static/js/3.5a7f34ad.chunk.js.map": "/static/js/3.5a7f34ad.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.26f345b0.chunk.css.map": "/static/css/main.26f345b0.chunk.css.map",
+    "static/css/main.0e7338ea.chunk.css.map": "/static/css/main.0e7338ea.chunk.css.map",
     "static/js/2.666b31c0.chunk.js.LICENSE.txt": "/static/js/2.666b31c0.chunk.js.LICENSE.txt",
     "static/media/Film.29aba490.mp4": "/static/media/Film.29aba490.mp4",
     "static/media/comment-circle-game.a0d531f0.mp3": "/static/media/comment-circle-game.a0d531f0.mp3",
@@ -26,7 +26,7 @@
   "entrypoints": [
     "static/js/runtime-main.3f01bb75.js",
     "static/js/2.666b31c0.chunk.js",
-    "static/css/main.26f345b0.chunk.css",
+    "static/css/main.0e7338ea.chunk.css",
     "static/js/main.ba875e9a.chunk.js"
   ]
 }
