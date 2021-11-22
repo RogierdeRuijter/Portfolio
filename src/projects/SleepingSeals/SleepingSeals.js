@@ -11,7 +11,7 @@ function SleepingTumblrSeals({ showSleepingTumblrSeals }) {
             id="sleeping-tumblr-seals-iframe"
             title="sleeping-tumblr-seals"
             className="iframe-size"
-            src="https://sleepingsealswithcelebrityquotes.com"
+            src="https://rogierderuijter.github.io/sleeping-seals-with-celebirty-qoutes"
             frameBorder="0"
           ></iframe>
           <Waveform project="sleeping-tumblr-seals" />
