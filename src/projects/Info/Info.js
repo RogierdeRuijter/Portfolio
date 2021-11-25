@@ -20,7 +20,7 @@ function Info() {
                   love for updates.
                 </li>
                 <li>Menno, for scaring me into making beautiful things.</li>
-                <li>Niels, for showing me what a review looks like</li>
+                <li>Niels, for showing me what a review looks like.</li>
                 <li>Isabelle, for getting lost in conversations with me.</li>
               </ul>
             </div>
