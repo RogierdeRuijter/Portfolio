@@ -1,7 +1,7 @@
 #content-container {
   display: grid;
   grid-template-columns: min(30%, 200px) min(70%, 1200px);
-  background-color: #fff5fb;
+  background-color: #fff;
   line-height: 1.4;
   /* This is needed for the video */
   position: relative;
