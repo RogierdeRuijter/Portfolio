@@ -3,7 +3,7 @@ import ContentContainer from "../../helpers/ContentContainer/ContentContainer";
 
 function Info() {
   return (
-    <ContentContainer withFullScreenHeight={true} noBottomBorder={true}>
+    <ContentContainer withFullScreenHeight={true}>
       <div className="info-container">
         <div>
           <div className="info-content">

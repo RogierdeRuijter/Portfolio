@@ -7,7 +7,6 @@ function ContentContainer(props) {
       className="content-container"
       style={{
         height: props.withFullScreenHeight ? "100vh" : "",
-        borderBottom: props.noBottomBorder ? "" : "1px solid black",
       }}
     >
       {props.children}
