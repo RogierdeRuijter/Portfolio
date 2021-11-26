@@ -1,5 +1,6 @@
 #content-container {
-  display: grid;
+  display: flex;
+  justify-content: center;
   /* TODO: add container around here */
   /* grid-template-columns: min(30%, 200px) min(70%, 1200px); */
   background-color: #fff;
@@ -35,6 +36,7 @@
 
 #project-content {
   /* grid-area: 1/2; */
+  max-width: 1200px;
   box-sizing: border-box;
   padding-right: min(16px, 3%);
 }
