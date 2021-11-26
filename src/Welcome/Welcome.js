@@ -1,9 +1,9 @@
 import "./Welcome.css";
 
-function Welcome({ welcomeTextRef, children }) {
+function Welcome({ children }) {
   return (
     <div id="welcome-container">
-      <div ref={welcomeTextRef} style={{ fontSize: "4vw" }}>
+      <div style={{ fontSize: "4vw" }}>
         {children}
       </div>
       <div id="scroll-down-element">
