@@ -187,32 +187,45 @@ const App = () => {
               </video>
             </div>
           </Welcome>
+          <div className="project-introduction">
+            <div>Fish race</div>
+          </div>
         </div>
         <div className="empty-spacing" id={sections.fishRace}>
           <FishRace showFishRace={showFishRace} />
-          <div style={{ width: "100%", height: "100vh" }}></div>
+          <div className="project-introduction">
+            <div>Circle game</div>
+          </div>
         </div>
         <div className="empty-spacing" id={sections.circleGame}>
           <CircleGame showCircleGame={showCircleGame} />
-          <div style={{ width: "100%", height: "100vh" }}></div>
+          <div className="project-introduction">
+            <div>Montepoeli</div>
+          </div>
         </div>
         <div className="empty-spacing" id={sections.montepoeli}>
           <Montepoeli />
-          <div style={{ width: "100%", height: "100vh" }}></div>
+          <div className="project-introduction">
+            <div>Get low</div>
+          </div>
         </div>
         <div className="empty-spacing" id={sections.getLow}>
           <GetLow showGetLow={showGetLow} />
-          <div style={{ width: "100%", height: "100vh" }}></div>
+          <div className="project-introduction">
+            <div>Sad Sleeping Seals </div>
+          </div>
         </div>
         <div className="empty-spacing" id={sections.sleepingTumblrSeals}>
           <SleepingTumblrSeals
             showSleepingTumblrSeals={showSleepingTumblrSeals}
           />
-          <div style={{ width: "100%", height: "100vh" }}></div>
+          <div className="project-introduction">
+            <div>Julia</div>
+          </div>
         </div>
         <div className="empty-spacing" id={sections.julia}>
           <Julia showJulia={showJulia} />
-          <div style={{ width: "100%", height: "100vh" }}></div>
+          <div style={{ width: "100%", height: "50vh" }}></div>
         </div>
         <div className="empty-spacing" id={sections.info}>
           <Info />
