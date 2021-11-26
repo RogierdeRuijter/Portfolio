@@ -6,11 +6,9 @@ import Waveform from "../../helpers/Waveform/Waveform";
 
 function CircleGame() {
   return (
-    <>
-      <div className="project-introduction">
-        <div>Circle game</div>
-      </div>
-      <ContentWithAudioContainer id="circle-game-container">
+
+    
+      <ContentWithAudioContainer id="circle-game-container" title={"Circle game"}>
         <iframe
           id="circle-game-iframe"
           title="circle-game"
@@ -22,7 +20,6 @@ function CircleGame() {
         ></iframe>
         <Waveform project="circle-game" />
       </ContentWithAudioContainer>
-    </>
   );
 }
 

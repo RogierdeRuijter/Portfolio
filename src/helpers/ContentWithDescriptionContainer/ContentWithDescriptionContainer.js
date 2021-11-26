@@ -1,17 +1,27 @@
 import "./ContentWithDescriptionContainer.css";
 
-function ContentWithAudioContainer({ id, noFixedHeightContent, children }) {
+function ContentWithAudioContainer({
+  id,
+  noFixedHeightContent,
+  title,
+  children,
+}) {
   return (
-    <div
-      id={id}
-      className="content-container-with-description"
-      style={{
-        height: noFixedHeightContent ? "" : "100vh",
-        gridTemplateRows: noFixedHeightContent ? "auto 20%" : "80% 20%",
-      }}
-    >
-      {children}
-    </div>
+    <>
+      <div className="project-introduction">
+        <div>{title}</div>
+      </div>
+      <div
+        id={id}
+        className="content-container-with-description"
+        style={{
+          height: noFixedHeightContent ? "" : "100vh",
+          gridTemplateRows: noFixedHeightContent ? "auto 20%" : "80% 20%",
+        }}
+      >
+        {children}
+      </div>
+    </>
   );
 }
 

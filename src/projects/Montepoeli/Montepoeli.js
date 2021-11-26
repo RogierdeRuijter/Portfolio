@@ -7,36 +7,32 @@ import Waveform from "../../helpers/Waveform/Waveform";
 
 function Montepoeli() {
   return (
-    <>
-      <div className="project-introduction">
-        <div>Montepoeli</div>
+    <ContentWithAudioContainer
+      id="montepoeli-content-container"
+      title={"Montepoeli"}
+      noFixedHeightContent={true}
+    >
+      <div id="montepoeli-content">
+        <img
+          className="iphone rounded-corners spacer"
+          src={montepoeliHome}
+          alt="Home screen"
+        ></img>
+        <img
+          className="iphone rounded-corners spacer"
+          src={montepoeliAddGame}
+          alt="Add game"
+        ></img>
+        <img
+          className="iphone rounded-corners"
+          src={montepoeliAddGameFilled}
+          alt="Filled in game"
+        ></img>
       </div>
-      <ContentWithAudioContainer
-        id="montepoeli-content-container"
-        noFixedHeightContent={true}
-      >
-        <div id="montepoeli-content">
-          <img
-            className="iphone rounded-corners spacer"
-            src={montepoeliHome}
-            alt="Home screen"
-          ></img>
-          <img
-            className="iphone rounded-corners spacer"
-            src={montepoeliAddGame}
-            alt="Add game"
-          ></img>
-          <img
-            className="iphone rounded-corners"
-            src={montepoeliAddGameFilled}
-            alt="Filled in game"
-          ></img>
-        </div>
-        <div id="description">
-          <Waveform project="montepoeli" />
-        </div>
-      </ContentWithAudioContainer>
-    </>
+      <div id="description">
+        <Waveform project="montepoeli" />
+      </div>
+    </ContentWithAudioContainer>
   );
 }
 
