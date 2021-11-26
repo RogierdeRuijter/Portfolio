@@ -1,10 +1,16 @@
 import "./Welcome.css";
+import film from "../assets/Film.mp4";
 
-function Welcome({ children }) {
+function Welcome() {
   return (
     <div id="welcome-container">
-      <div style={{ fontSize: "4vw" }}>
-        {children}
+      <div id="my-introduction">Rogier de Ruijter</div>
+      <div>
+        <div id="video-of-me">
+          <video autoPlay muted loop width={600}>
+            <source src={film} type="video/mp4" />
+          </video>
+        </div>
       </div>
       <div id="scroll-down-element">
         <span id="scroll-down-element-line"></span>

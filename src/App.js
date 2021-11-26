@@ -7,20 +7,12 @@ import Montepoeli from "./projects/Montepoeli/Montepoeli";
 import Info from "./projects/Info/Info";
 import Julia from "./projects/Julia/Julia";
 import Welcome from "./Welcome/Welcome";
-import film from "./assets/Film.mp4";
 
 const App = () => {
   return (
     <div id="content-container">
       <div id="project-content">
-        <Welcome>
-          <div id="my-introduction">Rogier de Ruijter</div>
-          <div id="video-of-me">
-            <video autoPlay muted loop width={600}>
-              <source src={film} type="video/mp4" />
-            </video>
-          </div>
-        </Welcome>
+        <Welcome></Welcome>
         <div className="project-introduction">
           <div>Fish race</div>
         </div>
