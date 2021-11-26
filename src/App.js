@@ -17,13 +17,13 @@ const App = () => {
           <div>Fish race</div>
         </div>
         <div className="empty-spacing">
-          <FishRace showFishRace={true} />
+          <FishRace />
           <div className="project-introduction">
             <div>Circle game</div>
           </div>
         </div>
         <div className="empty-spacing">
-          <CircleGame showCircleGame={true} />
+          <CircleGame />
           <div className="project-introduction">
             <div>Montepoeli</div>
           </div>
@@ -35,19 +35,19 @@ const App = () => {
           </div>
         </div>
         <div className="empty-spacing">
-          <GetLow showGetLow={true} />
+          <GetLow />
           <div className="project-introduction">
             <div>Sad Sleeping Seals</div>
           </div>
         </div>
         <div className="empty-spacing">
-          <SleepingTumblrSeals showSleepingTumblrSeals={true} />
+          <SleepingTumblrSeals />
           <div className="project-introduction">
             <div>Julia</div>
           </div>
         </div>
         <div className="empty-spacing">
-          <Julia showJulia={true} />
+          <Julia />
           <div style={{ width: "100%", height: "50vh" }}></div>
         </div>
         <div className="empty-spacing">

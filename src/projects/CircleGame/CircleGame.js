@@ -15,20 +15,18 @@ function CircleGame({ showCircleGame }) {
           <Loader />
         </DelayedLoadingFade>
       </div>
-      {showCircleGame && (
-        <>
-          <iframe
-            id="circle-game-iframe"
-            title="circle-game"
-            className="iframe-size"
-            src="https://circle-ga.me"
-            loading="lazy"
-            frameBorder="0"
-            style={{ borderRadius: "10px" }}
-          ></iframe>
-          <Waveform project="circle-game" />
-        </>
-      )}
+      <>
+        <iframe
+          id="circle-game-iframe"
+          title="circle-game"
+          className="iframe-size"
+          src="https://circle-ga.me"
+          loading="lazy"
+          frameBorder="0"
+          style={{ borderRadius: "10px" }}
+        ></iframe>
+        <Waveform project="circle-game" />
+      </>
     </ContentWithAudioContainer>
   );
 }
