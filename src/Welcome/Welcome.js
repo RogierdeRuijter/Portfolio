@@ -7,7 +7,7 @@ function Welcome() {
       <div id="my-introduction">Rogier de Ruijter</div>
       <div>
         <div id="video-of-me">
-          <video autoplay muted loop width={600} playsinline>
+          <video autoplay playsinline muted loop width={600}>
             <source src={film} type="video/mp4" />
           </video>
         </div>
