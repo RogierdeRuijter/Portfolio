@@ -55,3 +55,15 @@
     transform: translateY(0px);
   }
 }
+
+#my-introduction {
+  font-size: max(5vw, 32px);
+  font-weight: 200;
+  text-align: center;
+  position: absolute;
+  top: 8%;
+}
+
+video {
+  max-width: 100%;
+}

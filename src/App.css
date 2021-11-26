@@ -1,109 +1,15 @@
 #content-container {
-  display: grid;
-  grid-template-columns: min(30%, 200px) min(70%, 1200px);
-  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  background-color: #ffff;
   line-height: 1.4;
-  /* This is needed for the video */
-  position: relative;
-}
-
-#menu-container {
-  grid-area: 1/1;
-}
-
-/* TODO: rename duplicate selector name */
-#menu {
   box-sizing: border-box;
-  width: 200px;
-  max-width: 30%;
-  padding-top: 8px;
-  padding-left: 8px;
-  position: fixed;
-  left: 0;
-  top: 0;
-}
-
-.fade-in-animation {
-  animation: 1s ease-in fadeIn forwards;
-  -webkit-animation: 1s ease-in fadeIn forwards;
-}
-
-#project-links {
-  opacity: 0;
 }
 
 #project-content {
-  grid-area: 1/2;
-  box-sizing: border-box;
-  padding-right: min(16px, 3%);
-}
-
-#project-content .empty-spacing {
-  min-height: 100px;
-}
-
-#title {
-  font-weight: bold;
-  margin-bottom: 32px;
-}
-
-#title:hover {
-  background-color: unset !important;
-}
-
-#projects {
-  list-style: none;
-  padding-inline-start: 0;
-}
-
-.menu {
-  padding-inline-start: 8px;
-  padding-right: 8px;
-}
-
-.menu a {
-  text-decoration: none;
-  color: black;
-  display: block;
-}
-
-.menu a:visited {
-  color: black;
-}
-
-.menu .active {
-  font-weight: bold;
-}
-
-.menu a:hover {
-  background-color: lightpink;
-}
-
-/* TODO: Figure out if this needs to be there */
-/* menu li {
-  margin-bottom: 3px;
-} */
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.video-project-links {
-  position: fixed;
-  top: 50%;
-  left: 0;
-  width: 13%;
-  height: 10%;
-}
-
-.video-project-links video {
-  width: 100%;
-  height: 100%;
+  max-width: 1200px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .project-introduction {
@@ -115,12 +21,6 @@
 }
 
 .project-introduction div {
-  font-size: 4vw;
+  font-size: max(4vw, 24px);
   font-weight: 100;
-}
-
-#my-introduction {
-  font-size: 5vw;
-  font-weight: 200;
-  text-align: center;
 }

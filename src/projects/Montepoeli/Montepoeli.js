@@ -9,6 +9,7 @@ function Montepoeli() {
   return (
     <ContentWithAudioContainer
       id="montepoeli-content-container"
+      title={"Montepoeli"}
       noFixedHeightContent={true}
     >
       <div id="montepoeli-content">
