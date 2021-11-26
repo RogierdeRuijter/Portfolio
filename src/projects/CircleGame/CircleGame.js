@@ -4,18 +4,13 @@ import DelayedLoadingFade from "../../helpers/DelayedLoadingFade/DelayedLoadingF
 import ContentWithAudioContainer from "../../helpers/ContentWithDescriptionContainer/ContentWithDescriptionContainer";
 import Waveform from "../../helpers/Waveform/Waveform";
 
-function CircleGame({ showCircleGame }) {
+function CircleGame() {
   return (
-    <ContentWithAudioContainer
-      id="circle-game-container"
-      loading={!showCircleGame}
-    >
-      <div className="iframe-size">
-        <DelayedLoadingFade removeLoader={showCircleGame}>
-          <Loader />
-        </DelayedLoadingFade>
+    <>
+      <div className="project-introduction">
+        <div>Circle game</div>
       </div>
-      <>
+      <ContentWithAudioContainer id="circle-game-container">
         <iframe
           id="circle-game-iframe"
           title="circle-game"
@@ -26,8 +21,8 @@ function CircleGame({ showCircleGame }) {
           style={{ borderRadius: "10px" }}
         ></iframe>
         <Waveform project="circle-game" />
-      </>
-    </ContentWithAudioContainer>
+      </ContentWithAudioContainer>
+    </>
   );
 }
 

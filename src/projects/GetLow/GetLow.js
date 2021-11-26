@@ -4,18 +4,23 @@ import Waveform from "../../helpers/Waveform/Waveform";
 
 function GetLow() {
   return (
-    <ContentWithAudioContainer id="get-low-container">
-      <iframe
-        id="get-low-iframe"
-        title="get-low"
-        className="iframe-size"
-        src="https://rogierderuijter.github.io/get-low/"
-        loading="lazy"
-        frameBorder="0"
-        style={{ borderRadius: "10px" }}
-      ></iframe>
-      <Waveform project="get-low" />
-    </ContentWithAudioContainer>
+    <>
+      <div className="project-introduction">
+        <div>Get low</div>
+      </div>
+      <ContentWithAudioContainer id="get-low-container">
+        <iframe
+          id="get-low-iframe"
+          title="get-low"
+          className="iframe-size"
+          src="https://rogierderuijter.github.io/get-low/"
+          loading="lazy"
+          frameBorder="0"
+          style={{ borderRadius: "10px" }}
+        ></iframe>
+        <Waveform project="get-low" />
+      </ContentWithAudioContainer>
+    </>
   );
 }
 
