@@ -177,12 +177,13 @@ const App = () => {
       <div id="project-content">
         <div id={sections.welcome}>
           <Welcome welcomeTextRef={welcomeTextRef}>
+            <div id="my-introduction">Rogier de Ruijter</div>
             {/* TODO: Move this somewhere else that it is clear that this is moved around the dom */}
             <div
               id="video-of-me"
               className={moveVideoToLeftSideScreen ? "video-project-links" : ""}
             >
-              <video autoPlay muted loop>
+              <video autoPlay muted loop width={600}>
                 <source src={film} type="video/mp4" />
               </video>
             </div>
