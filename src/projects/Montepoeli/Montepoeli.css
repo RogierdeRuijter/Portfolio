@@ -16,6 +16,8 @@
 
 #montepoeli-content {
   grid-area: 1/1;
+  display: flex;
+  align-items: center;
 }
 
 #description {
