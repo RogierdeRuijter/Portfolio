@@ -51,7 +51,7 @@ const activeElementIsPassedJulia = (currentSection) => {
 };
 
 const addFadeInAnimationForProjectLinks = () => {
-  document.getElementById("project-links").classList.add("fade-in-animation");
+  // document.getElementById("project-links").classList.add("fade-in-animation");
 };
 
 const isScrolledIntoView = (el) => {
@@ -96,7 +96,7 @@ const App = () => {
     const element = welcomeTextRef.current;
     if (element) {
       if (!isScrolledIntoView(element)) {
-        setMoveVideoToLeftSideScreen(true);
+        // setMoveVideoToLeftSideScreen(true);
         addFadeInAnimationForProjectLinks();
         window.removeEventListener("scroll", scrollHandler);
       }
@@ -115,7 +115,7 @@ const App = () => {
     } else {
       addFadeInAnimationForProjectLinks();
       // TODO: move video of me into the project link
-      setMoveVideoToLeftSideScreen(true);
+      // setMoveVideoToLeftSideScreen(true);
     }
   }, [location, history]);
 
@@ -148,7 +148,7 @@ const App = () => {
 
   return (
     <div id="content-container">
-      <div id="menu-container">
+      {/* <div id="menu-container">
         <div id="menu">
           <div id="project-links">
             <Scrollspy
@@ -173,7 +173,7 @@ const App = () => {
             </Scrollspy>
           </div>
         </div>
-      </div>
+      </div> */}
       <div id="project-content">
         <div id={sections.welcome}>
           <Welcome welcomeTextRef={welcomeTextRef}>
