@@ -6,7 +6,7 @@ function ContentContainer(props) {
       id={props.id}
       className="content-container"
       style={{
-        height: props.withFullScreenHeight ? "100vh" : "",
+        minHeight: props.withFullScreenHeight ? "100vh" : "",
       }}
     >
       {props.children}
