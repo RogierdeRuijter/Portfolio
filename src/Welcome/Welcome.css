@@ -82,11 +82,11 @@ video {
 
 #video-loader-container {
   position: absolute;
+  max-width: 100%;
 }
 
 .video-container {
   aspect-ratio: 16/9;
-  width: 600px;
   max-width: 100%;
   position: relative;
 }
