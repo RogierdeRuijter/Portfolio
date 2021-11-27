@@ -1,7 +1,7 @@
 #content-container {
   display: flex;
   justify-content: center;
-  background-color: #ffff;
+  background-color: #fdf9ec;
   line-height: 1.4;
   box-sizing: border-box;
 }
