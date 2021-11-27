@@ -87,5 +87,6 @@ video {
 .video-container {
   aspect-ratio: 16/9;
   width: 600px;
+  max-width: 100%;
   position: relative;
 }
