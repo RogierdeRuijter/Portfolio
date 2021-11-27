@@ -24,7 +24,7 @@
 
 #scroll-down-element {
   position: absolute;
-  bottom: 0;
+  bottom: env(safe-area-inset-bottom);
   height: 120px;
   width: 100%;
   display: flex;
@@ -67,4 +67,25 @@
 video {
   max-width: 100%;
   border-radius: 10px;
+}
+
+.video-loader {
+  border-radius: 10px;
+  width: 600px;
+  aspect-ratio: 16/9;
+  max-width: 100%;
+
+  box-shadow: 0 4px 10px 0 rgba(33, 33, 33, 0.15);
+
+  background-color: lightgray;
+}
+
+#video-loader-container {
+  position: absolute;
+}
+
+.video-container {
+  aspect-ratio: 16/9;
+  width: 600px;
+  position: relative;
 }
