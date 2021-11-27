@@ -24,7 +24,7 @@
 
 #scroll-down-element {
   position: absolute;
-  bottom: 0;
+  bottom: env(safe-area-inset-bottom);
   height: 120px;
   width: 100%;
   display: flex;
