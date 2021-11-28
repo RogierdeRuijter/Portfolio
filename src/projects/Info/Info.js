@@ -10,10 +10,10 @@ function Info() {
           <div>
             <div className="info-content">
               <div>
-                I am forever grateful for everyone I have worked with, thank you
+                I am forever grateful for everyone I have worked with. Thank you
                 so much.
               </div>
-              <div style={{ marginTop: "10px" }}>
+              <div style={{ marginTop: "16px" }}>
                 Special thanks:
                 <ul className="special-thanks">
                   <li>
@@ -26,11 +26,11 @@ function Info() {
                   <li>Isabelle, for getting lost in conversations with me.</li>
                 </ul>
               </div>
-              <div style={{ marginTop: "20px" }}>
+              <div style={{ marginTop: "16px" }}>
                 And above all, thanks mom for the love, support, dedication, and
                 drive to give us whatever we needed.
               </div>
-              <div style={{ marginTop: "15px" }}>
+              <div style={{ marginTop: "16px" }}>
                 You have made me into what I am.
               </div>
             </div>

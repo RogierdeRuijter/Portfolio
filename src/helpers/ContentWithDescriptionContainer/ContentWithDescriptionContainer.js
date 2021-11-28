@@ -15,7 +15,7 @@ function ContentWithAudioContainer({
         id={id}
         className="content-container-with-description"
         style={{
-          height: noFixedHeightContent ? "" : "100vh",
+          minHeight: noFixedHeightContent ? "" : "100vh",
           gridTemplateRows: noFixedHeightContent ? "auto 20%" : "80% 20%",
         }}
       >
