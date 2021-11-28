@@ -42,7 +42,7 @@ const App = () => {
     <div id="content-container">
       <div id="project-content">
         <div
-          id="info-cion"
+          id="info-icon"
           onClick={() => setShowContactInfo(!showContactInfo)}
         >
           ℹ️
