@@ -11,6 +11,7 @@ import "./Waveform.css";
 const Waveform = ({ project }) => {
   const [wavesurfer, setWavesurfer] = useState();
   const [playing, setPlaying] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setWavesurfer(
@@ -28,6 +29,10 @@ const Waveform = ({ project }) => {
     wavesurfer?.on("finish", () => {
       setPlaying(false);
       wavesurfer.seekTo(0);
+    });
+
+    wavesurfer?.on("ready", () => {
+      setLoading(false);
     });
   }, [wavesurfer]);
 
@@ -60,15 +65,30 @@ const Waveform = ({ project }) => {
   };
 
   return (
-    <div style={{ display: "flex", alignItems: "center" }}>
-      <a style={{ width: "5%", cursor: "pointer" }} onClick={toggleAudio}>
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "45px auto",
+        alignItems: "center",
+      }}
+    >
+      <a onClick={toggleAudio}>
         <button
+          disabled={loading}
+          style={{
+            borderColor: `transparent transparent transparent ${
+              loading ? "lightgray" : "palegreen"
+            }`,
+          }}
           className={`play-pause-button ${playing ? "pause" : ""}`}
         ></button>
       </a>
       <div
         id={"waveform-" + project}
-        style={{ width: "93%", marginLeft: "2%" }}
+        style={{
+          width: "100%",
+          backgroundColor: loading ? "lightgray" : "unset",
+        }}
       ></div>
     </div>
   );
