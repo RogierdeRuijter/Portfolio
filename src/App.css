@@ -31,13 +31,13 @@
   z-index: 2;
   text-align: right;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 #contact-info {
   /* This right and top value are used to anchor the contact-info to the info-icon */
-  right: calc(1% + 25px);
-  top: calc(1% + 25px);
+  right: calc(1% + 23px);
+  top: calc(1% + 23px);
   position: fixed;
   z-index: 3;
   padding: 16px;

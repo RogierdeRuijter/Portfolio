@@ -49,7 +49,7 @@ const App = () => {
         </div>
         {showContactInfo && (
           <div id="contact-info">
-            📧 <span>rogierderuijter@hotmail.com</span>
+            📧 <div>rogierderuijter@hotmail.com</div>
           </div>
         )}
         <Welcome />
