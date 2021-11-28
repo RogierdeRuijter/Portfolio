@@ -1,10 +1,12 @@
 #welcome-container {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 #scroll-down-element-line {
@@ -23,8 +25,6 @@
 }
 
 #scroll-down-element {
-  position: absolute;
-  bottom: env(safe-area-inset-bottom);
   height: 120px;
   width: 100%;
   display: flex;
@@ -57,11 +57,10 @@
 }
 
 #my-introduction {
+  margin-top: 3%;
   font-size: max(5vw, 40px);
   font-weight: 500;
   text-align: center;
-  position: absolute;
-  top: 8%;
 }
 
 video {

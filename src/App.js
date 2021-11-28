@@ -8,21 +8,19 @@ import Info from "./projects/Info/Info";
 import Julia from "./projects/Julia/Julia";
 import Welcome from "./Welcome/Welcome";
 
-const App = () => {
-  return (
-    <div id="content-container">
-      <div id="project-content">
-        <Welcome />
-        <FishRace />
-        <CircleGame />
-        <Montepoeli />
-        <GetLow />
-        <SleepingTumblrSeals />
-        <Julia />
-        <Info />
-      </div>
+const App = () => (
+  <div id="content-container">
+    <div id="project-content">
+      <Welcome />
+      <FishRace />
+      <CircleGame />
+      <Montepoeli />
+      <GetLow />
+      <SleepingTumblrSeals />
+      <Julia />
+      <Info />
     </div>
-  );
-};
+  </div>
+);
 
 export default App;
