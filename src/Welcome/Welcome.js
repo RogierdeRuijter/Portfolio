@@ -16,7 +16,7 @@ function Welcome() {
     window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener(handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -31,16 +31,9 @@ function Welcome() {
     <div id="welcome-container">
       <div id="my-introduction">Rogier de Ruijter</div>
       <div>
-        <div className="video-container">
-          {showLoader && (
-            <div id={"video-loader-container"}>
-              <div className={"video-loader"}></div>
-            </div>
-          )}
-          <video autoPlay playsInline muted loop width={600} id={"myVideo"}>
-            <source src={film} type="video/mp4" />
-          </video>
-        </div>
+        <video autoPlay playsInline muted loop width={600} id={"myVideo"}>
+          <source src={film} type="video/mp4" />
+        </video>
       </div>
       <div id="scroll-down-element">
         <span id="scroll-down-element-line"></span>
