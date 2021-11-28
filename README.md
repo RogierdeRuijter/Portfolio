@@ -1,3 +1,3 @@
 # Portfolio website 
 
-Listing all the project I have done build with React.
+Listing all the project I have done. Protfolio build with React.
