@@ -66,26 +66,5 @@
 video {
   max-width: 100%;
   border-radius: 10px;
-}
-
-.video-loader {
-  border-radius: 10px;
-  width: 600px;
-  aspect-ratio: 16/9;
-  max-width: 100%;
-
-  box-shadow: 0 4px 10px 0 rgba(33, 33, 33, 0.15);
-
   background-color: lightgray;
-}
-
-#video-loader-container {
-  position: absolute;
-  max-width: 100%;
-}
-
-.video-container {
-  aspect-ratio: 16/9;
-  max-width: 100%;
-  position: relative;
 }
