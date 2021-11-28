@@ -1,4 +1,4 @@
-import "./ContentWithDescriptionContainer.css";
+import "./ContentWithAudioContainer.css";
 
 function ContentWithAudioContainer({
   id,

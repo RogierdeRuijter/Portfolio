@@ -1,5 +1,5 @@
 import "./GetLow.css";
-import ContentWithAudioContainer from "../../helpers/ContentWithDescriptionContainer/ContentWithDescriptionContainer";
+import ContentWithAudioContainer from "../../helpers/ContentWithAudioContainer/ContentWithAudioContainer";
 import Waveform from "../../helpers/Waveform/Waveform";
 
 function GetLow() {
@@ -12,7 +12,6 @@ function GetLow() {
         src="https://rogierderuijter.github.io/get-low/"
         loading="lazy"
         frameBorder="0"
-        style={{ borderRadius: "10px" }}
       ></iframe>
       <Waveform project="get-low" />
     </ContentWithAudioContainer>

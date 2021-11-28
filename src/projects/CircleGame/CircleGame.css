@@ -4,3 +4,7 @@
   background-color: lightgray;
   grid-area: 1/1;
 }
+
+#circle-game-container iframe {
+  border-radius: 8px;
+}
