@@ -7,9 +7,11 @@ import Montepoeli from "./projects/Montepoeli/Montepoeli";
 import Info from "./projects/Info/Info";
 import Julia from "./projects/Julia/Julia";
 import Welcome from "./Welcome/Welcome";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const App = () => {
+  const [showContactInfo, setShowContactInfo] = useState(false);
+
   useEffect(() => {
     // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
     let vh = window.innerHeight * 0.01;
@@ -17,9 +19,39 @@ const App = () => {
     document.documentElement.style.setProperty("--vh", `${vh}px`);
   }, []);
 
+  useEffect(() => {
+    const handler = (e) => {
+      if (
+        document.getElementById("contact-info") &&
+        !document.getElementById("contact-info").contains(e.target)
+      ) {
+        console.log("click outside box");
+        console.log(showContactInfo);
+        // Clicked outside the box
+        if (showContactInfo) {
+          setShowContactInfo(false);
+        }
+      }
+    };
+
+    window.addEventListener("click", handler);
+
+    return () => {
+      window.removeEventListener("click", handler);
+    };
+  }, [showContactInfo]);
+
   return (
     <div id="content-container">
       <div id="project-content">
+        <div id="header" onClick={() => setShowContactInfo(!showContactInfo)}>
+          ℹ️
+        </div>
+        {showContactInfo && (
+          <div id="contact-info">
+            📧 <span>rogierderuijter@hotmail.com</span>
+          </div>
+        )}
         <Welcome />
         <FishRace />
         <CircleGame />

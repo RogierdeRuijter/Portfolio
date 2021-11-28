@@ -3,7 +3,6 @@
   justify-content: center;
   background-color: #fdf9ec;
   line-height: 1.4;
-  box-sizing: border-box;
 }
 
 #project-content {
@@ -23,4 +22,31 @@
 .project-introduction div {
   font-size: max(4vw, 32px);
   font-weight: 300;
+}
+
+#header {
+  /* TODO: optimize for mobile  */
+  /* height: 40px; */
+
+  position: fixed;
+  top: 1%;
+  right: 1%;
+  /* border-bottom: 1px solid black; */
+  z-index: 2;
+  text-align: right;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* TODO: use the header element as an anchor for this element */
+#contact-info {
+  right: calc(1% + 25px);
+  top: calc(1% + 25px);
+  position: fixed;
+  z-index: 3;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid black;
+  text-align: center;
+  border-radius: 8px;
 }
