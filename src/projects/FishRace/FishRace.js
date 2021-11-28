@@ -1,5 +1,5 @@
 import "./FishRace.css";
-import ContentWithAudioContainer from "../../helpers/ContentWithDescriptionContainer/ContentWithDescriptionContainer";
+import ContentWithAudioContainer from "../../helpers/ContentWithAudioContainer/ContentWithAudioContainer";
 import Waveform from "../../helpers/Waveform/Waveform";
 
 function FishRace() {

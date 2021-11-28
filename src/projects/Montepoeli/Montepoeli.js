@@ -2,7 +2,7 @@ import montepoeliHome from "../../assets/montepoeli_home.png";
 import montepoeliAddGame from "../../assets/montepoeli_add_game.png";
 import montepoeliAddGameFilled from "../../assets/montepoeli_add_game_filled.png";
 import "./Montepoeli.css";
-import ContentWithAudioContainer from "../../helpers/ContentWithDescriptionContainer/ContentWithDescriptionContainer";
+import ContentWithAudioContainer from "../../helpers/ContentWithAudioContainer/ContentWithAudioContainer";
 import Waveform from "../../helpers/Waveform/Waveform";
 
 function Montepoeli() {
