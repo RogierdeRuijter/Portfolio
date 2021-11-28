@@ -20,7 +20,7 @@ const App = () => {
   }, []);
 
   useEffect(() => {
-    const handler = (e) => {
+    const outsideContactInfoClickHandler = (e) => {
       if (
         document.getElementById("contact-info") &&
         !document.getElementById("contact-info").contains(e.target)
@@ -31,10 +31,10 @@ const App = () => {
       }
     };
 
-    window.addEventListener("click", handler);
+    window.addEventListener("click", outsideContactInfoClickHandler);
 
     return () => {
-      window.removeEventListener("click", handler);
+      window.removeEventListener("click", outsideContactInfoClickHandler);
     };
   }, [showContactInfo]);
 
