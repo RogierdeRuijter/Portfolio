@@ -25,9 +25,6 @@ const App = () => {
         document.getElementById("contact-info") &&
         !document.getElementById("contact-info").contains(e.target)
       ) {
-        console.log("click outside box");
-        console.log(showContactInfo);
-        // Clicked outside the box
         if (showContactInfo) {
           setShowContactInfo(false);
         }
@@ -44,7 +41,10 @@ const App = () => {
   return (
     <div id="content-container">
       <div id="project-content">
-        <div id="header" onClick={() => setShowContactInfo(!showContactInfo)}>
+        <div
+          id="info-cion"
+          onClick={() => setShowContactInfo(!showContactInfo)}
+        >
           ℹ️
         </div>
         {showContactInfo && (
