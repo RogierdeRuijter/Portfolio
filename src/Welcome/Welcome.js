@@ -1,10 +1,8 @@
 import "./Welcome.css";
 import film from "../assets/Film.mp4";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 function Welcome() {
-  const [showLoader, setShowLoader] = useState(true);
-
   useEffect(() => {
     const handleResize = () => {
       // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
