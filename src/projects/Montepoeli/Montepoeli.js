@@ -14,12 +14,12 @@ function Montepoeli() {
     >
       <div id="montepoeli-content">
         <img
-          className="iphone rounded-corners"
+          className="iphone rounded-corners spacer"
           src={montepoeliHome}
           alt="Home screen"
         ></img>
         <img
-          className="iphone rounded-corners"
+          className="iphone rounded-corners spacer"
           src={montepoeliAddGame}
           alt="Add game"
         ></img>
