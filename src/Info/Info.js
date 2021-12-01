@@ -20,7 +20,7 @@ function Info() {
           style={{ marginRight: "32px" }}
         >
           <img src="https://img.icons8.com/ios/150/000000/apple-mail.png" />
-          Mail
+          Email me
         </a>
         <a
           className="info-element"
