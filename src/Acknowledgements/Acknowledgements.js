@@ -1,14 +1,14 @@
-import "./Info.css";
-import ContentContainer from "../../helpers/ContentContainer/ContentContainer";
+import "./Acknowledgements.css";
+import ContentContainer from "../helpers/ContentContainer/ContentContainer";
 
-function Info() {
+function Acknowledgements() {
   return (
     <>
       <div style={{ width: "100%", height: "50vh" }}></div>
       <ContentContainer withFullScreenHeight={true}>
-        <div className="info-container">
+        <div className="acknowledgements-container">
           <div>
-            <div className="info-content">
+            <div className="acknowledgements-content">
               <div>
                 I am forever grateful for everyone I have worked with. Thank you
                 so much.
@@ -41,4 +41,4 @@ function Info() {
   );
 }
 
-export default Info;
+export default Acknowledgements;

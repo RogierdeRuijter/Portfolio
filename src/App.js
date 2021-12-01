@@ -4,10 +4,11 @@ import FishRace from "./projects/FishRace/FishRace";
 import SleepingTumblrSeals from "./projects/SleepingSeals/SleepingSeals";
 import GetLow from "./projects/GetLow/GetLow";
 import Montepoeli from "./projects/Montepoeli/Montepoeli";
-import Info from "./projects/Info/Info";
+import Acknowledgements from "./Acknowledgements/Acknowledgements";
 import Julia from "./projects/Julia/Julia";
 import Welcome from "./Welcome/Welcome";
 import { useEffect, useState } from "react";
+import Info from "./Info/Info";
 
 const App = () => {
   const [showContactInfo, setShowContactInfo] = useState(false);
@@ -59,6 +60,7 @@ const App = () => {
         <GetLow />
         <SleepingTumblrSeals />
         <Julia />
+        <Acknowledgements />
         <Info />
       </div>
     </div>
