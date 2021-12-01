@@ -17,10 +17,10 @@ function Info() {
           className="info-element"
           href="mailto:rogierderuijter@hotmail.com"
           label="rogierderuijter.com"
-          style={{ marginRight: "32px" }}
+          style={{ marginRight: "32px", fontWeight: "500" }}
         >
           <img src="https://img.icons8.com/ios/150/000000/apple-mail.png" />
-          Email me
+          Mail me
         </a>
         <a
           className="info-element"
