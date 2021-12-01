@@ -9,7 +9,7 @@ function CircleGame() {
         id="circle-game-iframe"
         title="circle-game"
         className="iframe-size"
-        src="https://circle-ga.me"
+        src="https://rogierderuijter.github.io/circle/"
         loading="lazy"
         frameBorder="0"
       ></iframe>
