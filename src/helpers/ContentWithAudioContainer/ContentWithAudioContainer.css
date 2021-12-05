@@ -6,5 +6,8 @@
 
   width: 100%;
 
+  min-height: 100vh;
+  grid-template-rows: 80% 20%;
+
   display: grid;
 }
