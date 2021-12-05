@@ -12,3 +12,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/* Using a class selector the style does not get applied, not sure why. only this one isn't the other once are respected. */
+video {
+  max-width: 100%;
+}
