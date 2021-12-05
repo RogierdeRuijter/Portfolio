@@ -16,9 +16,10 @@ function Montepoeli() {
           muted
           loop
           controls
-          width={600}
-          id={"montepoeli-video"}
+          width={462}
+          id="montepoeli-video"
         >
+          TODO: add additional video qualites
           <source src={montepoeliVideo} type="video/mp4" />
         </video>
       </div>
