@@ -11,7 +11,6 @@ function Montepoeli() {
     >
       <div id="montepoeli-content">
         <video
-          autoPlay
           playsInline
           muted
           loop
