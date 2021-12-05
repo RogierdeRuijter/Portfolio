@@ -10,14 +10,7 @@ function Montepoeli() {
       title={"Montepoeli"}
     >
       <div id="montepoeli-content">
-        <video
-          playsInline
-          muted
-          loop
-          controls
-          width={462}
-          id="montepoeli-video"
-        >
+        <video playsInline muted controls width={462} id="montepoeli-video">
           {/* TODO: add additional video qualites */}
           <source src={montepoeliVideo} type="video/mp4" />
         </video>
