@@ -1,6 +1,4 @@
-import montepoeliHome from "../../assets/montepoeli_home.png";
-import montepoeliAddGame from "../../assets/montepoeli_add_game.png";
-import montepoeliAddGameFilled from "../../assets/montepoeli_add_game_filled.png";
+import montepoeliVideo from "../../assets/montepoeli_video_462 × 1000.mp4";
 import "./Montepoeli.css";
 import ContentWithAudioContainer from "../../helpers/ContentWithAudioContainer/ContentWithAudioContainer";
 import Waveform from "../../helpers/Waveform/Waveform";
@@ -10,24 +8,19 @@ function Montepoeli() {
     <ContentWithAudioContainer
       id="montepoeli-content-container"
       title={"Montepoeli"}
-      noFixedHeightContent={true}
     >
       <div id="montepoeli-content">
-        <img
-          className="iphone rounded-corners spacer"
-          src={montepoeliHome}
-          alt="Home screen"
-        ></img>
-        <img
-          className="iphone rounded-corners spacer"
-          src={montepoeliAddGame}
-          alt="Add game"
-        ></img>
-        <img
-          className="iphone rounded-corners"
-          src={montepoeliAddGameFilled}
-          alt="Filled in game"
-        ></img>
+        <video
+          autoPlay
+          playsInline
+          muted
+          loop
+          controls
+          width={600}
+          id={"montepoeli-video"}
+        >
+          <source src={montepoeliVideo} type="video/mp4" />
+        </video>
       </div>
       <div id="description">
         <Waveform project="montepoeli" />

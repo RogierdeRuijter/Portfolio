@@ -1,34 +1,12 @@
-.rounded-corners {
-  border-radius: 40px;
-}
-
-.iphone {
-  height: 600px;
-}
-
-.spacer {
-  padding-bottom: 8px;
-}
-
-#montepoeli-content-container img {
-  max-width: 100%;
+#montepoeli-video {
+  border-radius: 8px;
+  max-height: 80vh;
 }
 
 #montepoeli-content {
   grid-area: 1/1;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-@media screen and (min-width: 992px) {
-  #montepoeli-content {
-    flex-direction: row;
-  }
-
-  .spacer {
-    padding-right: 8px;
-  }
+  justify-content: center;
 }
 
 #description {

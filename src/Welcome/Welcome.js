@@ -5,7 +5,7 @@ const Welcome = () => (
   <div id="welcome-container">
     <div id="my-introduction">Rogier de Ruijter</div>
     <div>
-      <video autoPlay playsInline muted loop width={600} id={"myVideo"}>
+      <video className="myVideo" autoPlay playsInline muted loop width={600}>
         <source src={film} type="video/mp4" />
       </video>
     </div>

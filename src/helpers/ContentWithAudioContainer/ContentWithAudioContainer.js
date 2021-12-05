@@ -1,5 +1,5 @@
 import "./ContentWithAudioContainer.css";
-
+// TODO: check if noFixedHeightContent prop can be removed. Maybe used by Julia
 function ContentWithAudioContainer({
   id,
   noFixedHeightContent,
