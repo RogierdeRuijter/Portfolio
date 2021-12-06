@@ -6,19 +6,11 @@ import GetLow from "./projects/GetLow/GetLow";
 import Montepoeli from "./projects/Montepoeli/Montepoeli";
 import Acknowledgements from "./Acknowledgements/Acknowledgements";
 import Julia from "./projects/Julia/Julia";
-import Welcome from "./Welcome/Welcome";
 import { useEffect, useState } from "react";
 import Info from "./Info/Info";
 
 const App = () => {
   const [showContactInfo, setShowContactInfo] = useState(false);
-
-  useEffect(() => {
-    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-    let vh = window.innerHeight * 0.01;
-    // Then we set the value in the --vh custom property to the root of the document
-    document.documentElement.style.setProperty("--vh", `${vh}px`);
-  }, []);
 
   useEffect(() => {
     const outsideContactInfoClickHandler = (e) => {
@@ -53,7 +45,6 @@ const App = () => {
             📧 <div>rogierderuijter@hotmail.com</div>
           </div>
         )}
-        <Welcome />
         <FishRace />
         <CircleGame />
         <Montepoeli />
