@@ -1,4 +1,5 @@
 import "./Welcome.css";
+// TODO: add optimized image
 import film from "../assets/Film.mp4";
 import { useState } from "react";
 
