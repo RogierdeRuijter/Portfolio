@@ -37,17 +37,3 @@ const Welcome = () => {
 };
 
 export default Welcome;
-
-// {useVideoTag && (
-//   <video
-//     playsInline
-//     muted
-//     controls
-//     width={462}
-//     preload="auto"
-//     className="montepoeli-video"
-//   >
-//     {/* TODO: add additional video qualites */}
-//     <source src={montepoeliVideo} type="video/mp4" />
-//   </video>
-// )}
