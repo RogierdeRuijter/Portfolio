@@ -2,22 +2,20 @@ import montepoeliVideo from "../../assets/montepoeli_video_462 × 1000.mp4";
 import "./Montepoeli.css";
 import ContentWithAudioContainer from "../../helpers/ContentWithAudioContainer/ContentWithAudioContainer";
 import Waveform from "../../helpers/Waveform/Waveform";
+import { useEffect } from "react";
 
 function Montepoeli() {
+  useEffect(() => {
+    const video = document.getElementById("montepoeli-video");
+    video.load();
+  }, []);
   return (
     <ContentWithAudioContainer
       id="montepoeli-content-container"
       title={"Montepoeli"}
     >
       <div id="montepoeli-content">
-        <video
-          playsInline
-          muted
-          controls
-          width={462}
-          preload="auto"
-          id="montepoeli-video"
-        >
+        <video playsInline muted controls width={462} id="montepoeli-video">
           {/* TODO: add additional video qualites */}
           <source src={montepoeliVideo} type="video/mp4" />
         </video>
