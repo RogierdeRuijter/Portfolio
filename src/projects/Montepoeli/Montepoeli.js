@@ -4,8 +4,6 @@ import ContentWithAudioContainer from "../../helpers/ContentWithAudioContainer/C
 import Waveform from "../../helpers/Waveform/Waveform";
 import { useEffect } from "react";
 
-let boxElement;
-
 const isVideoPlaying = (video) =>
   !!(
     video.currentTime > 0 &&
@@ -30,19 +28,6 @@ function handleIntersect(entries) {
   });
 }
 
-function createObserver() {
-  let observer;
-
-  let options = {
-    root: null,
-    rootMargin: "0px",
-    threshold: [0, 0.2, 0.4, 0.6, 0.8, 1],
-  };
-
-  observer = new IntersectionObserver(handleIntersect, options);
-  observer.observe(boxElement);
-}
-
 function Montepoeli() {
   useEffect(() => {
     const video = document.getElementById("montepoeli-video");
@@ -55,8 +40,16 @@ function Montepoeli() {
 
   useEffect(() => {
     const initObserver = () => {
-      boxElement = document.querySelector("#montepoeli-video");
-      createObserver();
+      const boxElement = document.querySelector("#montepoeli-video");
+
+      const options = {
+        root: null,
+        rootMargin: "0px",
+        threshold: [0, 0.2, 0.4, 0.6, 0.8, 1],
+      };
+
+      const observer = new IntersectionObserver(handleIntersect, options);
+      observer.observe(boxElement);
     };
     window.addEventListener("load", initObserver, false);
 
@@ -70,21 +63,7 @@ function Montepoeli() {
       title={"Montepoeli"}
     >
       <div id="montepoeli-content">
-        <video
-          playsInline
-          muted
-          width={462}
-          id="montepoeli-video"
-          onClick={() => {
-            const video = document.getElementById("montepoeli-video");
-
-            if (isVideoPlaying(video)) {
-              video.pause();
-            } else {
-              video.play();
-            }
-          }}
-        >
+        <video playsInline muted width={462} id="montepoeli-video">
           {/* TODO: add additional video qualites */}
           <source src={montepoeliVideo} type="video/mp4" />
         </video>
