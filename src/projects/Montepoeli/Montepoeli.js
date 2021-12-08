@@ -4,10 +4,65 @@ import ContentWithAudioContainer from "../../helpers/ContentWithAudioContainer/C
 import Waveform from "../../helpers/Waveform/Waveform";
 import { useEffect } from "react";
 
+let boxElement;
+
+const isVideoPlaying = (video) =>
+  !!(
+    video.currentTime > 0 &&
+    !video.paused &&
+    !video.ended &&
+    video.readyState > 2
+  );
+
+function handleIntersect(entries) {
+  entries.forEach((entry) => {
+    if (entry.intersectionRatio >= 0.8) {
+      const video = document.getElementById("montepoeli-video");
+      video.play();
+    }
+    if (entry.intersectionRatio === 0) {
+      const video = document.getElementById("montepoeli-video");
+      if (isVideoPlaying(video)) {
+        video.pause();
+        video.currentTime = 0;
+      }
+    }
+  });
+}
+
+function createObserver() {
+  let observer;
+
+  let options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: [0, 0.2, 0.4, 0.6, 0.8, 1],
+  };
+
+  observer = new IntersectionObserver(handleIntersect, options);
+  observer.observe(boxElement);
+}
+
 function Montepoeli() {
   useEffect(() => {
     const video = document.getElementById("montepoeli-video");
     video.load();
+
+    video.onended = () => {
+      document.getElementById("montepoeli-video").currentTime = 0;
+    };
+  }, []);
+
+  useEffect(() => {
+    const initObserver = () => {
+      boxElement = document.querySelector("#montepoeli-video");
+      createObserver();
+    };
+    window.addEventListener("load", initObserver, false);
+
+    return () => {
+      window.removeEventListener("load", initObserver);
+    };
   }, []);
   return (
     <ContentWithAudioContainer
@@ -15,7 +70,21 @@ function Montepoeli() {
       title={"Montepoeli"}
     >
       <div id="montepoeli-content">
-        <video playsInline muted controls width={462} id="montepoeli-video">
+        <video
+          playsInline
+          muted
+          width={462}
+          id="montepoeli-video"
+          onClick={() => {
+            const video = document.getElementById("montepoeli-video");
+
+            if (isVideoPlaying(video)) {
+              video.pause();
+            } else {
+              video.play();
+            }
+          }}
+        >
           {/* TODO: add additional video qualites */}
           <source src={montepoeliVideo} type="video/mp4" />
         </video>
