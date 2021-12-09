@@ -4,6 +4,8 @@ import ContentWithAudioContainer from "../../helpers/ContentWithAudioContainer/C
 import Waveform from "../../helpers/Waveform/Waveform";
 import { useEffect } from "react";
 
+let intervalPointer;
+
 const isVideoPlaying = (video) =>
   !!(
     video.currentTime > 0 &&
@@ -23,6 +25,7 @@ function handleIntersect(entries) {
       if (isVideoPlaying(video)) {
         video.pause();
         video.currentTime = 0;
+        clearInterval(intervalPointer);
       }
     }
   });
@@ -31,11 +34,23 @@ function handleIntersect(entries) {
 function Montepoeli() {
   useEffect(() => {
     const video = document.getElementById("montepoeli-video");
+    // The video needs a reload to show the picture on safari for IOS
     video.load();
 
     video.onended = () => {
+      clearInterval(intervalPointer);
       document.getElementById("montepoeli-video").currentTime = 0;
     };
+    const progress = document.getElementById("progress");
+
+    function progressHandler() {
+      intervalPointer = setInterval(() => {
+        if (video.currentTime) {
+          progress.value = (video.currentTime / video.duration) * 100;
+        }
+      }, 500);
+    }
+    video.addEventListener("play", progressHandler);
   }, []);
 
   useEffect(() => {
@@ -63,10 +78,17 @@ function Montepoeli() {
       title={"Montepoeli"}
     >
       <div id="montepoeli-content">
-        <video playsInline muted width={462} id="montepoeli-video">
-          {/* TODO: add additional video qualites */}
-          <source src={montepoeliVideo} type="video/mp4" />
-        </video>
+        <figure id="montepoli-figure">
+          <video playsInline muted id="montepoeli-video">
+            {/* TODO: add additional video qualites */}
+            <source src={montepoeliVideo} type="video/mp4" />
+          </video>
+          <figcaption>
+            <progress id="progress" max="100" value="0">
+              Progress
+            </progress>
+          </figcaption>
+        </figure>
       </div>
       <div id="description">
         <Waveform project="montepoeli" />

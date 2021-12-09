@@ -1,5 +1,6 @@
 #montepoeli-video {
-  border-radius: 8px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   max-height: 80vh;
 }
 
@@ -12,4 +13,42 @@
 #description {
   grid-area: 2/1;
   margin-top: 20px;
+}
+
+figcaption {
+  margin-top: -9px;
+  line-height: 0;
+}
+
+progress[value] {
+  appearance: none;
+  border: none;
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+/* I don't really get how the coloring works here
+ * I copied what they did here https://css-tricks.com/html5-progress-element/
+*/
+progress[value]::-webkit-progress-value {
+  background-image: -webkit-linear-gradient(
+      -45deg,
+      transparent 33%,
+      lightgreen 33%,
+      lightgreen 66%,
+      transparent 66%
+    ),
+    -webkit-linear-gradient(top, lightgreen, lightgreen),
+    -webkit-linear-gradient(left, lightgreen, lightgreen);
+
+  transition: width 0.5s linear;
+}
+
+#progress {
+  height: 2px;
+  vertical-align: 0;
+  width: 100%;
 }
