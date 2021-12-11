@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- #fdf9ec -->
 <html lang="en" style="background-color: #fcfbea">
   <head>
     <meta charset="utf-8" />
@@ -126,6 +125,10 @@
         aspect-ratio: 16/9;
       }
     </style>
+    <script>
+      const img = document.createElement("img");
+      img.src = "Film.mp4";
+    </script>
     <div id="welcome-wrapper">
       <div id="welcome-content-container">
         <div id="welcome-container">
@@ -143,7 +146,18 @@
     </div>
     <div id="root">
       <!-- Loading indicator before react is loaded into the browser -->
-      <div style="width: 100vw; height: 100vh; background-color: #fcfbea"></div>
+      <div
+        style="
+          width: 100vw;
+          height: 100vh;
+          background-color: #fcfbea;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        Loading...
+      </div>
     </div>
     <noscript>You need to enable JavaScript to run this app.</noscript>
   </body>

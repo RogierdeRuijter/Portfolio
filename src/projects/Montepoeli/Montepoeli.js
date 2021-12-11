@@ -54,24 +54,18 @@ function Montepoeli() {
   }, []);
 
   useEffect(() => {
-    const initObserver = () => {
-      const boxElement = document.querySelector("#montepoeli-video");
+    const videoElement = document.querySelector("#montepoeli-video");
 
-      const options = {
-        root: null,
-        rootMargin: "0px",
-        threshold: [0, 0.2, 0.4, 0.6, 0.8, 1],
-      };
-
-      const observer = new IntersectionObserver(handleIntersect, options);
-      observer.observe(boxElement);
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: [0, 0.2, 0.4, 0.6, 0.8, 1],
     };
-    window.addEventListener("load", initObserver, false);
 
-    return () => {
-      window.removeEventListener("load", initObserver);
-    };
+    const observer = new IntersectionObserver(handleIntersect, options);
+    observer.observe(videoElement);
   }, []);
+
   return (
     <ContentWithAudioContainer
       id="montepoeli-content-container"
