@@ -4,8 +4,8 @@ import ContentContainer from "../helpers/ContentContainer/ContentContainer";
 function Acknowledgements() {
   return (
     <>
-      <div style={{ width: "100%", height: "50vh" }}></div>
-      <ContentContainer withFullScreenHeight={true}>
+      <div className="content-wrapper"></div>
+      <ContentContainer>
         <div className="acknowledgements-container">
           <div>
             <div className="acknowledgements-content">

@@ -6,4 +6,5 @@
    *  This is only a problem when the screen becomes smaller 
    * */
   height: 600vh;
+  height: calc(var(--vh, 1vh) * 600);
 }

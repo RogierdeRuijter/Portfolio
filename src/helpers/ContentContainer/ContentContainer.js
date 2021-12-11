@@ -2,13 +2,7 @@ import "./ContentContainer.css";
 
 function ContentContainer(props) {
   return (
-    <div
-      id={props.id}
-      className="content-container"
-      style={{
-        minHeight: props.withFullScreenHeight ? "100vh" : "",
-      }}
-    >
+    <div id={props.id} className="content-container">
       {props.children}
     </div>
   );

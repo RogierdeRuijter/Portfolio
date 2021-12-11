@@ -2,6 +2,7 @@
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   max-height: 80vh;
+  max-height: calc(var(--vh, 1vh) * 80);
   background-color: lightgray;
 }
 
