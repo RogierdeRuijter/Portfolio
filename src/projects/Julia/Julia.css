@@ -1,4 +1,5 @@
-#julia-container .iframe-size {
+.iframe-size {
   width: 100%;
+
   /* The height is set through a script in the index file */
 }
