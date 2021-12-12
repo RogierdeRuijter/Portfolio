@@ -199,11 +199,6 @@
       }
 
       document.addEventListener("DOMContentLoaded", function () {
-        const juliaIframeHeight = document.getElementById("julia-iframe");
-        const defaultHeight = "5000px";
-
-        juliaIframeHeight.height = defaultHeight;
-
         window.addEventListener("message", gotResizeMessage, false);
       }); //on DOM ready
     </script>
