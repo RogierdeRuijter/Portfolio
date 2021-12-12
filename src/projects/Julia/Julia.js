@@ -1,8 +1,25 @@
 import "./Julia.css";
 import ContentContainer from "../../helpers/ContentContainer/ContentContainer";
 import Waveform from "../../helpers/Waveform/Waveform";
+import { useLayoutEffect } from "react";
 
 const Julia = () => {
+  useLayoutEffect(() => {
+    function getResizeMessage(event) {
+      var juliaIframe = document.getElementById("julia-iframe");
+      if (juliaIframe.contentWindow === event.source) {
+        juliaIframe.height = Number(event.data.height);
+
+        return 1;
+      }
+    }
+
+    window.addEventListener("message", getResizeMessage, false);
+
+    return () => {
+      window.removeEventListener("message", getResizeMessage);
+    };
+  }, []);
   return (
     <>
       <div className="project-introduction">
