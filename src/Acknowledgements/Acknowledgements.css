@@ -1,7 +1,11 @@
+.acknowledgements-spacer {
+  height: 50vh;
+}
+
 .acknowledgements-container {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   width: 100%;
   min-height: 100vh;
 }

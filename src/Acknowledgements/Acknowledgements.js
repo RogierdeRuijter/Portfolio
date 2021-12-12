@@ -3,6 +3,7 @@ import "./Acknowledgements.css";
 function Acknowledgements() {
   return (
     <>
+      <div className="acknowledgements-spacer"></div>
       <div className="acknowledgements-container">
         <div className="acknowledgements-content">
           <div>
