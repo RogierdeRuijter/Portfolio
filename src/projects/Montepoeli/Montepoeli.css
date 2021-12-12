@@ -2,19 +2,12 @@
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   max-height: 80vh;
-  max-height: calc(var(--vh, 1vh) * 80);
   background-color: lightgray;
 }
 
 #montepoeli-content {
-  grid-area: 1/1;
   display: flex;
   justify-content: center;
-}
-
-#description {
-  grid-area: 2/1;
-  margin-top: 20px;
 }
 
 figcaption {
