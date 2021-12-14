@@ -12,15 +12,19 @@ const Waveform = ({ project }) => {
   const [wavesurfer, setWavesurfer] = useState();
   const [playing, setPlaying] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
-    setWavesurfer(
-      WaveSurfer.create({
-        container: `#waveform-${project}`,
-        barHeight: 5,
-        progressColor: "palegreen",
-      })
-    );
+    const waveformContainer = document.getElementById(`waveform-${project}`);
+    if (waveformContainer) {
+      setWavesurfer(
+        WaveSurfer.create({
+          container: `#waveform-${project}`,
+          barHeight: 5,
+          progressColor: "palegreen",
+        })
+      );
+    }
     // TODO: find a way to offload the wavelength dom element.
     //  When the component hot reloads a duplicate of the waveform occurs
   }, [project]);
@@ -33,6 +37,10 @@ const Waveform = ({ project }) => {
 
     wavesurfer?.on("ready", () => {
       setLoading(false);
+    });
+
+    wavesurfer?.on("error", () => {
+      setError(true);
     });
   }, [wavesurfer]);
 
@@ -65,32 +73,36 @@ const Waveform = ({ project }) => {
   };
 
   return (
-    <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: "45px auto",
-        alignItems: "center",
-      }}
-    >
-      <a onClick={toggleAudio}>
-        <button
-          disabled={loading}
+    <>
+      {!error && (
+        <div
           style={{
-            borderColor: `transparent transparent transparent ${
-              loading ? "lightgray" : "palegreen"
-            }`,
+            display: "grid",
+            gridTemplateColumns: "45px auto",
+            alignItems: "center",
           }}
-          className={`play-pause-button ${playing ? "pause" : ""}`}
-        ></button>
-      </a>
-      <div
-        id={"waveform-" + project}
-        style={{
-          width: "100%",
-          backgroundColor: loading ? "lightgray" : "unset",
-        }}
-      ></div>
-    </div>
+        >
+          <a onClick={toggleAudio}>
+            <button
+              disabled={loading}
+              style={{
+                borderColor: `transparent transparent transparent ${
+                  loading ? "lightgray" : "palegreen"
+                }`,
+              }}
+              className={`play-pause-button ${playing ? "pause" : ""}`}
+            ></button>
+          </a>
+          <div
+            id={"waveform-" + project}
+            style={{
+              width: "100%",
+              backgroundColor: loading ? "lightgray" : "unset",
+            }}
+          ></div>
+        </div>
+      )}
+    </>
   );
 };
 
