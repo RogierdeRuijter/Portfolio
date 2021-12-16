@@ -43,7 +43,7 @@ progress[value]::-webkit-progress-value {
 }
 
 #progress {
-  height: 2px;
+  height: 4px;
   vertical-align: 0;
   width: 100%;
 }
