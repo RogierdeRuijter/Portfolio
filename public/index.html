@@ -46,14 +46,18 @@
       document.documentElement.style.setProperty("--vh", `${vh}px`);
     </script>
     <style>
+      body {
+        box-sizing: border-box;
+      }
       #welcome-wrapper {
         display: flex;
         justify-content: center;
-      }
-      #welcome-content-container {
-        max-width: 1200px;
         padding-left: 16px;
         padding-right: 16px;
+      }
+      #welcome-content-container {
+        width: 100%;
+        max-width: 1200px;
       }
       #welcome-container {
         position: relative;
@@ -126,21 +130,32 @@
         max-width: 100%;
       }
 
+      /* Using a class selector the style does not get applied, not sure why. only this one isn't the other once are respected. */
+      video {
+        max-width: 100%;
+      }
+
       .myVideo {
         border-radius: 8px;
         background-color: lightgray;
         aspect-ratio: 16/9;
+      }
+
+      #welcome-video-container {
+        width: 100%;
+        max-width: 600px;
+
+        aspect-ratio: 16/9;
+        border-radius: 8px;
+        background-color: lightgray;
+        overflow: hidden;
       }
     </style>
     <div id="welcome-wrapper">
       <div id="welcome-content-container">
         <div id="welcome-container">
           <div id="my-introduction">Rogier</div>
-          <div>
-            <video class="myVideo" autoplay playsinline muted loop width="600">
-              <source src="Film.mp4" type="video/mp4" />
-            </video>
-          </div>
+          <div id="welcome-video-container"></div>
           <div id="scroll-down-element">
             <span id="scroll-down-element-line"></span>
             <span id="scroll-down-element-text">Scroll</span>
@@ -163,6 +178,29 @@
         Loading...
       </div>
     </div>
+    <script>
+      const container = document.getElementById("welcome-video-container");
+
+      const imageTag = document.createElement("img");
+      imageTag.src = "Film.mp4";
+      imageTag.style.maxWidth = "100%";
+
+      imageTag.onload = () => {
+        container.appendChild(imageTag);
+      };
+
+      imageTag.onerror = () => {
+        const videoTag = document.createElement("video");
+        videoTag.src = "Film.mp4";
+        videoTag.muted = true;
+        videoTag.autoplay = true;
+        videoTag.loop = true;
+        videoTag.width = 600;
+        videoTag.setAttribute("playsinline", "");
+
+        container.appendChild(videoTag);
+      };
+    </script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
   </body>
 </html>
