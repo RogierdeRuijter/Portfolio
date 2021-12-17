@@ -42,7 +42,13 @@ const App = () => {
         </div>
         {showContactInfo && (
           <div id="contact-info">
-            📧 <div>rogierderuijter@hotmail.com</div>
+            <a
+              className="info-element"
+              href="mailto:rogierderuijter@hotmail.com"
+              label="rogierderuijter.com"
+            >
+              📧 Contact me
+            </a>
           </div>
         )}
         <FishRace />
