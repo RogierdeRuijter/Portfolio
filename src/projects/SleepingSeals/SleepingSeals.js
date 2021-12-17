@@ -12,6 +12,7 @@ function SleepingTumblrSeals() {
         id="sleeping-tumblr-seals-iframe"
         title="sleeping-tumblr-seals"
         className="iframe-size"
+        loading="lazy"
         src="https://rogierderuijter.github.io/sleeping-seals-with-celebirty-qoutes"
         frameBorder="0"
       ></iframe>

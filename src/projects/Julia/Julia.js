@@ -30,6 +30,7 @@ const Julia = () => {
           id="julia-iframe"
           title="julia"
           className="iframe-size"
+          loading="lazy"
           src="https://rogierderuijter.github.io/julia/"
           frameBorder="0"
         ></iframe>
