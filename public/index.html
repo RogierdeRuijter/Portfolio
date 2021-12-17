@@ -138,12 +138,20 @@
         background-color: lightgray;
         overflow: hidden;
       }
+
+      .myVideo {
+        border-radius: 8px;
+      }
     </style>
     <div id="welcome-wrapper">
       <div id="welcome-content-container">
         <div id="welcome-container">
           <div id="my-introduction">Rogier</div>
-          <div id="welcome-video-container"></div>
+          <div id="welcome-video-container">
+            <video class="myVideo" autoplay playsinline muted loop width="600">
+              <source src="Film.mp4" type="video/mp4" />
+            </video>
+          </div>
           <div id="scroll-down-element">
             <span id="scroll-down-element-line"></span>
             <span id="scroll-down-element-text">Scroll</span>
@@ -166,29 +174,6 @@
         Loading...
       </div>
     </div>
-    <script>
-      const container = document.getElementById("welcome-video-container");
-
-      const imageTag = document.createElement("img");
-      imageTag.src = "Film.mp4";
-      imageTag.style.maxWidth = "100%";
-
-      imageTag.onload = () => {
-        container.appendChild(imageTag);
-      };
-
-      imageTag.onerror = () => {
-        const videoTag = document.createElement("video");
-        videoTag.src = "Film.mp4";
-        videoTag.muted = true;
-        videoTag.autoplay = true;
-        videoTag.loop = true;
-        videoTag.width = 600;
-        videoTag.setAttribute("playsinline", "");
-
-        container.appendChild(videoTag);
-      };
-    </script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
   </body>
 </html>
