@@ -38,7 +38,6 @@
     </script>
   </head>
   <body style="margin: 0">
-    <noscript>You need to enable JavaScript to run this app.</noscript>
     <script>
       // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
       let vh = window.innerHeight * 0.01;
@@ -151,7 +150,15 @@
         <div id="welcome-container">
           <div id="my-introduction">Rogier</div>
           <div id="welcome-video-container">
-            <video class="myVideo" autoplay playsinline muted loop width="600">
+            <video
+              class="myVideo"
+              autoplay
+              playsinline
+              muted
+              loop
+              width="600"
+              preload="auto"
+            >
               <source src="Film.mp4" type="video/mp4" />
             </video>
           </div>

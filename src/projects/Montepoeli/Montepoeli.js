@@ -73,7 +73,7 @@ function Montepoeli() {
     >
       <div id="montepoeli-content">
         <figure id="montepoli-figure">
-          <video playsInline muted id="montepoeli-video">
+          <video playsInline muted id="montepoeli-video" preload="metadata">
             {/* TODO: add additional video qualites */}
             <source src={montepoeliVideo} type="video/mp4" />
           </video>
