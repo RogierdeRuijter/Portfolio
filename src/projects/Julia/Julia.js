@@ -1,9 +1,19 @@
 import "./Julia.css";
 import ContentContainer from "../../helpers/ContentContainer/ContentContainer";
 import Waveform from "../../helpers/Waveform/Waveform";
-import { useLayoutEffect } from "react";
+import { useLayoutEffect, useState, useEffect } from "react";
 
 const Julia = () => {
+  const [iframeUrl, setIframeUrl] = useState();
+
+  useEffect(() => {
+    let timerFunc = setTimeout(() => {
+      setIframeUrl("https://rogierderuijter.github.io/julia/");
+    }, 1500);
+
+    return () => clearTimeout(timerFunc);
+  }, []);
+
   useLayoutEffect(() => {
     function getResizeMessage(event) {
       var juliaIframe = document.getElementById("julia-iframe");
@@ -31,7 +41,7 @@ const Julia = () => {
           title="julia"
           className="iframe-size"
           loading="lazy"
-          src="https://rogierderuijter.github.io/julia/"
+          src={iframeUrl}
           frameBorder="0"
         ></iframe>
         <Waveform project="julia" />
