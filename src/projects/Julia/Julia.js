@@ -40,7 +40,6 @@ const Julia = () => {
           id="julia-iframe"
           title="julia"
           className="iframe-size"
-          loading="lazy"
           src={iframeUrl}
           frameBorder="0"
         ></iframe>
