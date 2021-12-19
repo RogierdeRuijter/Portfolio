@@ -30,7 +30,13 @@
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
-        dataLayer.push(arguments);
+        if (window.location.href.includes("localhost")) {
+          console.groupCollapsed("gtag arguments");
+          console.log(arguments);
+          console.groupEnd();
+        } else {
+          dataLayer.push(arguments);
+        }
       }
       gtag("js", new Date());
 

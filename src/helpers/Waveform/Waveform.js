@@ -75,7 +75,6 @@ const Waveform = ({ project }) => {
   const toggleAudio = () => {
     setPlaying(!playing);
     wavesurfer.playPause();
-    console.log(!playing);
 
     // Audio going to be played
     if (!playing) {
