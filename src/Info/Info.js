@@ -7,6 +7,11 @@ function Info() {
         <a
           className="info-element"
           href="https://github.com/RogierdeRuijter"
+          onClick={() => {
+            gtag("event", "projects-click", {
+              event_category: "engagement",
+            });
+          }}
           target="_blank"
           style={{ marginRight: "32px" }}
         >
