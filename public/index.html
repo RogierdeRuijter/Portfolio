@@ -54,7 +54,6 @@
       body {
         box-sizing: border-box;
       }
-
       #root {
         margin-bottom: calc(100vh - calc(var(--vh, 1vh) * 100));
       }
@@ -132,10 +131,9 @@
       #my-introduction {
         font-size: max(5vw, 40px);
         font-weight: 500;
-        flex-grow: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        text-align: center;
+        position: absolute;
+        top: 10%;
       }
 
       /* TODO: move this style to the montepoeli video tag */
@@ -173,11 +171,9 @@
               <source src="Film.mp4" type="video/mp4" />
             </video>
           </div>
-          <div style="flex-grow: 1; width: 100%">
-            <div id="scroll-down-element">
-              <span id="scroll-down-element-line"></span>
-              <span id="scroll-down-element-text">Scroll</span>
-            </div>
+          <div id="scroll-down-element">
+            <span id="scroll-down-element-line"></span>
+            <span id="scroll-down-element-text">Scroll</span>
           </div>
         </div>
       </div>
@@ -203,7 +199,7 @@
 
       const hiddenScreenPixels = Number(style.marginBottom.slice(0, -2));
       const fullScreenVh = (window.innerHeight + hiddenScreenPixels) * 0.01;
-      
+
       document.documentElement.style.setProperty(
         "--full-screen-vh",
         `${fullScreenVh}px`
