@@ -54,6 +54,9 @@
       body {
         box-sizing: border-box;
       }
+      #root {
+        margin-bottom: calc(100vh - calc(var(--vh, 1vh) * 100));
+      }
       #welcome-wrapper {
         display: flex;
         justify-content: center;
@@ -190,6 +193,21 @@
         Loading...
       </div>
     </div>
+    <script>
+      var p = document.getElementById("root");
+      var style = p.currentStyle || window.getComputedStyle(p);
+
+      const hiddenScreenPixels = Number(style.marginBottom.slice(0, -2));
+      const fullScreenVh = (window.innerHeight + hiddenScreenPixels) * 0.01;
+
+      document.documentElement.style.setProperty(
+        "--full-screen-vh",
+        `${fullScreenVh}px`
+      );
+
+      // Reset it
+      p.style.marginBottom = 0;
+    </script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
   </body>
 </html>
