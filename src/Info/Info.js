@@ -8,8 +8,9 @@ function Info() {
           className="info-element"
           href="https://github.com/RogierdeRuijter"
           onClick={() => {
-            gtag("event", "projects-click", {
-              event_category: "engagement",
+            gtag("event", "click", {
+              event_category: "external-links",
+              event_label: "projects",
             });
           }}
           target="_blank"
@@ -34,8 +35,9 @@ function Info() {
           className="info-element"
           href="https://medium.com/@vsfhtvjshn"
           onClick={() => {
-            gtag("event", "blog-click", {
-              event_category: "engagement",
+            gtag("event", "click", {
+              event_category: "external-links",
+              event_label: "blog",
             });
           }}
           target="_blank"

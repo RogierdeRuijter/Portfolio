@@ -33,6 +33,11 @@ const Waveform = ({ project }) => {
     wavesurfer?.on("finish", () => {
       setPlaying(false);
       wavesurfer.seekTo(0);
+      gtag("event", "pause", {
+        event_category: "audio-messages",
+        event_label: project,
+        event_value: 100,
+      });
     });
 
     wavesurfer?.on("ready", () => {
@@ -70,6 +75,25 @@ const Waveform = ({ project }) => {
   const toggleAudio = () => {
     setPlaying(!playing);
     wavesurfer.playPause();
+    console.log(!playing);
+
+    // Audio going to be played
+    if (!playing) {
+      gtag("event", "play", {
+        event_category: "audio-messages",
+        event_label: project,
+      });
+    } else {
+      gtag("event", "pause", {
+        event_category: "audio-messages",
+        event_label: project,
+        event_value: Math.round(
+          (Math.round(wavesurfer.getCurrentTime()) /
+            Math.round(wavesurfer.getDuration())) *
+            100
+        ),
+      });
+    }
   };
 
   return (
