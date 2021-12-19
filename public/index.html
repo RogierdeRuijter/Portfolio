@@ -31,7 +31,7 @@
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         if (window.location.href.includes("localhost")) {
-          console.group("gtag arguments");
+          console.groupCollapsed("gtag arguments");
           console.log(arguments);
           console.groupEnd();
         } else {
