@@ -33,6 +33,11 @@ function Info() {
         <a
           className="info-element"
           href="https://medium.com/@vsfhtvjshn"
+          onClick={() => {
+            gtag("event", "blog-click", {
+              event_category: "engagement",
+            });
+          }}
           target="_blank"
         >
           <img src="https://img.icons8.com/ios/150/000000/medium-logo.png" />
