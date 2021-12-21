@@ -54,6 +54,8 @@ function Montepoeli() {
   }, []);
 
   useEffect(() => {
+    // If this implementation causes issues it can be refactored to use the useRef approved seen in the
+    // Waveform component. For now this is good enough
     const videoElement = document.querySelector("#montepoeli-video");
 
     const options = {
