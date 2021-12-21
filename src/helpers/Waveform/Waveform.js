@@ -5,14 +5,49 @@ import montepoeliAudio from "../../assets/comment-montepoeli.mp3";
 import getLowAudio from "../../assets/comment-get-low.mp3";
 import sleepingSealsAudio from "../../assets/comment-sleeping-seals.mp3";
 import juliaAudio from "../../assets/comment-julia.mp3";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import "./Waveform.css";
+
+const options = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0,
+};
 
 const Waveform = ({ project }) => {
   const [wavesurfer, setWavesurfer] = useState();
+  const wavesurferRef = useRef(null);
+
   const [playing, setPlaying] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
+
+  useEffect(() => {
+    function handleWavesurferIntersection(entries) {
+      entries.forEach((entry) => {
+        if (entry.intersectionRatio === 0) {
+          if (wavesurfer?.isPlaying()) {
+            wavesurfer?.pause();
+            setPlaying(false);
+            // TODO: maybe reset back to zero, but not sure about that
+          }
+        }
+      });
+    }
+    const observer = new IntersectionObserver(
+      handleWavesurferIntersection,
+      options
+    );
+    if (wavesurferRef.current) {
+      observer.observe(wavesurferRef.current);
+    }
+
+    return () => {
+      if (wavesurferRef.current) {
+        observer.unobserve(wavesurferRef.current);
+      }
+    };
+  }, [project, wavesurfer]);
 
   useEffect(() => {
     const waveformContainer = document.getElementById(`waveform-${project}`);
@@ -27,6 +62,7 @@ const Waveform = ({ project }) => {
     }
     // TODO: find a way to offload the wavelength dom element.
     //  When the component hot reloads a duplicate of the waveform occurs
+    //  UPDATE: maybe useRef can be used to create the WaveSurfer object instead of the direct element by id
   }, [project]);
 
   useEffect(() => {
@@ -118,6 +154,7 @@ const Waveform = ({ project }) => {
           </a>
           <div
             id={"waveform-" + project}
+            ref={wavesurferRef}
             style={{
               width: "100%",
               backgroundColor: loading ? "lightgray" : "unset",
