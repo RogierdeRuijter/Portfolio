@@ -38,9 +38,16 @@
           dataLayer.push(arguments);
         }
       }
+
+      gtag("consent", "default", {
+        ad_storage: "denied",
+      });
+
       gtag("js", new Date());
 
-      gtag("config", "G-MG9RL470BY");
+      gtag("config", "G-MG9RL470BY", {
+        anonymize_ip: true,
+      });
     </script>
   </head>
   <body style="margin: 0">
