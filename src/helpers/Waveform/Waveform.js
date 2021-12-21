@@ -62,6 +62,7 @@ const Waveform = ({ project }) => {
     }
     // TODO: find a way to offload the wavelength dom element.
     //  When the component hot reloads a duplicate of the waveform occurs
+    //  UPDATE: maybe useRef can be used to create the WaveSurfer object instead of the direct element by id
   }, [project]);
 
   useEffect(() => {
