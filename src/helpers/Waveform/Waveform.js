@@ -108,27 +108,22 @@ const Waveform = ({ project }) => {
     wavesurfer?.load(projectAudioFile);
   }, [wavesurfer, project]);
 
+  const getCurrentTimeInPercentages = () =>
+    Math.round(
+      (Math.round(wavesurfer?.getCurrentTime()) /
+        Math.round(wavesurfer?.getDuration())) *
+        100
+    );
+
   const toggleAudio = () => {
     setPlaying(!playing);
     wavesurfer.playPause();
 
-    // Audio going to be played
-    if (!playing) {
-      gtag("event", "play", {
-        event_category: "audio-messages",
-        event_label: project,
-      });
-    } else {
-      gtag("event", "pause", {
-        event_category: "audio-messages",
-        event_label: project,
-        event_value: Math.round(
-          (Math.round(wavesurfer.getCurrentTime()) /
-            Math.round(wavesurfer.getDuration())) *
-            100
-        ),
-      });
-    }
+    gtag("event", !playing ? "play" : "pause", {
+      event_category: "audio-messages",
+      event_label: project,
+      event_value: getCurrentTimeInPercentages(),
+    });
   };
 
   return (
