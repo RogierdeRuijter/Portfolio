@@ -120,9 +120,8 @@ const Waveform = ({ project }) => {
     wavesurfer.playPause();
 
     gtag("event", !playing ? "play" : "pause", {
-      event_category: "audio-messages",
-      event_label: project,
-      event_value: getCurrentTimeInPercentages(),
+      event_category: project,
+      event_label: getCurrentTimeInPercentages(),
     });
   };
 
