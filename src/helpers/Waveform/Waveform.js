@@ -8,12 +8,6 @@ import juliaAudio from "../../assets/comment-julia.mp3";
 import { useEffect, useState, useRef } from "react";
 import "./Waveform.css";
 
-const options = {
-  root: null,
-  rootMargin: "0px",
-  threshold: 0,
-};
-
 const Waveform = ({ project }) => {
   const [wavesurfer, setWavesurfer] = useState();
   const wavesurferRef = useRef(null);
@@ -21,6 +15,7 @@ const Waveform = ({ project }) => {
   const [playing, setPlaying] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
+  const [observer, setObserver] = useState();
 
   useEffect(() => {
     function handleWavesurferIntersection(entries) {
@@ -34,19 +29,16 @@ const Waveform = ({ project }) => {
         }
       });
     }
-    const observer = new IntersectionObserver(
-      handleWavesurferIntersection,
-      options
-    );
-    if (wavesurferRef.current) {
-      observer.observe(wavesurferRef.current);
-    }
 
-    return () => {
-      if (wavesurferRef.current) {
-        observer.unobserve(wavesurferRef.current);
-      }
-    };
+    if (wavesurferRef.current) {
+      setObserver(
+        new IntersectionObserver(handleWavesurferIntersection, {
+          root: null,
+          rootMargin: "0px",
+          threshold: 0,
+        })
+      );
+    }
   }, [project, wavesurfer]);
 
   useEffect(() => {
@@ -69,6 +61,9 @@ const Waveform = ({ project }) => {
     wavesurfer?.on("finish", () => {
       setPlaying(false);
       wavesurfer.seekTo(0);
+
+      observer.unobserve(wavesurferRef.current);
+
       gtag("event", "pause", {
         event_category: "audio-messages",
         event_label: project,
@@ -118,6 +113,12 @@ const Waveform = ({ project }) => {
   const toggleAudio = () => {
     setPlaying(!playing);
     wavesurfer.playPause();
+
+    if (!playing) {
+      observer.observe(wavesurferRef.current);
+    } else {
+      observer.unobserve(wavesurferRef.current);
+    }
 
     gtag("event", !playing ? "play" : "pause", {
       event_category: project,
