@@ -168,6 +168,7 @@
           <div id="my-introduction">Rogier</div>
           <div id="welcome-video-container">
             <video
+              id="face-video"
               class="myVideo"
               autoplay
               playsinline
@@ -224,6 +225,25 @@
       };
 
       window.addEventListener("scroll", hideText);
+    </script>
+    <script>
+      const faceVideo = document.getElementById("face-video");
+
+      function handlePlayPauseFaceVideo(entries) {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting === true) {
+            faceVideo.play();
+          } else {
+            faceVideo.pause();
+          }
+        });
+      }
+      const observer = new IntersectionObserver(handlePlayPauseFaceVideo, {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0,
+      });
+      observer.observe(faceVideo);
     </script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
   </body>
