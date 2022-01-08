@@ -9,19 +9,16 @@
   max-width: 1200px;
 }
 
-.project-introduction {
+.sentence-about-me {
   width: 100%;
-  height: 100vh;
-  height: calc(var(--full-screen-vh, 1vh) * 100);
+  height: 150vh;
+  height: calc(var(--full-screen-vh, 1vh) * 150);
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
-}
-
-.project-introduction div {
-  font-size: max(4vw, 32px);
+  /* TODO: add media for adaptable text size */
+  font-size: 32px;
   font-weight: 400;
-  margin-bottom: 22%;
 }
 
 #info-icon {

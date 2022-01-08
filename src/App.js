@@ -29,12 +29,30 @@ const App = () => {
   return (
     <div id="content-container">
       <div id="project-content">
+        <section className="sentence-about-me">
+          I was made in Amsterdam.
+        </section>
         <FishRace />
+        <section className="sentence-about-me">
+          I wish there were better tools for writing code on a mobile phone.
+        </section>
         <CircleGame />
+        <section className="sentence-about-me">
+          I believe the focus should never be on what framework is used to build
+          a website.
+        </section>
         <Montepoeli />
+        <section className="sentence-about-me">
+          The environment should be my number 1 priority.
+        </section>
         <GetLow />
+        <section className="sentence-about-me">
+          Don’t get it right. Get it true.
+        </section>
         <SleepingTumblrSeals />
+        <section className="sentence-about-me"></section>
         <Julia />
+        <section className="sentence-about-me"></section>
         <Acknowledgements />
         <Info />
       </div>
