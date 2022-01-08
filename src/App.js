@@ -47,12 +47,13 @@ const App = () => {
         </section>
         <GetLow />
         <section className="sentence-about-me">
-          Don’t get it right. Get it true.
+          Tickets cripple innovation.
         </section>
         <SleepingTumblrSeals />
-        <section className="sentence-about-me"></section>
+        <section className="sentence-about-me">
+          Don’t get it right. Get it true.
+        </section>
         <Julia />
-        <section className="sentence-about-me"></section>
         <Acknowledgements />
         <Info />
       </div>
