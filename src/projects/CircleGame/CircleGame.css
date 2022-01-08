@@ -3,7 +3,3 @@
   height: 80%;
   background-color: lightgray;
 }
-
-#circle-game-container iframe {
-  border-radius: 8px;
-}
