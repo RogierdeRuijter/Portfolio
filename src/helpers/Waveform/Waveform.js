@@ -134,6 +134,8 @@ const Waveform = ({ project }) => {
             display: "grid",
             gridTemplateColumns: "45px auto",
             alignItems: "center",
+            marginLeft: "16px",
+            marginRight: "16px",
           }}
         >
           <a onClick={toggleAudio}>
