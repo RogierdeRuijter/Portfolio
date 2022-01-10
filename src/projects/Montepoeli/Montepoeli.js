@@ -72,6 +72,9 @@ function Montepoeli() {
     <ContentWithAudioContainer
       id="montepoeli-content-container"
       title={"Montepoeli"}
+      description={
+        "De app die ik gemaakt heb voor de schaakclub waar ik in zit. Deze club is ontstaan in het prachtige montepoelchiano, Italië.  We kunnen hier de wedstrijden bijhouden en de regels van de club opslaan."
+      }
     >
       <div id="montepoeli-content">
         <figure id="montepoli-figure">

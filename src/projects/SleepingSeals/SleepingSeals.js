@@ -7,6 +7,7 @@ function SleepingTumblrSeals() {
     <ContentWithAudioContainer
       id="sleeping-seals-container"
       title="Sad Sleeping Seals"
+      description={"Quotes en zeehonden. What else."}
     >
       <iframe
         id="sleeping-tumblr-seals-iframe"

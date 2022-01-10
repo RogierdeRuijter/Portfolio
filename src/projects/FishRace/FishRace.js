@@ -4,7 +4,13 @@ import Waveform from "../../helpers/Waveform/Waveform";
 
 function FishRace() {
   return (
-    <ContentWithAudioContainer id="fish-race-container" title={"Fish race"}>
+    <ContentWithAudioContainer
+      id="fish-race-container"
+      title={"Fish race"}
+      description={
+        "Toen ik 7 was zag ik dit spel op konningendag. 4 vissen die tegen elkaar racen. Ik ben het nooit meer vergeten. Nu kan ik het elke dag spelen"
+      }
+    >
       <iframe
         id="fish-race-iframe"
         title="fish-race"

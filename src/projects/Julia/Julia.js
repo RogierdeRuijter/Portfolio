@@ -33,7 +33,13 @@ const Julia = () => {
   return (
     <>
       <div className="project-introduction">
-        <div>Julia</div>
+        <div id="container">
+          <div id="title">Julia</div>
+          <div>
+            Collection of images of my time with you. I am sorry we couldn’t
+            figure it out.
+          </div>
+        </div>
       </div>
       <ContentContainer id="julia-container">
         <iframe

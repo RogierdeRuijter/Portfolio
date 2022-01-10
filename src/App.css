@@ -19,8 +19,10 @@
 }
 
 .project-introduction #container {
-  margin-bottom: 22%;
+  margin-bottom: 18%;
   max-width: 800px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .project-introduction #title {
