@@ -18,10 +18,15 @@
   justify-content: center;
 }
 
-.project-introduction div {
+.project-introduction #container {
+  margin-bottom: 22%;
+  max-width: 800px;
+}
+
+.project-introduction #title {
+  text-align: center;
   font-size: max(4vw, 32px);
   font-weight: 400;
-  margin-bottom: 22%;
 }
 
 #info-icon {
