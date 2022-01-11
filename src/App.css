@@ -6,6 +6,9 @@
 }
 
 #project-content {
+  /* TODO: the max-width here should probably be 800px because I do not want it to go bigger then that
+    if it does it is possible that the iframes start scrolling. The width of the container is ultimatly 
+    determined by widest iframe. But that logic is not really clear right now */
   max-width: 1200px;
 }
 
