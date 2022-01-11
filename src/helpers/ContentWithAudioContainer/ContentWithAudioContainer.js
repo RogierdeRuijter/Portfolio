@@ -1,11 +1,10 @@
 import "./ContentWithAudioContainer.css";
+import ProjectTitle from "../ProjectTitle/ProjectTitle";
 
 function ContentWithAudioContainer({ id, title, children }) {
   return (
     <>
-      <div className="project-introduction">
-        <div>{title}</div>
-      </div>
+      <ProjectTitle title={title} />
       <div id={id} className="content-container-with-description">
         {children}
       </div>
