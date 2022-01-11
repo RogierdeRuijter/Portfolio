@@ -1,6 +1,7 @@
 import "./Julia.css";
 import ContentContainer from "../../helpers/ContentContainer/ContentContainer";
 import Waveform from "../../helpers/Waveform/Waveform";
+import ProjectTitle from "../../helpers/ProjectTitle/ProjectTitle";
 import { useLayoutEffect, useState, useEffect } from "react";
 
 const Julia = () => {
@@ -32,9 +33,7 @@ const Julia = () => {
   }, []);
   return (
     <>
-      <div className="project-introduction">
-        <div>Julia</div>
-      </div>
+      <ProjectTitle title={"Julia"} />
       <ContentContainer id="julia-container">
         <iframe
           id="julia-iframe"
