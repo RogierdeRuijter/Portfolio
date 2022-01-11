@@ -10,7 +10,6 @@
 }
 
 .sentence-about-me {
-  width: 100%;
   max-width: 800px;
   height: 150vh;
   height: calc(var(--full-screen-vh, 1vh) * 150);
