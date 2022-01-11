@@ -17,9 +17,3 @@
     font-size: 32px;
   }
 }
-
-@media (max-width: 700px) {
-  .project-title {
-    font-size: 24px;
-  }
-}
