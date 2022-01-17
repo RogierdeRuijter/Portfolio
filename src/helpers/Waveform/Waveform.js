@@ -49,6 +49,7 @@ const Waveform = ({ project }) => {
           container: `#waveform-${project}`,
           barHeight: 5,
           progressColor: "palegreen",
+          height: 64,
         })
       );
     }
@@ -82,6 +83,7 @@ const Waveform = ({ project }) => {
 
   useEffect(() => {
     let projectAudioFile;
+    console.log(project);
     if (project === "fish-race") {
       projectAudioFile = fishRaceAudio;
     }
@@ -136,6 +138,8 @@ const Waveform = ({ project }) => {
             alignItems: "center",
             marginLeft: "16px",
             marginRight: "16px",
+            // TODO: would be nicer if the marginBottom was in the consumer
+            marginBottom: "16px",
           }}
         >
           <a onClick={toggleAudio}>

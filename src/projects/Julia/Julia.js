@@ -35,6 +35,7 @@ const Julia = () => {
     <>
       <ProjectTitle title={"Julia"} />
       <ContentContainer id="julia-container">
+        <Waveform project="julia" />
         <iframe
           id="julia-iframe"
           title="julia"
@@ -42,7 +43,6 @@ const Julia = () => {
           src={iframeUrl}
           frameBorder="0"
         ></iframe>
-        <Waveform project="julia" />
       </ContentContainer>
     </>
   );

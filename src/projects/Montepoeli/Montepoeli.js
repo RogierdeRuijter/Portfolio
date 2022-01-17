@@ -8,6 +8,7 @@ let intervalPointer;
 
 const isVideoPlaying = (video) =>
   !!(
+    video &&
     video.currentTime > 0 &&
     !video.paused &&
     !video.ended &&
@@ -71,7 +72,8 @@ function Montepoeli() {
   return (
     <ContentWithAudioContainer
       id="montepoeli-content-container"
-      title={"Montepoeli"}
+      title="Montepoeli"
+      project="montepoeli"
     >
       <div id="montepoeli-content">
         <figure id="montepoli-figure">
@@ -85,9 +87,6 @@ function Montepoeli() {
             </progress>
           </figcaption>
         </figure>
-      </div>
-      <div id="description">
-        <Waveform project="montepoeli" />
       </div>
     </ContentWithAudioContainer>
   );
