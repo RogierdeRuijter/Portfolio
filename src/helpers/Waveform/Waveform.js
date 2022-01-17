@@ -9,7 +9,6 @@ import { useEffect, useState } from "react";
 import "./Waveform.css";
 
 const Waveform = ({ project, containerRef }) => {
-  console.log(containerRef);
   const [wavesurfer, setWavesurfer] = useState();
 
   const [playing, setPlaying] = useState(false);
