@@ -33,7 +33,7 @@ const Julia = () => {
     };
   }, []);
   return (
-    <>
+    <div ref={containerRef}>
       <ProjectTitle title={"Julia"} />
       <ContentContainer id="julia-container">
         <Waveform project="julia" containerRef={containerRef} />
@@ -45,7 +45,7 @@ const Julia = () => {
           frameBorder="0"
         ></iframe>
       </ContentContainer>
-    </>
+    </div>
   );
 };
 
