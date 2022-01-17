@@ -8,8 +8,6 @@
   justify-content: center;
 
   width: 100%;
-  height: 15vh;
-  height: calc(var(--full-screen-vh, 1vh) * 15);
 }
 
 @media (max-width: 1024px) {

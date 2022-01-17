@@ -1,10 +1,13 @@
 import "./FishRace.css";
 import ContentWithAudioContainer from "../../helpers/ContentWithAudioContainer/ContentWithAudioContainer";
-import Waveform from "../../helpers/Waveform/Waveform";
 
 function FishRace() {
   return (
-    <ContentWithAudioContainer id="fish-race-container" title={"Fish race"}>
+    <ContentWithAudioContainer
+      id="fish-race-container"
+      title="Fish race"
+      project="fish-race"
+    >
       <iframe
         id="fish-race-iframe"
         title="fish-race"
@@ -13,7 +16,6 @@ function FishRace() {
         loading="lazy"
         frameBorder="0"
       ></iframe>
-      <Waveform project="fish-race" />
     </ContentWithAudioContainer>
   );
 }

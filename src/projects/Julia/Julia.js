@@ -2,10 +2,11 @@ import "./Julia.css";
 import ContentContainer from "../../helpers/ContentContainer/ContentContainer";
 import Waveform from "../../helpers/Waveform/Waveform";
 import ProjectTitle from "../../helpers/ProjectTitle/ProjectTitle";
-import { useLayoutEffect, useState, useEffect } from "react";
+import { useLayoutEffect, useState, useEffect, useRef } from "react";
 
 const Julia = () => {
   const [iframeUrl, setIframeUrl] = useState();
+  const containerRef = useRef(null);
 
   useEffect(() => {
     let timerFunc = setTimeout(() => {
@@ -32,9 +33,10 @@ const Julia = () => {
     };
   }, []);
   return (
-    <>
+    <div ref={containerRef}>
       <ProjectTitle title={"Julia"} />
       <ContentContainer id="julia-container">
+        <Waveform project="julia" containerRef={containerRef} />
         <iframe
           id="julia-iframe"
           title="julia"
@@ -42,9 +44,8 @@ const Julia = () => {
           src={iframeUrl}
           frameBorder="0"
         ></iframe>
-        <Waveform project="julia" />
       </ContentContainer>
-    </>
+    </div>
   );
 };
 
