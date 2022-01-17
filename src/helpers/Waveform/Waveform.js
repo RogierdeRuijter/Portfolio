@@ -5,12 +5,12 @@ import montepoeliAudio from "../../assets/comment-montepoeli.mp3";
 import getLowAudio from "../../assets/comment-get-low.mp3";
 import sleepingSealsAudio from "../../assets/comment-sleeping-seals.mp3";
 import juliaAudio from "../../assets/comment-julia.mp3";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import "./Waveform.css";
 
-const Waveform = ({ project }) => {
+const Waveform = ({ project, containerRef }) => {
+  console.log(containerRef);
   const [wavesurfer, setWavesurfer] = useState();
-  const wavesurferRef = useRef(null);
 
   const [playing, setPlaying] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -30,7 +30,7 @@ const Waveform = ({ project }) => {
       });
     }
 
-    if (wavesurferRef.current) {
+    if (containerRef.current) {
       setObserver(
         new IntersectionObserver(handleWavesurferIntersection, {
           root: null,
@@ -63,7 +63,7 @@ const Waveform = ({ project }) => {
       setPlaying(false);
       wavesurfer.seekTo(0);
 
-      observer.unobserve(wavesurferRef.current);
+      observer.unobserve(containerRef.current);
 
       gtag("event", "pause", {
         event_category: "audio-messages",
@@ -83,7 +83,6 @@ const Waveform = ({ project }) => {
 
   useEffect(() => {
     let projectAudioFile;
-    console.log(project);
     if (project === "fish-race") {
       projectAudioFile = fishRaceAudio;
     }
@@ -117,9 +116,9 @@ const Waveform = ({ project }) => {
     wavesurfer.playPause();
 
     if (!playing) {
-      observer.observe(wavesurferRef.current);
+      observer.observe(containerRef.current);
     } else {
-      observer.unobserve(wavesurferRef.current);
+      observer.unobserve(containerRef.current);
     }
 
     gtag("event", !playing ? "play" : "pause", {
@@ -155,7 +154,6 @@ const Waveform = ({ project }) => {
           </a>
           <div
             id={"waveform-" + project}
-            ref={wavesurferRef}
             style={{
               width: "100%",
               backgroundColor: loading ? "lightgray" : "unset",
