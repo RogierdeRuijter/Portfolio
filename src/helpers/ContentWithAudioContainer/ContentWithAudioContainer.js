@@ -12,7 +12,6 @@ function ContentWithAudioContainer({ id, title, project, children }) {
       <Waveform project={project} containerRef={containerRef} />
       <div id={id} className="content-container-with-description">
         {children}
-        <div id="project-description">description</div>
       </div>
     </div>
   );
