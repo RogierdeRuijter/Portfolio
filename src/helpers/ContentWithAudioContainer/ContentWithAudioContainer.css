@@ -6,3 +6,7 @@
   height: 100vh;
   height: calc(var(--full-screen-vh, 1vh) * 100);
 }
+
+#project-description {
+  padding: 16px;
+}
