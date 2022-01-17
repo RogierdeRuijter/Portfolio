@@ -1,14 +1,12 @@
 import montepoeliVideo from "../../assets/montepoeli_video_462 × 1000.mp4";
 import "./Montepoeli.css";
 import ContentWithAudioContainer from "../../helpers/ContentWithAudioContainer/ContentWithAudioContainer";
-import Waveform from "../../helpers/Waveform/Waveform";
 import { useEffect } from "react";
 
 let intervalPointer;
 
 const isVideoPlaying = (video) =>
   !!(
-    video &&
     video.currentTime > 0 &&
     !video.paused &&
     !video.ended &&
