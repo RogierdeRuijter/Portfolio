@@ -137,7 +137,7 @@ const Waveform = ({ project, containerRef }) => {
             marginLeft: "16px",
             marginRight: "16px",
             // TODO: would be nicer if the marginBottom was in the consumer
-            marginBottom: "16px",
+            marginBottom: "8px",
           }}
         >
           <a onClick={toggleAudio}>
