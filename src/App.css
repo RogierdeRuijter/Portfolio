@@ -6,11 +6,13 @@
 }
 
 #project-content {
-  max-width: 1200px;
+  /* TODO: the max-width here is 800px because I do not want it to go bigger then that
+    if it does it is possible that the iframes start scrolling. The width of the container is ultimatly 
+    determined by widest iframe. But that logic is not really clear right now */
+  max-width: 800px;
 }
 
-.project-introduction {
-  width: 100%;
+.project-spacer {
   height: 100vh;
   height: calc(var(--full-screen-vh, 1vh) * 100);
   display: flex;

@@ -1,10 +1,13 @@
 import "./GetLow.css";
 import ContentWithAudioContainer from "../../helpers/ContentWithAudioContainer/ContentWithAudioContainer";
-import Waveform from "../../helpers/Waveform/Waveform";
 
 function GetLow() {
   return (
-    <ContentWithAudioContainer id="get-low-container" title="Get low">
+    <ContentWithAudioContainer
+      id="get-low-container"
+      title="Get low"
+      project="get-low"
+    >
       <iframe
         id="get-low-iframe"
         title="get-low"
@@ -13,7 +16,6 @@ function GetLow() {
         loading="lazy"
         frameBorder="0"
       ></iframe>
-      <Waveform project="get-low" />
     </ContentWithAudioContainer>
   );
 }

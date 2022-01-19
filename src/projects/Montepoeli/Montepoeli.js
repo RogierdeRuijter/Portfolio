@@ -1,7 +1,6 @@
 import montepoeliVideo from "../../assets/montepoeli_video_462 × 1000.mp4";
 import "./Montepoeli.css";
 import ContentWithAudioContainer from "../../helpers/ContentWithAudioContainer/ContentWithAudioContainer";
-import Waveform from "../../helpers/Waveform/Waveform";
 import { useEffect } from "react";
 
 let intervalPointer;
@@ -71,10 +70,9 @@ function Montepoeli() {
   return (
     <ContentWithAudioContainer
       id="montepoeli-content-container"
-      title={"Montepoeli"}
-      description={
-        "De app die ik gemaakt heb voor de schaakclub waar ik in zit. Deze club is ontstaan in het prachtige montepoelchiano, Italië.  We kunnen hier de wedstrijden bijhouden en de regels van de club opslaan."
-      }
+      description="De app die ik gemaakt heb voor de schaakclub waar ik in zit. Deze club is ontstaan in het prachtige montepoelchiano, Italië.  We kunnen hier de wedstrijden bijhouden en de regels van de club opslaan."
+      title="Montepoeli"
+      project="montepoeli"
     >
       <div id="montepoeli-content">
         <figure id="montepoli-figure">
@@ -88,9 +86,6 @@ function Montepoeli() {
             </progress>
           </figcaption>
         </figure>
-      </div>
-      <div id="description">
-        <Waveform project="montepoeli" />
       </div>
     </ContentWithAudioContainer>
   );

@@ -29,11 +29,17 @@ const App = () => {
   return (
     <div id="content-container">
       <div id="project-content">
+        <div className="project-spacer"></div>
         <FishRace />
+        <div className="project-spacer"></div>
         <CircleGame />
+        <div className="project-spacer"></div>
         <Montepoeli />
+        <div className="project-spacer"></div>
         <GetLow />
+        <div className="project-spacer"></div>
         <SleepingTumblrSeals />
+        <div className="project-spacer"></div>
         <Julia />
         <Acknowledgements />
         <Info />
