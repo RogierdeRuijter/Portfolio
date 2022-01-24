@@ -17,6 +17,11 @@
   height: calc(var(--full-screen-vh, 1vh) * 100);
 }
 
+.project-spacer-small {
+  height: 5vh;
+  height: calc(var(--full-screen-vh, 1vh) * 5);
+}
+
 #info-icon {
   position: fixed;
   top: 1%;

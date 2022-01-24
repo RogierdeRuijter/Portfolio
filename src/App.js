@@ -29,7 +29,7 @@ const App = () => {
   return (
     <div id="content-container">
       <div id="project-content">
-        <div className="project-spacer"></div>
+        <div className="project-spacer-small"></div>
         <FishRace />
         <div className="project-spacer"></div>
         <CircleGame />

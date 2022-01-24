@@ -65,6 +65,9 @@
         margin-bottom: calc(100vh - calc(var(--vh, 1vh) * 100));
       }
       #welcome-wrapper {
+        position: fixed;
+        top: 0;
+        width: 100%;
         display: flex;
         justify-content: center;
       }
@@ -176,7 +179,14 @@
         </div>
       </div>
     </div>
-    <div id="root">
+    <div
+      id="root"
+      style="
+        position: relative;
+        background-color: rgb(252, 251, 234);
+        margin-top: 100vh;
+      "
+    >
       <!-- Loading indicator before react is loaded into the browser -->
       <div
         style="
