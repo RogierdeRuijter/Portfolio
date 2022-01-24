@@ -1,7 +1,7 @@
 import "./ProjectTitle.css";
 
 function ProjectTitle({ title }) {
-  return <div className="project-title">{title}</div>;
+  return <h2 className="project-title">{title}</h2>;
 }
 
 export default ProjectTitle;
