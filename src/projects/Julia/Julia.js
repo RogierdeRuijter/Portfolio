@@ -44,10 +44,10 @@ const Julia = () => {
           src={iframeUrl}
           frameBorder="0"
         ></iframe>
-        <div>
+        <p>
           Collection of images of my time with you. I am sorry we couldn’t
           figure it out.
-        </div>
+        </p>
       </ContentContainer>
     </div>
   );
