@@ -7,6 +7,7 @@ function GetLow() {
       id="get-low-container"
       title="Get low"
       project="get-low"
+      description="Elke keer als ik dit zie denk ik het maakt allemaal niks uit. Alles wat ik wil is gewoon mogelijk. Ik hoef er alleen maar voor te gaan."
     >
       <iframe
         id="get-low-iframe"
