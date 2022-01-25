@@ -132,10 +132,11 @@ const Waveform = ({ project, containerRef }) => {
         <div
           style={{
             display: "grid",
+            width: "90%",
             gridTemplateColumns: "45px auto",
             alignItems: "center",
-            marginLeft: "16px",
-            marginRight: "16px",
+            marginLeft: "auto",
+            marginRight: "auto",
             // TODO: would be nicer if the marginBottom was in the consumer
             marginBottom: "8px",
           }}
