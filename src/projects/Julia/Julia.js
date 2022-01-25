@@ -44,7 +44,7 @@ const Julia = () => {
           src={iframeUrl}
           frameBorder="0"
         ></iframe>
-        <p style={{ width: "80%", marginLeft: "auto", marginRight: "auto" }}>
+        <p style={{ width: "90%", marginLeft: "auto", marginRight: "auto" }}>
           Collection of images of my time with you. I am sorry we couldn’t
           figure it out.
         </p>
