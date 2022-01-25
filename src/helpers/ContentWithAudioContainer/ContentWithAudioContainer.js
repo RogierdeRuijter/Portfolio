@@ -12,12 +12,14 @@ function ContentWithAudioContainer({
 }) {
   const containerRef = useRef(null);
   return (
-    <div ref={containerRef}>
+    <div ref={containerRef} style={{ position: "relative" }}>
       <ProjectTitle title={title} />
       <Waveform project={project} containerRef={containerRef} />
       <div id={id} className="content-container-with-description">
         {children}
-        <p>{description}</p>
+        <p style={{ width: "80%", marginLeft: "auto", marginRight: "auto" }}>
+          {description}
+        </p>
       </div>
     </div>
   );
