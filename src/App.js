@@ -27,10 +27,15 @@ const App = () => {
   }, []);
 
   return (
-    <div id="content-container">
+    <div
+      id="content-container"
+      style={{ boxShadow: "0 3px 10px rgb(0 0 0 / 0.2)" }}
+    >
       <div id="project-content">
-        <div className="project-spacer-small"></div>
-        <FishRace />
+        <div>
+          <div className="project-spacer-small"></div>
+          <FishRace />
+        </div>
         <div className="project-spacer"></div>
         <CircleGame />
         <div className="project-spacer"></div>
