@@ -83,15 +83,6 @@
         justify-content: center;
       }
 
-      #scroll-down-element-line {
-        margin-bottom: 4px;
-        border-right: 1px solid black;
-        height: min(60px, 80%);
-        width: 2px;
-        animation: 3.2s ease-in-out infinite fadebottom;
-        -webkit-animation: 3.2s ease-in-out infinite fadebottom;
-      }
-
       #scroll-down-element {
         height: min(100px, 10%);
         width: 100%;
@@ -101,6 +92,15 @@
         justify-content: center;
         position: absolute;
         bottom: 0;
+      }
+
+      .scroll-down-element-line {
+        margin-bottom: 4px;
+        border-right: 1px solid black;
+        height: min(60px, 80%);
+        width: 2px;
+        animation: 3.2s ease-in-out infinite fadebottom;
+        -webkit-animation: 3.2s ease-in-out infinite fadebottom;
       }
 
       @keyframes fadebottom {
@@ -170,7 +170,7 @@
             </video>
           </div>
           <div id="scroll-down-element">
-            <span id="scroll-down-element-line"></span>
+            <span class="scroll-down-element-line"></span>
             <span id="scroll-down-element-text">Scroll</span>
           </div>
         </div>
