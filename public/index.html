@@ -127,7 +127,6 @@
       }
 
       #scroll-down-element-text {
-        transition: opacity 1.5s ease;
         margin: 0.5rem 0 1rem 0;
         font-weight: 500;
         text-transform: uppercase;
@@ -205,15 +204,6 @@
 
       // Reset it
       p.style.marginBottom = 0;
-    </script>
-    <script>
-      const hideText = () => {
-        const scrollText = document.getElementById("scroll-down-element-text");
-        scrollText.style.opacity = "0";
-        window.removeEventListener("scroll", hideText);
-      };
-
-      window.addEventListener("scroll", hideText);
     </script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
   </body>
