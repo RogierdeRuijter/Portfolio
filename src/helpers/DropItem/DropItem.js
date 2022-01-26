@@ -1,5 +1,3 @@
-import "./DropItem.css";
-
 function DropItem() {
   return (
     <div
