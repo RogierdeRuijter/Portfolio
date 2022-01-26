@@ -15,6 +15,9 @@
 .project-spacer {
   height: 100vh;
   height: calc(var(--full-screen-vh, 1vh) * 100);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #info-icon {
