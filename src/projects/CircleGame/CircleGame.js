@@ -5,7 +5,7 @@ function CircleGame() {
   return (
     <ContentWithAudioContainer
       id="circle-game-container"
-      description="Het spel wat ik in den treuren speel met jan en alleman. Als je kijkt en je vingen niet snel genoeg in de cirkel stop dan verlies je een hartje. De eerst die geen hartjes meer heeft verliest het spel."
+      description="Het spel wat ik in den treuren speel met jan en alleman. Als je kijkt en je je vinger niet snel genoeg in de cirkel stopt dan verlies je een hartje. De eerste die geen hartjes meer heeft verliest het spel."
       title="Circle game"
       project="circle-game"
     >
