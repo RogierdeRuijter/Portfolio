@@ -1,11 +1,13 @@
 import "./CircleGame.css";
 import ContentWithAudioContainer from "../../helpers/ContentWithAudioContainer/ContentWithAudioContainer";
 
+// Als je kijkt en je je vinger niet snel genoeg in de cirkel stopt dan verlies je een hartje. De eerste die geen hartjes meer heeft verliest het spel.
+
 function CircleGame() {
   return (
     <ContentWithAudioContainer
       id="circle-game-container"
-      description="Het spel wat ik in den treuren speel met jan en alleman. Als je kijkt en je je vinger niet snel genoeg in de cirkel stopt dan verlies je een hartje. De eerste die geen hartjes meer heeft verliest het spel."
+      description="De circle game het spel wat ik in den treuren speel met jan en alleman. Om het tegen de mensen op het internet te spelen heb ik het gebouwd. Snel! Click in de circel die de hand maakt anders verlies je een hartje 💔"
       title="Circle game"
       project="circle-game"
     >

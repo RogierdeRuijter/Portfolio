@@ -5,7 +5,7 @@ function FishRace() {
   return (
     <ContentWithAudioContainer
       id="fish-race-container"
-      description="Toen ik 7 was zag ik op konningendag in het Vondelpark een man die een bak met water had waar 4 vissen in zwommen. Als iedereen geld had ingezet op zijn favoriete vis dan haalde de man het shot weg en gingen de vissen tegen elkaar racen door naar de overkant te zwemmen. Ik ben dit nooit meer vergeten."
+      description="Toen ik 7 was zag ik op konningendag in het Vondelpark een man met een bak water waar 4 vissen in zwommen. Hij had een vissen race gemaakt. Als iedereen geld had ingezet op zijn favoriete vis dan gaf de man het start shot en gingen de vissen tegen elkaar racen door naar de overkant te zwemmen. Ik ben dit nooit meer vergeten."
       title="Fish race"
       project="fish-race"
     >

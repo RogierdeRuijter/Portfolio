@@ -45,8 +45,7 @@ const Julia = () => {
           frameBorder="0"
         ></iframe>
         <p style={{ width: "90%", marginLeft: "auto", marginRight: "auto" }}>
-          Collection of images of my time with you. I am sorry we couldn’t
-          figure it out.
+          Julia is a visual story conveying my past with Isabelle.
         </p>
       </ContentContainer>
     </div>

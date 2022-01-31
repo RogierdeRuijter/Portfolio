@@ -70,7 +70,7 @@ function Montepoeli() {
   return (
     <ContentWithAudioContainer
       id="montepoeli-content-container"
-      description="De app die ik gemaakt heb voor de schaakclub waar ik in zit. Deze club is ontstaan in het prachtige montepoelchiano, Italië.  We kunnen hier de wedstrijden bijhouden en de regels van de club opslaan."
+      description="De app die ik gemaakt heb voor de schaakclub waar ik in zit. Deze club is ontstaan in het prachtige Montepulciano, Italië.  We kunnen hier de gespeelde wedstrijden en de regels van de club opslaan."
       title="Montepoeli"
       project="montepoeli"
     >
