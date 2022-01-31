@@ -1,7 +1,10 @@
 .project-title {
   font-size: 48px;
-  line-height: 1.2;
+  line-height: 1;
+  margin-block-start: 0;
+  margin-block-end: 0;
   margin-bottom: 16px;
+
   font-weight: 400;
 
   display: flex;

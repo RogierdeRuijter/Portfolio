@@ -17,10 +17,10 @@ function ContentWithAudioContainer({
       <Waveform project={project} containerRef={containerRef} />
       <div id={id} className="content-container-with-description">
         {children}
-        <p style={{ width: "90%", marginLeft: "auto", marginRight: "auto" }}>
-          {description}
-        </p>
       </div>
+      <p style={{ width: "90%", marginLeft: "auto", marginRight: "auto" }}>
+        {description}
+      </p>
     </div>
   );
 }
