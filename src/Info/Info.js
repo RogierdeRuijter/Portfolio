@@ -17,7 +17,7 @@ function Info() {
             });
           }}
           target="_blank"
-          style={{ marginRight: "15%" }}
+          style={{ marginRight: "16%" }}
         >
           <img src={githubIcon} />
           Projects
