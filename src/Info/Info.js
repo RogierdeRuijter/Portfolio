@@ -1,6 +1,6 @@
 import "./Info.css";
 import githubIcon from "../assets/github.svg";
-import envelopeIcon from "../assets/envelope-open.svg";
+import envelopeIcon from "../assets/envelope.svg";
 import mediumIcon from "../assets/medium-m.svg";
 
 function Info() {
@@ -17,7 +17,7 @@ function Info() {
             });
           }}
           target="_blank"
-          style={{ marginRight: "64px" }}
+          style={{ marginRight: "15%" }}
         >
           <img src={githubIcon} />
           Projects
@@ -29,7 +29,7 @@ function Info() {
           onClick={() => {
             gtag("event", "generate_lead");
           }}
-          style={{ marginRight: "64px", fontWeight: "500" }}
+          style={{ marginRight: "15%", fontWeight: "500" }}
         >
           <img src={envelopeIcon} />
           Contact me
