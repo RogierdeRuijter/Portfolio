@@ -26,7 +26,7 @@
 
   /* Reset anchor tag */
   text-decoration: none;
-  color: black;
+  color: #353532;
 }
 
 @media (max-width: 1024px) {
@@ -46,5 +46,5 @@
 }
 
 .info-element:visited {
-  color: black;
+  color: #353532;
 }
