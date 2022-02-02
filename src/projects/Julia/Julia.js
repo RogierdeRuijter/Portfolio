@@ -45,8 +45,9 @@ const Julia = () => {
           frameBorder="0"
         ></iframe>
         <div style={{ width: "90%", marginLeft: "auto", marginRight: "auto" }}>
-          <p>Foto's die mij altijd doen denk aan jou.</p>
-          <p>Julia is haar tweede naam.</p>
+          <p>
+            Foto's die mij altijd doen denk aan jou. Julia is je tweede naam.
+          </p>
         </div>
       </ContentContainer>
     </div>
