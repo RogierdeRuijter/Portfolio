@@ -1,3 +1,4 @@
+/* Item that is there to display that the user can scroll down */
 function DropItem() {
   return (
     <div

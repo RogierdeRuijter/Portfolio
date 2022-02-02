@@ -34,7 +34,7 @@ const Julia = () => {
   }, []);
   return (
     <div ref={containerRef} style={{ position: "relative" }}>
-      <ProjectTitle title={"Julia"} />
+      <ProjectTitle title="Julia" />
       <ContentContainer id="julia-container">
         <Waveform project="julia" containerRef={containerRef} />
         <iframe
@@ -44,9 +44,10 @@ const Julia = () => {
           src={iframeUrl}
           frameBorder="0"
         ></iframe>
-        <p style={{ width: "90%", marginLeft: "auto", marginRight: "auto" }}>
-          Julia is a visual story conveying my past with Isabelle.
-        </p>
+        <div style={{ width: "90%", marginLeft: "auto", marginRight: "auto" }}>
+          <p>Foto's die mij altijd doen denk aan jou.</p>
+          <p>Julia is haar tweede naam.</p>
+        </div>
       </ContentContainer>
     </div>
   );
