@@ -45,7 +45,7 @@ const Julia = () => {
           frameBorder="0"
         ></iframe>
         <p style={{ width: "90%", marginLeft: "auto", marginRight: "auto" }}>
-          Julia is a visual story conveying my past with Isabelle.
+          Julia is a visual story conveying my past with you. Her second name is Julia. 
         </p>
       </ContentContainer>
     </div>
