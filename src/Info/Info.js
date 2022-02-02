@@ -1,4 +1,7 @@
 import "./Info.css";
+import githubIcon from "../assets/github.svg";
+import envelopeIcon from "../assets/envelope.svg";
+import mediumIcon from "../assets/medium-m.svg";
 
 function Info() {
   return (
@@ -14,9 +17,9 @@ function Info() {
             });
           }}
           target="_blank"
-          style={{ marginRight: "32px" }}
+          style={{ marginRight: "15%" }}
         >
-          <img src="https://img.icons8.com/ios/150/000000/github--v1.png" />
+          <img src={githubIcon} />
           Projects
         </a>
         <a
@@ -26,9 +29,9 @@ function Info() {
           onClick={() => {
             gtag("event", "generate_lead");
           }}
-          style={{ marginRight: "32px", fontWeight: "500" }}
+          style={{ marginRight: "15%", fontWeight: "500" }}
         >
-          <img src="https://img.icons8.com/ios/150/000000/apple-mail.png" />
+          <img src={envelopeIcon} />
           Contact me
         </a>
         <a
@@ -42,7 +45,7 @@ function Info() {
           }}
           target="_blank"
         >
-          <img src="https://img.icons8.com/ios/150/000000/medium-logo.png" />
+          <img src={mediumIcon} />
           Blog
         </a>
       </div>
