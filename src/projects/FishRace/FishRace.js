@@ -7,11 +7,12 @@ function FishRace() {
       id="fish-race-container"
       title="Fish race"
       project="fish-race"
+      flexibleContainer
     >
       <iframe
         id="fish-race-iframe"
         title="fish-race"
-        className="iframe-size lazyload"
+        className="iframe-size default-height lazyload"
         data-src="https://itisafishrace.xyz"
         loading="lazy"
         frameBorder="0"

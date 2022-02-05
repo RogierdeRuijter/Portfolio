@@ -7,10 +7,32 @@ import Montepoeli from "./projects/Montepoeli/Montepoeli";
 import Acknowledgements from "./Acknowledgements/Acknowledgements";
 import Julia from "./projects/Julia/Julia";
 import Info from "./Info/Info";
-import { useEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 import DropItem from "./helpers/DropItem/DropItem";
 
 const App = () => {
+  useLayoutEffect(() => {
+    function getResizeMessage(event) {
+      const getLowIframe = document.getElementById("get-low-iframe");
+      const fishRaceIframe = document.getElementById("fish-race-iframe");
+      const juliaIframe = document.getElementById("julia-iframe");
+
+      const iframes = [fishRaceIframe, getLowIframe, juliaIframe];
+      iframes.forEach((iframe) => {
+        if (iframe.contentWindow === event.source) {
+          iframe.classList.remove("default-height");
+          iframe.height = Number(event.data.height);
+        }
+      });
+    }
+
+    window.addEventListener("message", getResizeMessage, false);
+
+    return () => {
+      window.removeEventListener("message", getResizeMessage);
+    };
+  }, []);
+
   useEffect(() => {
     if ("loading" in HTMLIFrameElement.prototype) {
       const iframes = document.querySelectorAll('iframe[loading="lazy"]');
