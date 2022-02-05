@@ -7,6 +7,7 @@ function GetLow() {
       id="get-low-container"
       title="Get low"
       project="get-low"
+      flexibleContainer
     >
       <iframe
         id="get-low-iframe"

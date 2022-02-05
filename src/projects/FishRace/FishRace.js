@@ -7,6 +7,7 @@ function FishRace() {
       id="fish-race-container"
       title="Fish race"
       project="fish-race"
+      flexibleContainer
     >
       <iframe
         id="fish-race-iframe"
