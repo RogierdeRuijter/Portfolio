@@ -1,4 +1,7 @@
 #julia-container .iframe-size {
   width: 100%;
-  /* The height is set through a script in the index file */
+}
+
+#julia-container .default-height {
+  height: 4000px;
 }
