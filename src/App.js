@@ -18,7 +18,6 @@ const App = () => {
       const juliaIframe = document.getElementById("julia-iframe");
 
       const iframes = [fishRaceIframe, getLowIframe, juliaIframe];
-      console.log(event.data.height);
       iframes.forEach((iframe) => {
         if (iframe.contentWindow === event.source) {
           iframe.classList.remove("default-height");
