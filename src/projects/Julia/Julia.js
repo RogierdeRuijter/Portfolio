@@ -7,6 +7,7 @@ import { useLayoutEffect, useRef } from "react";
 const Julia = () => {
   const containerRef = useRef(null);
 
+  // TODO: refactor this into hook
   useLayoutEffect(() => {
     function getResizeMessage(event) {
       var juliaIframe = document.getElementById("julia-iframe");
