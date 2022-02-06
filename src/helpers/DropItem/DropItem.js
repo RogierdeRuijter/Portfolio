@@ -1,4 +1,9 @@
-/* Item that is there to display that the user can scroll down */
+/*
+ * Item that is there to display that the user can scroll down
+ *
+ * The consumer of this component should have position relative as a css style.
+ * Since this component is positioned absolute.
+ */
 function DropItem() {
   return (
     <div
