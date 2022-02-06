@@ -60,7 +60,7 @@
     <style>
       body {
         box-sizing: border-box;
-        color: #353532;
+        color: #303030;
       }
       #root {
         margin-bottom: calc(100vh - calc(var(--vh, 1vh) * 100));
@@ -140,8 +140,8 @@
         text-align: center;
         position: absolute;
         top: 10%;
-        line-height: 1.2;
-        color: #1d1d1c;
+        line-height: 1;
+        color: #1b1b1b;
 
         /* Reset for h1 */
         margin-block-end: 0;
@@ -193,6 +193,11 @@
       </div>
     </div>
     <script>
+      /* 
+       * Script to calculate what the difference is between a vh unit with the browser
+       * header or without. The is mainly need for in-app browser where vh units are
+       * not stable
+       */
       var p = document.getElementById("root");
       var style = p.currentStyle || window.getComputedStyle(p);
 

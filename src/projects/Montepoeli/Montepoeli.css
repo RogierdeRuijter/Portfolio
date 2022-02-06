@@ -1,13 +1,18 @@
 #montepoeli-video {
   height: 100%;
-  max-height: 80vh;
-  max-height: calc(var(--full-screen-vh, 1vh) * 80);
   background-color: lightgray;
 }
 
 #montepoeli-content {
   display: flex;
   justify-content: center;
+}
+
+#montepoli-figure {
+  margin: 0;
+  aspect-ratio: 304.812/659.797;
+  height: 80vh;
+  height: calc(var(--full-screen-vh, 1vh) * 80);
 }
 
 figcaption {

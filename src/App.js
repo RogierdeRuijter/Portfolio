@@ -13,11 +13,8 @@ import DropItem from "./helpers/DropItem/DropItem";
 const App = () => {
   useLayoutEffect(() => {
     function getResizeMessage(event) {
-      const getLowIframe = document.getElementById("get-low-iframe");
-      const fishRaceIframe = document.getElementById("fish-race-iframe");
       const juliaIframe = document.getElementById("julia-iframe");
-
-      const iframes = [fishRaceIframe, getLowIframe, juliaIframe];
+      const iframes = [juliaIframe];
       iframes.forEach((iframe) => {
         if (iframe.contentWindow === event.source) {
           iframe.classList.remove("default-height");
@@ -52,7 +49,7 @@ const App = () => {
   return (
     <div id="content-container">
       <div id="project-content">
-        <div className="project-spacer"></div>
+        <div className="project-spacer without-spacing-scroll-down"></div>
         <FishRace />
         <div className="project-spacer">
           <DropItem />

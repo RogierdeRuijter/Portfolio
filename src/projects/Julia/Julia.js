@@ -8,8 +8,8 @@ const Julia = () => {
   const containerRef = useRef(null);
 
   return (
-    <div ref={containerRef}>
-      <ProjectTitle title={"Julia"} />
+    <div ref={containerRef} style={{ position: "relative" }}>
+      <ProjectTitle title="Julia" />
       <ContentContainer id="julia-container">
         <Waveform project="julia" containerRef={containerRef} />
         <iframe
@@ -19,6 +19,11 @@ const Julia = () => {
           data-src="https://rogierderuijter.github.io/julia/"
           frameBorder="0"
         ></iframe>
+        <div style={{ width: "90%", marginLeft: "auto", marginRight: "auto" }}>
+          <p>
+            Foto's die mij altijd doen denken aan jou. Julia is je tweede naam.
+          </p>
+        </div>
       </ContentContainer>
     </div>
   );

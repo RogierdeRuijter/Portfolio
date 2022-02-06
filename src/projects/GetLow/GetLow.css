@@ -1,8 +1,5 @@
 #get-low-container .iframe-size {
   width: 100%;
   background-color: lightgray;
-}
-
-#get-low-container .default-height {
-  height: 450px;
+  aspect-ratio: 800/450;
 }
