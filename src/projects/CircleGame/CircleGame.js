@@ -1,8 +1,6 @@
 import "./CircleGame.css";
 import ContentWithAudioContainer from "../../helpers/ContentWithAudioContainer/ContentWithAudioContainer";
 
-// Als je kijkt en je je vinger niet snel genoeg in de cirkel stopt dan verlies je een hartje. De eerste die geen hartjes meer heeft verliest het spel.
-
 function CircleGame() {
   return (
     <ContentWithAudioContainer
