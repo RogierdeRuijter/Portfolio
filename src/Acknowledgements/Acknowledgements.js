@@ -1,9 +1,12 @@
 import "./Acknowledgements.css";
+import DropItem from "../helpers/DropItem/DropItem";
 
 function Acknowledgements() {
   return (
     <>
-      <div className="acknowledgements-spacer"></div>
+      <div className="acknowledgements-spacer">
+        <DropItem />
+      </div>
       <div className="acknowledgements-container">
         <div className="acknowledgements-content">
           <div>
