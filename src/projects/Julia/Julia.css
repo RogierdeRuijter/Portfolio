@@ -3,5 +3,6 @@
 }
 
 #julia-container .default-height {
+  /* height of the project when it is viewed on a desktop screen */
   height: 5425px;
 }
