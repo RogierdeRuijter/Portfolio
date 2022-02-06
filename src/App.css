@@ -6,9 +6,11 @@
 }
 
 #project-content {
-  /* TODO: the max-width here is 800px because I do not want it to go bigger then that
-    if it does it is possible that the iframes start scrolling. The width of the container is ultimatly 
-    determined by widest iframe. But that logic is not really clear right now */
+  /* 
+   * TODO: the max-width here is 800px because I do not want it to go bigger then that
+   * if it does it is possible that the iframes start scrolling. The width of the container is ultimatly 
+   * determined by widest iframe. But that logic is not really clear right now 
+   */
   max-width: 800px;
 }
 
@@ -22,8 +24,10 @@
 }
 
 .without-spacing-scroll-down {
-  /* 1rem comes from the margin bottom of the scroll down element. This is subtract because otherwise the spacing feelings
-  like more than 100vh */
+  /* 
+   * 1rem comes from the margin bottom of the scroll down element. This is subtract 
+   * because otherwise the spacing feelings like more than 100vh 
+   */
   height: calc(calc(var(--full-screen-vh, 1vh) * 100) - 1rem);
 }
 
