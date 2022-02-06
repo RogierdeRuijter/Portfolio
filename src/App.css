@@ -34,13 +34,13 @@
 .project-introduction #container {
   margin-bottom: 18%;
   max-width: 800px;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .project-introduction #title {
   text-align: center;
-  font-size: max(4vw, 32px);
+  font-size: max(4vw, 2rem);
   font-weight: 400;
   justify-content: center;
   align-items: center;
@@ -53,9 +53,10 @@
   z-index: 2;
   text-align: right;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
+/* TODO: remove this css class */
 #contact-info {
   /* This right and top value are used to anchor the contact-info to the info-icon */
   right: calc(1% + 23px);
