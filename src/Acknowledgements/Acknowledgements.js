@@ -8,12 +8,12 @@ function Acknowledgements() {
         <DropItem />
       </div>
       <div className="acknowledgements-container">
-        <div className="acknowledgements-content">
-          <div>
+        <section className="acknowledgements-content">
+          <p>
             I am forever grateful for everyone I have worked with. Thank you so
             much.
-          </div>
-          <div style={{ marginTop: "16px" }}>
+          </p>
+          <p>
             Special thanks:
             <ul className="special-thanks">
               <li>
@@ -25,15 +25,13 @@ function Acknowledgements() {
               <li>Niels, for showing me what a review looks like.</li>
               <li>Isabelle, for getting lost in conversations with me.</li>
             </ul>
-          </div>
-          <div style={{ marginTop: "16px" }}>
+          </p>
+          <p>
             And above all, thanks mom for the love, support, dedication, and
             drive to give us whatever we needed.
-          </div>
-          <div style={{ marginTop: "16px" }}>
-            You have made me into what I am.
-          </div>
-        </div>
+          </p>
+          <p>You have made me into what I am.</p>
+        </section>
       </div>
     </>
   );
