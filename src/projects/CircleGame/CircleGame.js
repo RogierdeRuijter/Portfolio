@@ -7,7 +7,7 @@ function CircleGame() {
   return (
     <ContentWithAudioContainer
       id="circle-game-container"
-      description="De circle game het spel wat ik in den treuren speel met jan en alleman. Om de mensen op het internet ook te laten genieten van dit spel heb ik het gebouwd. Snel! Click in de circel die de hand maakt anders verlies je een hartje 💔"
+      description="De circle game; het spel wat ik tot in den treuren speel met jan en alleman. Om de mensen op het internet ook te laten genieten van dit spel heb ik het gebouwd. Snel! Click in de circel die de hand maakt anders verlies je een hartje 💔"
       title="Circle game"
       project="circle-game"
     >

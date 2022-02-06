@@ -21,7 +21,7 @@ const Julia = () => {
         ></iframe>
         <div style={{ width: "90%", marginLeft: "auto", marginRight: "auto" }}>
           <p>
-            Foto's die mij altijd doen denk aan jou. Julia is je tweede naam.
+            Foto's die mij altijd doen denken aan jou. Julia is je tweede naam.
           </p>
         </div>
       </ContentContainer>
