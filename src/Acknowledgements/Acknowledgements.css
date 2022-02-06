@@ -6,6 +6,7 @@
 
 .acknowledgements-container {
   width: 100%;
+  display: flex;
 }
 
 .acknowledgements-content {
