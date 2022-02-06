@@ -16,6 +16,7 @@ const Julia = () => {
           id="julia-iframe"
           title="julia"
           className="iframe-size default-height lazyload"
+          loading="lazy"
           data-src="https://rogierderuijter.github.io/julia/"
           frameBorder="0"
         ></iframe>

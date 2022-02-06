@@ -18,6 +18,7 @@ const App = () => {
       iframes.forEach((iframe) => {
         if (iframe.contentWindow === event.source) {
           iframe.classList.remove("default-height");
+          console.log(event.data.height);
           iframe.height = Number(event.data.height);
         }
       });
