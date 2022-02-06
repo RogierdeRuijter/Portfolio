@@ -13,7 +13,7 @@ function FishRace() {
       <iframe
         id="fish-race-iframe"
         title="fish-race"
-        className="iframe-size default-height lazyload"
+        className="iframe-size lazyload"
         data-src="https://itisafishrace.xyz"
         loading="lazy"
         frameBorder="0"
