@@ -15,7 +15,7 @@ function Acknowledgements() {
           </p>
           <p>
             Special thanks:
-            <ul className="special-thanks">
+            <ul>
               <li>
                 Lourens, your love for development radiates. It touched my soul
                 in many ways I can't describe. Thank you for giving me a love
