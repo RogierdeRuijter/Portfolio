@@ -1,5 +1,3 @@
 .content-container-with-description {
   width: 100%;
-  height: 80vh;
-  height: calc(var(--full-screen-vh, 1vh) * 80);
 }

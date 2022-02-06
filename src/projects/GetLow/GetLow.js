@@ -13,8 +13,9 @@ function GetLow() {
       <iframe
         id="get-low-iframe"
         title="get-low"
-        className="iframe-size default-height"
-        src="https://rogierderuijter.github.io/get-low/"
+        className="iframe-size default-height lazyload"
+        data-src="https://rogierderuijter.github.io/get-low/"
+        loading="lazy"
         frameBorder="0"
       ></iframe>
     </ContentWithAudioContainer>

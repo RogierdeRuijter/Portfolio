@@ -13,11 +13,13 @@ import DropItem from "./helpers/DropItem/DropItem";
 const App = () => {
   useLayoutEffect(() => {
     function getResizeMessage(event) {
-      const getLowIframe = document.getElementById("get-low-iframe");
-      const fishRaceIframe = document.getElementById("fish-race-iframe");
+      // const getLowIframe = document.getElementById("get-low-iframe");
+      // const fishRaceIframe = document.getElementById("fish-race-iframe");
       const juliaIframe = document.getElementById("julia-iframe");
-
-      const iframes = [fishRaceIframe, getLowIframe, juliaIframe];
+      // fishRaceIframe,
+      // getLowIframe
+      //
+      const iframes = [juliaIframe];
       iframes.forEach((iframe) => {
         if (iframe.contentWindow === event.source) {
           iframe.classList.remove("default-height");
