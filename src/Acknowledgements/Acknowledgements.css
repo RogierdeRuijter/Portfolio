@@ -11,20 +11,17 @@
 
 .acknowledgements-content {
   width: 100%;
-  max-width: 700px;
   padding: 16px;
-  border-radius: 8px;
   font-size: 24px;
-  line-height: 1.6;
 }
 
-.special-thanks li {
-  margin-bottom: 5px;
+@media (max-width: 1024px) {
+  .acknowledgements-content {
+    font-size: 16px;
+  }
 }
 
 .special-thanks {
-  margin-block-start: 5px;
-  padding-inline-start: 10px;
   list-style: square inside
     url("data:image/gif;base64,R0lGODlhBQAKAIABAAAAAP///yH5BAEAAAEALAAAAAAFAAoAAAIIjI+ZwKwPUQEAOw==");
 }
