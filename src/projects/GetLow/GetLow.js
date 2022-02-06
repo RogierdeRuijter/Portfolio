@@ -13,7 +13,7 @@ function GetLow() {
       <iframe
         id="get-low-iframe"
         title="get-low"
-        className="iframe-size default-height lazyload"
+        className="iframe-size lazyload"
         data-src="https://rogierderuijter.github.io/get-low/"
         loading="lazy"
         frameBorder="0"
