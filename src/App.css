@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   line-height: 1.6;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 #project-content {
