@@ -13,7 +13,9 @@ function Acknowledgements() {
             I am forever grateful for everyone I have worked with. Thank you so
             much.
           </p>
-          <h5>Special thanks:</h5>
+          <h5 style={{ marginBlockStart: "1.5rem", marginBlockEnd: "1.5rem" }}>
+            Special thanks:
+          </h5>
           <ul style={{ listStyleType: "circle" }}>
             <li>
               Lourens, your love for development radiates. It touched my soul in
