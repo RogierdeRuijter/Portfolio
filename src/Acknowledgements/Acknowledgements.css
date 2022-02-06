@@ -1,15 +1,11 @@
 .acknowledgements-spacer {
-  height: 50vh;
-  height: calc(var(--full-screen-vh, 1vh) * 50);
+  height: 100vh;
+  height: calc(var(--full-screen-vh, 1vh) * 100);
+  position: relative;
 }
 
 .acknowledgements-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
-  min-height: 100vh;
-  min-height: calc(var(--full-screen-vh, 1vh) * 100);
 }
 
 .acknowledgements-content {
