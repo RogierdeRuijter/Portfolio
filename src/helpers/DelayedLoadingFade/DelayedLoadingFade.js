@@ -1,4 +1,5 @@
 // import './CircleGame.css';
+// TODO: remove this component
 import { useEffect, useState } from "react";
 
 function DelayedLoadingFade(props) {
