@@ -55,17 +55,3 @@
   cursor: pointer;
   font-size: 1rem;
 }
-
-/* TODO: remove this css class */
-#contact-info {
-  /* This right and top value are used to anchor the contact-info to the info-icon */
-  right: calc(1% + 23px);
-  top: calc(1% + 23px);
-  position: fixed;
-  z-index: 3;
-  padding: 16px;
-  background-color: white;
-  border: 1px solid black;
-  text-align: center;
-  border-radius: 8px;
-}
