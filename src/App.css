@@ -3,7 +3,13 @@
   display: flex;
   justify-content: center;
   line-height: 1.6;
-  font-size: 1.25rem;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  #content-container {
+    font-size: 1.1rem;
+  }
 }
 
 #project-content {
