@@ -29,7 +29,7 @@
   color: #353532;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .info-element {
     font-size: 1rem;
   }

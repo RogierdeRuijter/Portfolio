@@ -14,7 +14,7 @@
   padding: 1rem;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .acknowledgements-content {
     font-size: 1.35rem;
   }
