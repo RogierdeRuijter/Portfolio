@@ -21,6 +21,7 @@
   max-width: 800px;
 }
 
+<<<<<<< Updated upstream
 .project-spacer {
   position: relative;
   height: 100vh;
@@ -36,6 +37,12 @@
    * because otherwise the spacing feelings like more than 100vh 
    */
   height: calc(calc(var(--full-screen-vh, 1vh) * 100) - 1rem);
+=======
+@media (max-width: 700px) {
+  .sentence-about-me {
+    font-size: 24px;
+  }
+>>>>>>> Stashed changes
 }
 
 .project-introduction #container {
