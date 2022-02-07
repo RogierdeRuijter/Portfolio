@@ -19,8 +19,7 @@ function Acknowledgements() {
           <ul style={{ listStyleType: "circle" }}>
             <li>
               Lourens, your love for development radiates. It touched my soul in
-              many ways I can't describe. Thank you for giving me a love for
-              updates.
+              many ways I can't describe. Thank you for giving me love for updates.
             </li>
             <li>Menno, for scaring me into making beautiful things.</li>
             <li>Niels, for showing me what a review looks like.</li>
