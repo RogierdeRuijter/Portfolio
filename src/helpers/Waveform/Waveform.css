@@ -22,3 +22,19 @@
 .play-pause-button:hover {
   opacity: 0.9;
 }
+
+#waveform-container {
+  display: grid;
+  width: 90%;
+  grid-template-columns: 45px auto;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  #waveform-container {
+    margin-bottom: 1.5rem;
+  }
+}

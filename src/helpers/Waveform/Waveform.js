@@ -129,18 +129,7 @@ const Waveform = ({ project, containerRef }) => {
   return (
     <>
       {!error && (
-        <div
-          style={{
-            display: "grid",
-            width: "90%",
-            gridTemplateColumns: "45px auto",
-            alignItems: "center",
-            marginLeft: "auto",
-            marginRight: "auto",
-            // TODO: would be nicer if the marginBottom was in the consumer
-            marginBottom: "8px",
-          }}
-        >
+        <div id="waveform-container">
           <a onClick={toggleAudio}>
             <button
               disabled={loading}
