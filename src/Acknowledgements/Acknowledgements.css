@@ -12,5 +12,11 @@
 .acknowledgements-content {
   width: 100%;
   padding: 1rem;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
+}
+
+@media (max-width: 768px) {
+  .acknowledgements-content {
+    font-size: 1.25rem;
+  }
 }
