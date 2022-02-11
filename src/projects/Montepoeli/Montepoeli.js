@@ -87,7 +87,7 @@ function Montepoeli() {
             muted
             id="montepoeli-video"
             preload="metadata"
-            onLoadStart={() => {
+            onCanPlay={() => {
               setLoading(false);
             }}
             style={{ backgroundImage: `url(${montepoeliFirstFrame})` }}
