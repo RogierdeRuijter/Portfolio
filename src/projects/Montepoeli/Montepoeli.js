@@ -86,7 +86,7 @@ function Montepoeli() {
             playsInline
             muted
             id="montepoeli-video"
-            preload="metadata"
+            preload="none"
             onCanPlay={() => {
               setLoading(false);
             }}
