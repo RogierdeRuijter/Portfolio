@@ -1,7 +1,8 @@
 import montepoeliVideo from "../../assets/montepoeli_video_462 × 1000.mp4";
+import montepoeliFirstFrame from "../../assets/first_frame_montepoeli.jpeg";
 import "./Montepoeli.css";
 import ContentWithAudioContainer from "../../helpers/ContentWithAudioContainer/ContentWithAudioContainer";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 let intervalPointer;
 
@@ -31,6 +32,8 @@ function handleIntersect(entries) {
 }
 
 function Montepoeli() {
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     const video = document.getElementById("montepoeli-video");
     // The video needs a reload to show the picture on safari for IOS
@@ -75,8 +78,20 @@ function Montepoeli() {
       project="montepoeli"
     >
       <div id="montepoeli-content">
+        {loading && (
+          <div style={{ position: "absolute", color: "#fff" }}>Loading...</div>
+        )}
         <figure id="montepoli-figure">
-          <video playsInline muted id="montepoeli-video" preload="metadata">
+          <video
+            playsInline
+            muted
+            id="montepoeli-video"
+            preload="metadata"
+            onLoadStart={() => {
+              setLoading(false);
+            }}
+            style={{ backgroundImage: `url(${montepoeliFirstFrame})` }}
+          >
             {/* TODO: add additional video qualites */}
             <source src={montepoeliVideo} type="video/mp4" />
           </video>
