@@ -15,6 +15,10 @@
   margin-right: auto;
 }
 
+#info-container a {
+  padding: 0 8px;
+}
+
 .info-element {
   display: flex;
   flex-direction: column;

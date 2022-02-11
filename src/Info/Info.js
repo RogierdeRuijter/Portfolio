@@ -17,7 +17,7 @@ function Info() {
             });
           }}
           target="_blank"
-          style={{ marginRight: "15%" }}
+          style={{ marginRight: "calc(15% - 8px)" }}
         >
           <img src={githubIcon} />
           Projects
@@ -29,7 +29,7 @@ function Info() {
           onClick={() => {
             gtag("event", "generate_lead");
           }}
-          style={{ marginRight: "15%", fontWeight: "500" }}
+          style={{ marginRight: "calc(15% - 8px)", fontWeight: "500" }}
         >
           <img src={envelopeIcon} />
           Contact me
