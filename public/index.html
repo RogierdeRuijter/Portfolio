@@ -171,7 +171,6 @@
         max-width: 600px;
         aspect-ratio: 16/9;
         background-color: lightgray;
-        background-image: url("first_frame.jpg");
         background-repeat: no-repeat;
         background-size: contain;
         overflow: hidden;
@@ -208,6 +207,27 @@
         Loading...
       </div>
     </div>
+    <script>
+      /*
+       * Inject the image only when it is fully loaded. Therefore we avoid the
+       * 'dropping down' behaviour when the image is being loaded.
+       */
+      function OnImageLoaded(img) {
+        document.getElementById(
+          "welcome-video-container"
+        ).style.backgroundImage = 'url("first_frame.jpg")';
+      }
+
+      function PreloadImage(src) {
+        var img = new Image();
+        img.onload = function () {
+          OnImageLoaded(this);
+        };
+        img.src = src;
+      }
+
+      PreloadImage("first_frame.jpg");
+    </script>
     <script>
       /*
        * Script to calculate what the difference is between a vh unit with the browser
