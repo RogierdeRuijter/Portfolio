@@ -5,7 +5,7 @@ function FishRace() {
   return (
     <ContentWithAudioContainer
       id="fish-race-container"
-      description="Toen ik 7 was zag ik op Koninginnedag in het Vondelpark een man naast een bak water met 4 vissen staan. In de bak had hij een vissenrace gemaakt. Dit heeft zo’n indruk op mij gemaakt dat ik deze herinnering nooit meer vergeten ben."
+      description="Toen ik 7 was zag ik op Koninginnedag in het Vondelpark een man naast een bak water met 4 vissen staan. In de bak had hij een vissenrace gemaakt. Dit heeft zo’n indruk op mij gemaakt dat ik het nooit meer vergeten ben."
       title="Fish race"
       project="fish-race"
       flexibleContainer
