@@ -212,21 +212,21 @@
        * Inject the image only when it is fully loaded. Therefore we avoid the
        * 'dropping down' behaviour when the image is being loaded.
        */
-      function OnImageLoaded(img) {
+      const onImageLoaded = (img) => {
         document.getElementById(
           "welcome-video-container"
         ).style.backgroundImage = 'url("first_frame.jpg")';
-      }
+      };
 
-      function PreloadImage(src) {
+      const preloadImage = (src) => {
         var img = new Image();
         img.onload = function () {
-          OnImageLoaded(this);
+          onImageLoaded(this);
         };
         img.src = src;
-      }
+      };
 
-      PreloadImage("first_frame.jpg");
+      preloadImage("first_frame.jpg");
     </script>
     <script>
       /*
