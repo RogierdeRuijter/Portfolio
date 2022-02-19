@@ -48,7 +48,7 @@ const App = () => {
 
   return (
     <div id="content-container">
-      <div id="project-content">
+      <section id="project-content">
         <div className="project-spacer without-spacing-scroll-down">
           <DropItem />
         </div>
@@ -75,7 +75,7 @@ const App = () => {
         <Julia />
         <Acknowledgements />
         <Info />
-      </div>
+      </section>
     </div>
   );
 };
