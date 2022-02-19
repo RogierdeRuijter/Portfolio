@@ -5,7 +5,7 @@ import mediumIcon from "../assets/medium-m.svg";
 
 function Info() {
   return (
-    <div id="info-wrapper">
+    <footer id="info-wrapper">
       <div id="info-container">
         <a
           className="info-element"
@@ -49,7 +49,7 @@ function Info() {
           Blog
         </a>
       </div>
-    </div>
+    </footer>
   );
 }
 
