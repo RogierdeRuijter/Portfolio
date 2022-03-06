@@ -97,6 +97,12 @@
         justify-content: center;
       }
 
+      @supports (height: 100svh) {
+        #welcome-container {
+          height: 100svh;
+        }
+      }
+
       #scroll-down-element {
         height: min(100px, 10%);
         width: 100%;

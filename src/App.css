@@ -30,12 +30,24 @@
   justify-content: center;
 }
 
+@supports (height: 100lvh) {
+  .project-spacer {
+    height: 100lvh;
+  }
+}
+
 .without-spacing-scroll-down {
   /* 
    * 1rem comes from the margin bottom of the scroll down element. This is subtract 
    * because otherwise the spacing feelings like more than 100vh 
    */
   height: calc(calc(var(--full-screen-vh, 1vh) * 100) - 1rem);
+}
+
+@supports (height: 100lvh) {
+  .without-spacing-scroll-down {
+    height: calc(100lvh - 1rem);
+  }
 }
 
 .project-introduction #container {

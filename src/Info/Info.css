@@ -5,6 +5,12 @@
   align-items: center;
 }
 
+@supports (height: 100lvh) {
+  #info-wrapper {
+    min-height: 100lvh;
+  }
+}
+
 #info-container {
   display: flex;
   justify-content: space-between;
