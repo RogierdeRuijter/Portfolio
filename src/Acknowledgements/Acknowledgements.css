@@ -4,6 +4,12 @@
   position: relative;
 }
 
+@supports (height: 100lvh) {
+  .acknowledgements-spacer {
+    height: 100lvh;
+  }
+}
+
 .acknowledgements-container {
   width: 100%;
   display: flex;
