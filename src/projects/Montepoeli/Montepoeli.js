@@ -73,7 +73,6 @@ function Montepoeli() {
   return (
     <ContentWithAudioContainer
       id="montepoeli-content-container"
-      description="Dit is de app die ik voor mijn schaakclub gemaakt heb. De schaakclub is ontstaan in het prachtige Montepulciano in Italië. In de app kunnen de gespeelde schaakwedstrijden en clubregels opgeslagen worden."
       title="Montepoeli"
       project="montepoeli"
     >

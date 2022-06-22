@@ -3,22 +3,15 @@ import ProjectTitle from "../ProjectTitle/ProjectTitle";
 import Waveform from "../Waveform/Waveform";
 import { useRef } from "react";
 
-function ContentWithAudioContainer({
-  id,
-  title,
-  project,
-  description,
-  children,
-}) {
+function ContentWithAudioContainer({ id, title, project, children }) {
   const containerRef = useRef(null);
   return (
     <article ref={containerRef} style={{ position: "relative" }}>
       <ProjectTitle title={title} />
-      <Waveform project={project} containerRef={containerRef} />
       <div id={id} className="content-container-with-description">
         {children}
-        <p id="descrption-container">{description}</p>
       </div>
+      <Waveform project={project} containerRef={containerRef} />
     </article>
   );
 }
