@@ -2,7 +2,7 @@
   width: 100%;
   display: flex;
   scroll-snap-align: center;
-  margin-top: 25vh;
+  margin-top: var(--section-spacing);
 }
 
 .acknowledgements-content {

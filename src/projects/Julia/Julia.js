@@ -8,14 +8,7 @@ const Julia = () => {
   const containerRef = useRef(null);
 
   return (
-    <div
-      ref={containerRef}
-      style={{
-        position: "relative",
-        marginTop: "25vh",
-        scrollSnapAlign: "start",
-      }}
-    >
+    <div className="julia-wrapper" ref={containerRef}>
       <ProjectTitle title="Julia" />
       <ContentContainer id="julia-container">
         <Waveform project="julia" containerRef={containerRef} />
