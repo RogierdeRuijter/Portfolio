@@ -1,18 +1,8 @@
-.acknowledgements-spacer {
-  height: 100vh;
-  height: calc(var(--full-screen-vh, 1vh) * 100);
-  position: relative;
-}
-
-@supports (height: 100lvh) {
-  .acknowledgements-spacer {
-    height: 100lvh;
-  }
-}
-
 .acknowledgements-container {
   width: 100%;
   display: flex;
+  scroll-snap-align: center;
+  margin-top: 25vh;
 }
 
 .acknowledgements-content {

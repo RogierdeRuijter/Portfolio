@@ -6,7 +6,14 @@ import { useRef } from "react";
 function ContentWithAudioContainer({ id, title, project, children }) {
   const containerRef = useRef(null);
   return (
-    <article ref={containerRef} style={{ position: "relative" }}>
+    <article
+      ref={containerRef}
+      style={{
+        position: "relative",
+        scrollSnapAlign: "center",
+        marginTop: "25vh",
+      }}
+    >
       <ProjectTitle title={title} />
       <div id={id} className="content-container-with-description">
         {children}
