@@ -1,3 +1,9 @@
+.content-with-audio-container {
+  margin-top: var(--section-spacing);
+  position: relative;
+  scroll-snap-align: center;
+}
+
 .content-container-with-description {
   width: 100%;
 }

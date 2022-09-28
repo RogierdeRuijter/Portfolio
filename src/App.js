@@ -8,7 +8,6 @@ import Acknowledgements from "./Acknowledgements/Acknowledgements";
 import Julia from "./projects/Julia/Julia";
 import Info from "./Info/Info";
 import { useEffect, useLayoutEffect } from "react";
-import DropItem from "./helpers/DropItem/DropItem";
 
 const App = () => {
   useLayoutEffect(() => {
@@ -49,29 +48,11 @@ const App = () => {
   return (
     <div id="content-container">
       <section id="project-content">
-        <div className="project-spacer without-spacing-scroll-down">
-          <DropItem />
-        </div>
         <FishRace />
-        <div className="project-spacer">
-          <DropItem />
-        </div>
         <CircleGame />
-        <div className="project-spacer">
-          <DropItem />
-        </div>
         <Montepoeli />
-        <div className="project-spacer">
-          <DropItem />
-        </div>
         <GetLow />
-        <div className="project-spacer">
-          <DropItem />
-        </div>
         <SleepingTumblrSeals />
-        <div className="project-spacer">
-          <DropItem />
-        </div>
         <Julia />
         <Acknowledgements />
         <Info />

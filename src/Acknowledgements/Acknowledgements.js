@@ -4,9 +4,6 @@ import DropItem from "../helpers/DropItem/DropItem";
 function Acknowledgements() {
   return (
     <>
-      <div className="acknowledgements-spacer">
-        <DropItem />
-      </div>
       <div className="acknowledgements-container">
         <section className="acknowledgements-content">
           <p>
