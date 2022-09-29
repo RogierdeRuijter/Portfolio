@@ -17,14 +17,20 @@ const isVideoPlaying = (video) =>
 function handleIntersect(entries) {
   entries.forEach((entry) => {
     if (entry.intersectionRatio >= 0.8) {
-      const video = document.getElementById("montepoeli-video");
-      video.play();
+      entry.target
+        .play()
+        .then()
+        .catch((error) => {
+          if (error.name === "NotAllowedError") {
+            entry.target.setAttribute("controls", "");
+          }
+        });
     }
+
     if (entry.intersectionRatio === 0) {
-      const video = document.getElementById("montepoeli-video");
-      if (isVideoPlaying(video)) {
-        video.pause();
-        video.currentTime = 0;
+      if (isVideoPlaying(entry.target)) {
+        entry.target.pause();
+        entry.target.currentTime = 0;
         clearInterval(intervalPointer);
       }
     }

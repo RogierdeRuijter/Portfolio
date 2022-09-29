@@ -4,7 +4,7 @@ import Waveform from "../../helpers/Waveform/Waveform";
 import ProjectTitle from "../../helpers/ProjectTitle/ProjectTitle";
 import { useRef } from "react";
 
-const Julia = () => {
+const Julia =   () => {
   const containerRef = useRef(null);
 
   return (
