@@ -1,11 +1,11 @@
 .content-with-audio-container {
   display: grid;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 @media (max-width: 768px) {
   .content-with-audio-container {
-    gap: 1rem;
+    gap: 1.5rem;
   }
 }
 
