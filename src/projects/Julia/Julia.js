@@ -1,26 +1,23 @@
 import "./Julia.css";
-import ContentContainer from "../../helpers/ContentContainer/ContentContainer";
-import Waveform from "../../helpers/Waveform/Waveform";
-import ProjectTitle from "../../helpers/ProjectTitle/ProjectTitle";
-import { useRef } from "react";
+import ContentWithAudioContainer from "../../helpers/ContentWithAudioContainer/ContentWithAudioContainer";
 
-const Julia =   () => {
-  const containerRef = useRef(null);
-
+const Julia = () => {
   return (
-    <div ref={containerRef} style={{ position: "relative" }}>
-      <ProjectTitle title="Julia" />
-      <ContentContainer id="julia-container">
-        <Waveform project="julia" containerRef={containerRef} />
+    <div className="julia-wrapper">
+      <ContentWithAudioContainer
+        id="julia-container"
+        title="Julia"
+        project="julia"
+      >
         <iframe
           id="julia-iframe"
           title="julia"
-          className="iframe-size default-height lazyload"
-          loading="lazy"
+          className="iframe-size lazyload"
           data-src="https://rogierderuijter.github.io/julia/"
+          loading="lazy"
           frameBorder="0"
         ></iframe>
-      </ContentContainer>
+      </ContentWithAudioContainer>
     </div>
   );
 };

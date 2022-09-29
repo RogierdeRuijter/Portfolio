@@ -1,8 +1,7 @@
-#julia-container .iframe-size {
-  width: 100%;
+.julia-wrapper {
+  --waveform-grid-area: 2/1/3/2;
 }
 
-#julia-container .default-height {
-  /* height of the project when it is viewed on a desktop screen */
-  height: 5425px;
+#julia-container .iframe-size {
+  width: 100%;
 }

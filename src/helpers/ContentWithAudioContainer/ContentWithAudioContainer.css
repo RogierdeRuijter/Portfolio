@@ -1,3 +1,11 @@
+.content-with-audio-container {
+  display: grid;
+}
+
 .content-container-with-description {
   width: 100%;
+}
+
+.content-with-audio-container #waveform-container {
+  grid-area: var(--waveform-grid-area, auto);
 }
