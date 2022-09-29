@@ -18,7 +18,12 @@ const App = () => {
       iframes.forEach((iframe) => {
         if (iframe.contentWindow === event.source) {
           iframe.classList.remove("default-height");
-          iframe.height = Number(event.data.height);
+          const height = Number(event.data.height);
+
+          document
+            .getElementsByTagName("body")[0]
+            .style.setProperty("--julia-iframe-height", `${height}px`);
+          iframe.height = height;
         }
       });
     }

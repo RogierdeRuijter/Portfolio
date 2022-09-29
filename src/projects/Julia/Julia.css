@@ -1,7 +1,5 @@
 .julia-wrapper {
   --waveform-grid-area: 2/1/3/2;
-}
-
-#julia-container .iframe-size {
-  width: 100%;
+  --iframe-background-color: transparent;
+  --iframe-height: var(--julia-iframe-height);
 }

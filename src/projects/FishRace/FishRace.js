@@ -1,22 +1,22 @@
 import "./FishRace.css";
 import ContentWithAudioContainer from "../../helpers/ContentWithAudioContainer/ContentWithAudioContainer";
+import IFrame from "../../helpers/IFrame/IFrame";
 
 function FishRace() {
   return (
-    <ContentWithAudioContainer
-      id="fish-race-container"
-      title="Fish race"
-      project="fish-race"
-    >
-      <iframe
-        id="fish-race-iframe"
-        title="fish-race"
-        className="iframe-size lazyload"
-        data-src="https://itisafishrace.xyz"
-        loading="lazy"
-        frameBorder="0"
-      ></iframe>
-    </ContentWithAudioContainer>
+    <div className="fish-race-wrapper">
+      <ContentWithAudioContainer
+        id="fish-race-container"
+        title="Fish race"
+        project="fish-race"
+      >
+        <IFrame
+          id="fish-race-iframe"
+          title="fish-race"
+          src="https://itisafishrace.xyz"
+        />
+      </ContentWithAudioContainer>
+    </div>
   );
 }
 
