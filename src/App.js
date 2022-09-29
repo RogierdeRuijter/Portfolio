@@ -49,7 +49,7 @@ const App = () => {
   return (
     <div id="content-container">
       <section id="project-content">
-        <div className="project-spacer without-spacing-scroll-down">
+        <div className="project-spacer">
           <DropItem />
         </div>
         <FishRace />

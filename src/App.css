@@ -3,12 +3,12 @@
   display: flex;
   justify-content: center;
   line-height: 1.6;
-  font-size: 1rem;
+  font-size: 1em;
 }
 
 @media (max-width: 768px) {
   #content-container {
-    font-size: 1.125rem;
+    font-size: 1.125em;
   }
 }
 
@@ -33,20 +33,6 @@
 @supports (height: 100lvh) {
   .project-spacer {
     height: 100lvh;
-  }
-}
-
-.without-spacing-scroll-down {
-  /* 
-   * 1rem comes from the margin bottom of the scroll down element. This is subtract 
-   * because otherwise the spacing feelings like more than 100vh 
-   */
-  height: calc(calc(var(--full-screen-vh, 1vh) * 100) - 1rem);
-}
-
-@supports (height: 100lvh) {
-  .without-spacing-scroll-down {
-    height: calc(100lvh - 1rem);
   }
 }
 
