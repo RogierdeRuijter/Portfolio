@@ -21,21 +21,6 @@
   max-width: 800px;
 }
 
-.project-spacer {
-  position: relative;
-  height: 100vh;
-  height: calc(var(--full-screen-vh, 1vh) * 100);
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-}
-
-@supports (height: 100lvh) {
-  .project-spacer {
-    height: 100lvh;
-  }
-}
-
 .project-introduction #container {
   margin-bottom: 18%;
   max-width: 800px;

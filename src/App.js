@@ -49,29 +49,17 @@ const App = () => {
   return (
     <div id="content-container">
       <section id="project-content">
-        <div className="project-spacer">
-          <DropItem />
-        </div>
+        <DropItem />
         <FishRace />
-        <div className="project-spacer">
-          <DropItem />
-        </div>
+        <DropItem />
         <CircleGame />
-        <div className="project-spacer">
-          <DropItem />
-        </div>
+        <DropItem />
         <Montepoeli />
-        <div className="project-spacer">
-          <DropItem />
-        </div>
+        <DropItem />
         <GetLow />
-        <div className="project-spacer">
-          <DropItem />
-        </div>
+        <DropItem />
         <SleepingTumblrSeals />
-        <div className="project-spacer">
-          <DropItem />
-        </div>
+        <DropItem />
         <Julia />
         <Acknowledgements />
         <Info />
