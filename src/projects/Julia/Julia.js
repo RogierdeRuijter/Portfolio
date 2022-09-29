@@ -1,5 +1,6 @@
 import "./Julia.css";
 import ContentWithAudioContainer from "../../helpers/ContentWithAudioContainer/ContentWithAudioContainer";
+import IFrame from "../../helpers/IFrame/IFrame";
 
 const Julia = () => {
   return (
@@ -9,14 +10,11 @@ const Julia = () => {
         title="Julia"
         project="julia"
       >
-        <iframe
+        <IFrame
           id="julia-iframe"
           title="julia"
-          className="iframe-size lazyload"
-          data-src="https://rogierderuijter.github.io/julia/"
-          loading="lazy"
-          frameBorder="0"
-        ></iframe>
+          src="https://rogierderuijter.github.io/julia/"
+        />
       </ContentWithAudioContainer>
     </div>
   );

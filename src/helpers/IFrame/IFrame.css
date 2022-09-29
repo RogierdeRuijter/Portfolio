@@ -1,0 +1,8 @@
+.iframe-size {
+  min-height: var(--iframe-min-height, auto);
+  height: var(--iframe-height, auto);
+  aspect-ratio: var(--iframe-aspect-ratio, auto);
+
+  width: 100%;
+  background-color: var(--iframe-background-color, lightgray);
+}

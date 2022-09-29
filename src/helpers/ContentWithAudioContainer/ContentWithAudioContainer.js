@@ -8,9 +8,7 @@ function ContentWithAudioContainer({ id, title, project, children }) {
   return (
     <article ref={containerRef} className="content-with-audio-container">
       <ProjectTitle title={title} />
-      <div id={id} className="content-container-with-description">
-        {children}
-      </div>
+      <div id={id}>{children}</div>
       <Waveform project={project} containerRef={containerRef} />
     </article>
   );

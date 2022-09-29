@@ -1,9 +1,12 @@
 .content-with-audio-container {
   display: grid;
+  gap: 0.5rem;
 }
 
-.content-container-with-description {
-  width: 100%;
+@media (max-width: 768px) {
+  .content-with-audio-container {
+    gap: 1rem;
+  }
 }
 
 .content-with-audio-container #waveform-container {
