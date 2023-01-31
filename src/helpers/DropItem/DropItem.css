@@ -6,6 +6,7 @@
 }
 
 .full-page-wrapper {
+  height: 500px;
   height: 100vh;
   height: calc(var(--full-screen-vh, 1vh) * 100);
   height: 100lvh;
