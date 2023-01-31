@@ -1,3 +1,9 @@
 .circle-game-wrapper {
   --iframe-min-height: 80vh;
 }
+
+@supports (height: 80lvh) {
+  .circle-game-wrapper {
+    --iframe-min-height: 80lvh;
+  }  
+}

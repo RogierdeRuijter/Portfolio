@@ -87,19 +87,30 @@
         width: 100%;
         max-width: 1200px;
       }
+
       #welcome-container {
-        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
         width: 100%;
         height: 100vh; /* Fallback for browsers that do not support Custom Properties */
         height: calc(var(--vh, 1vh) * 100);
-        display: grid;
-        grid-template-rows: 1fr 2fr 1fr;
+        height: 100svh;
       }
 
-      @supports (height: 100svh) {
+      @supports (fdisplay: grid) {
         #welcome-container {
-          height: 100svh;
+          justify-content: unset;
+
+          display: grid;
+          grid-template-rows: 1fr 2fr 1fr;
         }
+      }
+
+      #my-introduction,
+      #welcome-video-container {
+        place-self: center;
       }
 
       #scroll-down-element {
@@ -109,6 +120,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
         place-self: end;
       }
 
@@ -156,7 +168,6 @@
         font-weight: 500;
         line-height: 1;
         color: #1b1b1b;
-        place-self: center;
       }
 
       /* TODO: move this style to the montepoeli video tag */
@@ -171,7 +182,6 @@
         background-color: lightgray;
         background-repeat: no-repeat;
         background-size: contain;
-        place-self: center;
         overflow: hidden;
       }
     </style>

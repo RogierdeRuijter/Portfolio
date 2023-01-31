@@ -11,26 +11,25 @@ function Acknowledgements() {
         <section className="acknowledgements-content">
           <p>
             I am forever grateful for everyone I have worked with. Thank you so
-            much.
+            much. Special thanks: <strong>Lourens</strong>, your love for development radiates. It touched my soul in
+            many ways I can't describe. Thank you for giving me love for updates. <strong>Menno</strong>, for scaring me into making beautiful things. <strong>Niels</strong>, for showing me what a review looks like. <strong>Isabelle</strong>, for getting lost in conversations with me. 
+            And above all, thanks <strong>mom</strong> for the love, support, dedication, and
+            drive to give us whatever we needed. You have made me into what I am.
           </p>
-          <h5 style={{ marginBlockStart: "1.5rem", marginBlockEnd: "1.5rem" }}>
-            Special thanks:
+          {/* <h5 style={{ marginBlockStart: "1.5rem", marginBlockEnd: "1.5rem" }}>
+            
           </h5>
           <ul style={{ listStyleType: "circle" }}>
             <li>
-              Lourens, your love for development radiates. It touched my soul in
-              many ways I can't describe. Thank you for giving me love for
-              updates.
+              
             </li>
-            <li>Menno, for scaring me into making beautiful things.</li>
-            <li>Niels, for showing me what a review looks like.</li>
-            <li>Isabelle, for getting lost in conversations with me.</li>
-          </ul>
+            <li></li>
+            <li></li>
+            <li>.</li>
+          </ul> */}
           <p>
-            And above all, thanks mom for the love, support, dedication, and
-            drive to give us whatever we needed.
           </p>
-          <p>You have made me into what I am.</p>
+          <p></p>
         </section>
       </div>
     </>

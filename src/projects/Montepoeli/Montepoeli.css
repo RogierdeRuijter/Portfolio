@@ -15,6 +15,7 @@
   aspect-ratio: 304.812/659.797;
   height: 80vh;
   height: calc(var(--full-screen-vh, 1vh) * 80);
+  height: 80lvh;
 }
 
 figcaption {
