@@ -1,14 +1,9 @@
 #info-wrapper {
   min-height: 100vh;
   min-height: calc(var(--full-screen-vh, 1vh) * 100);
+  min-height: 100lvh;
   display: flex;
   align-items: center;
-}
-
-@supports (height: 100lvh) {
-  #info-wrapper {
-    min-height: 100lvh;
-  }
 }
 
 #info-container {
