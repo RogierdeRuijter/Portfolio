@@ -13,7 +13,7 @@ function FishRace() {
         <IFrame
           id="fish-race-iframe"
           title="fish-race"
-          src="https://itisafishrace.xyz"
+          src="https://rogierderuijter.github.io/fish-race/"
         />
       </ContentWithAudioContainer>
     </div>
