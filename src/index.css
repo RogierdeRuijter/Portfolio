@@ -11,3 +11,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+[popover] {
+  max-width: 60ch;
+  top: 2rlh;
+  margin: 0 auto;
+  padding: 1em;
+  padding: 1rlh;
+}
+
+[popover] button {
+  display: block;
+  margin-left: auto;
+  padding: 0.5em 1em;
+  border: 1px solid oklch(30.92% 0 0);
+  border-radius: 0.5em;
+  background: transparent;
+  color: black;
+  cursor: pointer;
+  transition: background 0.15s ease-in;
+}
+
+[popover] button:hover {
+  transition: background 0.3s ease-out;
+  background: oklch(45.92% 0 0);
+  color: white;
+}
+

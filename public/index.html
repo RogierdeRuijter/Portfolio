@@ -40,8 +40,10 @@
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-MG9RL470BY"
     ></script>
+    <script defer src="%PUBLIC_URL%/popover-api-fallback.js"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
+
       function gtag() {
         if (window.location.href.includes("rogierderuijter")) {
           dataLayer.push(arguments);
@@ -183,6 +185,19 @@
         background-repeat: no-repeat;
         background-size: contain;
         overflow: hidden;
+      }
+
+      /* This is to prevent a content shift before the polyfill loads */
+      @supports not selector([popover]:popover-open) {
+        [popover] {
+          /* Overwrite dialog positon absolute */
+          position: fixed;
+          background-color: white;
+          border: 2px solid black;
+        }
+        [popover]:not([open]) {
+          display: none;
+        }
       }
     </style>
     <div id="welcome-wrapper">

@@ -12,3 +12,7 @@
 .content-with-audio-container #waveform-container {
   grid-area: var(--waveform-grid-area, auto);
 }
+
+.content-with-audio-title {
+  display: flex;
+}
