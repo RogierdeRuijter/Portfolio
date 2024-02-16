@@ -1,7 +1,6 @@
 import "./Info.css";
 import githubIcon from "../assets/github.svg";
 import envelopeIcon from "../assets/envelope.svg";
-import mediumIcon from "../assets/medium-m.svg";
 
 function Info() {
   return (
@@ -33,20 +32,6 @@ function Info() {
         >
           <img src={envelopeIcon} />
           Contact me
-        </a>
-        <a
-          className="info-element"
-          href="https://medium.com/@vsfhtvjshn"
-          onClick={() => {
-            gtag("event", "click", {
-              event_category: "external-links",
-              event_label: "blog",
-            });
-          }}
-          target="_blank"
-        >
-          <img src={mediumIcon} />
-          Blog
         </a>
       </div>
     </footer>
