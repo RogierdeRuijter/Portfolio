@@ -187,14 +187,17 @@
         overflow: hidden;
       }
 
-      /* This is to prevent a content shift before the polyfill loads */
       @supports not selector([popover]:popover-open) {
         [popover] {
-          /* Overwrite dialog positon absolute */
           position: fixed;
           background-color: white;
-          border: 2px solid black;
+          top: 40%;
         }
+
+        [popover]::before {
+          content: none;
+        }
+
         [popover]:not([open]) {
           display: none;
         }
@@ -210,7 +213,7 @@
             </video>
           </div>
           <div id="scroll-down-element">
-            <span class="scroll-down-element-line"></span>
+            <span className="scroll-down-element-line"></span>
             <span id="scroll-down-element-text">Scroll</span>
           </div>
         </header>

@@ -13,28 +13,32 @@ code {
 }
 
 [popover] {
-  max-width: 60ch;
-  top: 2rlh;
+  width: calc(60ch + 4em);
+  width: calc(60ch + 4rlh);
+  max-width: calc(100% - 1rlh);
   margin: 0 auto;
-  padding: 1em;
-  padding: 1rlh;
 }
 
 [popover] button {
-  display: block;
+  position: absolute;
+  top: calc(1rlh - 0.5ex);
+  right: calc(0.5rlh + 0.5ch);
   margin-left: auto;
-  padding: 0.5em 1em;
-  border: 1px solid oklch(30.92% 0 0);
-  border-radius: 0.5em;
+  border: 0;
+  font-size: 1rem;
   background: transparent;
-  color: black;
+  font-family: inherit;
+  font-weight: 300;
+  color: oklch(41% 0 0);
   cursor: pointer;
-  transition: background 0.15s ease-in;
+  transition: background 0.15s ease-in, color 0.15s ease-in;
 }
 
 [popover] button:hover {
-  transition: background 0.3s ease-out;
-  background: oklch(45.92% 0 0);
-  color: white;
+  transition: background 0.3s ease-out, color 0.4s ease-out;
+  color: oklch(10% 0 0);
 }
 
+* {
+  box-sizing: border-box;
+}

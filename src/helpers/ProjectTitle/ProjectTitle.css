@@ -39,6 +39,49 @@
   border: 0;
   cursor: pointer;
   transition: fill 0.1s ease-in;
+  position: relative;
+}
+
+[popover] {
+    position: relative;
+    top: calc(var(--top) - 0.5rlh);
+    box-shadow: 0 1px 14px rgba(0,0,0,.2);
+    border: 0;
+    padding: 0;
+    overflow: visible;
+    opacity: 0;
+}
+
+[popover]::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+  box-shadow: 0 1px 14px rgba(0,0,0,.2);
+  background: #fff;
+  position: absolute;
+  z-index: 1;
+  left: calc(50% - 10px);
+  bottom: -8px;
+}
+
+.popover-wrapper {
+  width: 100%;
+  padding: 2em;
+  padding: 2rlh;
+  border-radius: 4px;
+  background: #fff;
+  position: relative;
+  z-index: 998;  
+  text-wrap: balance;
+}
+
+@supports (initial-letter: 2) or (-webkit-initial-letter: 2) {
+  [popover] p:first-of-type::first-letter {
+    -webkit-initial-letter: 2;
+    initial-letter: 2;
+    margin-right: 0.5em;
+  }
 }
 
 .project-header .project-title-info:hover svg {
