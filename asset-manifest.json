@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.54eb6760.chunk.css",
-    "main.js": "/static/js/main.a6a75d16.chunk.js",
-    "main.js.map": "/static/js/main.a6a75d16.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.1d77f13e.js",
-    "runtime-main.js.map": "/static/js/runtime-main.1d77f13e.js.map",
-    "static/js/2.9a2a4ed5.chunk.js": "/static/js/2.9a2a4ed5.chunk.js",
-    "static/js/2.9a2a4ed5.chunk.js.map": "/static/js/2.9a2a4ed5.chunk.js.map",
-    "static/js/3.466ba84f.chunk.js": "/static/js/3.466ba84f.chunk.js",
-    "static/js/3.466ba84f.chunk.js.map": "/static/js/3.466ba84f.chunk.js.map",
+    "main.css": "/static/css/main.c888fd77.chunk.css",
+    "main.js": "/static/js/main.b2190668.chunk.js",
+    "main.js.map": "/static/js/main.b2190668.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.73edcc54.js",
+    "runtime-main.js.map": "/static/js/runtime-main.73edcc54.js.map",
+    "static/js/2.2ef038dd.chunk.js": "/static/js/2.2ef038dd.chunk.js",
+    "static/js/2.2ef038dd.chunk.js.map": "/static/js/2.2ef038dd.chunk.js.map",
+    "static/js/3.23da861b.chunk.js": "/static/js/3.23da861b.chunk.js",
+    "static/js/3.23da861b.chunk.js.map": "/static/js/3.23da861b.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.54eb6760.chunk.css.map": "/static/css/main.54eb6760.chunk.css.map",
-    "static/js/2.9a2a4ed5.chunk.js.LICENSE.txt": "/static/js/2.9a2a4ed5.chunk.js.LICENSE.txt",
+    "static/css/main.c888fd77.chunk.css.map": "/static/css/main.c888fd77.chunk.css.map",
+    "static/js/2.2ef038dd.chunk.js.LICENSE.txt": "/static/js/2.2ef038dd.chunk.js.LICENSE.txt",
     "static/media/comment-circle-game.a0d531f0.mp3": "/static/media/comment-circle-game.a0d531f0.mp3",
     "static/media/comment-fish-race.1df8e3ad.mp3": "/static/media/comment-fish-race.1df8e3ad.mp3",
     "static/media/comment-get-low.a2f110fc.mp3": "/static/media/comment-get-low.a2f110fc.mp3",
@@ -21,13 +21,12 @@
     "static/media/envelope.03442720.svg": "/static/media/envelope.03442720.svg",
     "static/media/first_frame_montepoeli.29021887.jpeg": "/static/media/first_frame_montepoeli.29021887.jpeg",
     "static/media/github.50efb19f.svg": "/static/media/github.50efb19f.svg",
-    "static/media/medium-m.94196f86.svg": "/static/media/medium-m.94196f86.svg",
     "static/media/montepoeli_video_462 × 1000.0a7b6f95.mp4": "/static/media/montepoeli_video_462 × 1000.0a7b6f95.mp4"
   },
   "entrypoints": [
-    "static/js/runtime-main.1d77f13e.js",
-    "static/js/2.9a2a4ed5.chunk.js",
-    "static/css/main.54eb6760.chunk.css",
-    "static/js/main.a6a75d16.chunk.js"
+    "static/js/runtime-main.73edcc54.js",
+    "static/js/2.2ef038dd.chunk.js",
+    "static/css/main.c888fd77.chunk.css",
+    "static/js/main.b2190668.chunk.js"
   ]
 }
