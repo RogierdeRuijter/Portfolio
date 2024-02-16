@@ -44,6 +44,10 @@
   }
 }
 
+[popover] p {
+  margin: 0;
+}
+
 [popover] button {
   position: absolute;
   top: calc(1rlh - 0.5ex);
