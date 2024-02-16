@@ -1,0 +1,69 @@
+[popover] {
+  position: relative;
+  top: calc(var(--top) - 0.5rlh);
+  box-shadow: 0 1px 14px rgba(0,0,0,.2);
+  border: 0;
+  padding: 0;
+  overflow: visible;
+  opacity: 0;
+  width: calc(60ch + 4em);
+  width: calc(60ch + 4rlh);
+  max-width: calc(100% - 1rlh);
+  margin: 0 auto;
+}
+
+[popover]::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+  box-shadow: 0 1px 14px rgba(0,0,0,.2);
+  background: #fff;
+  position: absolute;
+  z-index: 1;
+  left: calc(50% - 10px);
+  bottom: -8px;
+}
+
+.popover-wrapper {
+  width: 100%;
+  padding: 2em;
+  padding: 2rlh;
+  border-radius: 4px;
+  background: #fff;
+  position: relative;
+  z-index: 998;  
+  text-wrap: balance;
+}
+
+@supports (initial-letter: 2) or (-webkit-initial-letter: 2) {
+  [popover] p:first-of-type::first-letter {
+    -webkit-initial-letter: 2;
+    initial-letter: 2;
+    margin-right: 0.5em;
+  }
+}
+
+[popover] p {
+  margin: 0;
+}
+
+[popover] button {
+  position: absolute;
+  top: calc(1rlh - 0.5ex);
+  right: calc(0.5rlh + 0.5ch);
+  margin-left: auto;
+  border: 0;
+  font-size: 1rem;
+  background: transparent;
+  font-family: inherit;
+  font-weight: 300;
+  color: oklch(41% 0 0);
+  cursor: pointer;
+  transition: background 0.15s ease-in, color 0.15s ease-in;
+}
+
+[popover] button:hover {
+  transition: background 0.3s ease-out, color 0.4s ease-out;
+  color: oklch(10% 0 0);
+}

@@ -81,6 +81,7 @@ function Montepoeli() {
       id="montepoeli-content-container"
       title="Montepoeli"
       project="montepoeli"
+      popoverTargetId="montepoeli-explanation"
     >
       <div id="montepoeli-content">
         {loading && (
@@ -106,6 +107,22 @@ function Montepoeli() {
             </progress>
           </figcaption>
         </figure>
+      </div>
+      <div popover="auto" id="montepoeli-explanation">
+        <div className="popover-wrapper">
+          <p>
+            Dit is de app die ik voor mijn schaakclub gemaakt heb. De schaakclub
+            is ontstaan in het prachtige Montepulciano in Italië. In de app
+            kunnen de gespeelde schaakwedstrijden en clubregels opgeslagen
+            worden.
+          </p>
+          <button
+            popovertarget="montepoeli-explanation"
+            popovertargetaction="hide"
+          >
+            X
+          </button>
+        </div>
       </div>
     </ContentWithAudioContainer>
   );

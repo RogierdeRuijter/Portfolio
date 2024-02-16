@@ -40,8 +40,10 @@
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-MG9RL470BY"
     ></script>
+    <script defer src="%PUBLIC_URL%/popover-api-fallback.js"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
+
       function gtag() {
         if (window.location.href.includes("rogierderuijter")) {
           dataLayer.push(arguments);
@@ -184,6 +186,22 @@
         background-size: contain;
         overflow: hidden;
       }
+
+      @supports not selector([popover]:popover-open) {
+        [popover] {
+          position: fixed;
+          background-color: white;
+          top: 40%;
+        }
+
+        [popover]::before {
+          content: none;
+        }
+
+        [popover]:not([open]) {
+          display: none;
+        }
+      }
     </style>
     <div id="welcome-wrapper">
       <div id="welcome-content-container">
@@ -195,7 +213,7 @@
             </video>
           </div>
           <div id="scroll-down-element">
-            <span class="scroll-down-element-line"></span>
+            <span className="scroll-down-element-line"></span>
             <span id="scroll-down-element-text">Scroll</span>
           </div>
         </header>

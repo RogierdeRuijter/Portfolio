@@ -49,6 +49,17 @@ const App = () => {
         "https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js";
       document.body.appendChild(script);
     }
+
+    const listener = window.addEventListener("blur", () => {
+      const popoverApiSupported =
+        window.HTMLElement.prototype.hasOwnProperty("popover");
+      if (popoverApiSupported) {
+        document.querySelectorAll("[popover]").forEach((popover) => {
+          popover?.hidePopover();
+        });
+      }
+      window.removeEventListener("blur", listener);
+    });
   }, []);
 
   return (
