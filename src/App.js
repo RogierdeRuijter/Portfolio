@@ -21,16 +21,26 @@ const App = () => {
   );
 };
 
+function scrollToFirstH1(heading) {
+  // So ugly
+  setTimeout(() => {
+      const firstH1 = document.querySelector('#root').querySelector(heading);
+    if (firstH1) {
+      firstH1.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, 300);
+}
+
 function Layout() {
   return (
     <>
-      <nav class="nav">
-        <ul class="list">
-          <li class="item">
-            <Link to="/blog">Blog</Link>
+      <nav className="nav">
+        <ul className="list">
+          <li className="item">
+            <Link to="/blog" onClick={() => scrollToFirstH1('h1')}>Blog</Link>
           </li>
-          <li class="item">
-            <Link to="/">Home</Link>
+          <li className="item">
+            <Link to="/" onClick={() => scrollToFirstH1('h2')}>Home</Link>
           </li>
         </ul>
       </nav>
