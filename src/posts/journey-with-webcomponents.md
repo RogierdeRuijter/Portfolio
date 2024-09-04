@@ -12,18 +12,17 @@ they were already utilizing web components.
 > with a shadow DOM attached to them.
 
 At the time, we were working on a legacy web app that was challenging to modify.
-The objective was to construct a full-fledged UI library using web components.
-Since web components are independent of the rest of the page, we could use them
-without being concerned about other CSS or JavaScript on the page. This approach
-enabled us to incorporate these components within the legacy web app and, once we
-transitioned away from it, to effortlessly transfer the UI library to a new
-frontend framework. The concept remains solid, and in my opinion, it
-encapsulates the true potential of web components.
+The idea was that if we created a UI library with web components, we would be able to
+still make progress on standardizing the UI while not having to worry about other parts 
+of the web app. Besides, and this might be the main reason, that when we decided to move
+away from the legacy app, we could reuse the UI library because we web components
+are framework agnostic.
 
-This led us to attempt to accommodate both simple and intricate UI patterns
-within a custom element with a shadow DOM. Let’s examine a complex UI pattern,
-such as a card. To transmit data into the web component, we utilized attributes
-on the custom element in the following manner:
+This led us to attempt to accommodate both simple and complex UI patterns
+within a web component. Especially the complex patterns led to difficulties. 
+Let’s examine a complex UI pattern, such as a card. 
+To transmit data into the web component, we utilized attributes on the custom 
+element in the following manner:
 
 ```html
 <my-card
@@ -52,25 +51,23 @@ render() {
 }
 ```
 
-This approach resembles how frameworks like React and Astro render their
-components in the browser. However, it felt inappropriate to require JavaScript
+This approach resembles how frameworks like React and Angular render their
+components in the browser. However, it felt strange to require JavaScript
 for basic UI functionality. Additionally, the styles that need to be included in
 the Shadow DOM are more extensive than anticipated. For instance, in the
-provided example, we also need to include text styles that look something like
-this. That add an additional 15 - 50 lines of css depending on the amount of
-text styles.
+provided example, we also need to include text styles. That add an additional 
+15 - 50 lines of css depending on the amount of text styles.
 
-While these issues are not deal-breakers, we have built around 30 components,
-and there are some peculiar workarounds that you have to accept. However, it is
-definitely possible to overcome these challenges.
+While these issues are not deal-breakers, we have built around 30 components.
+There are peculiar workarounds that you have to do to get it to do what you want. 
+However, it is definitely possible to overcome these challenges.
 
 ## A Way Forward
 
 About a year ago, we decided to rebuild the frontend applications to replace the
 legacy web app. This gave us an opportunity to choose a new tech stack. We
-decided to go with Astro as our frontend meta framework and web components for
-our UI library. In this setting, we tried to find solutions to our above
-problems within our web component set up.
+decided to go with Astro as our frontend framework and web components for
+our UI library. In this setting, we tried to find solutions to our problems above.
 
 ### A Possible Solution
 
@@ -108,7 +105,7 @@ This approach is somewhat effective, but there’s a significant limitation: the
 light DOM styling will always override the Shadow DOM styling. Therefore, if
 there’s a global selector styling the `h2` element, the Shadow DOM styling will
 be overridden. This issue repeatedly arose in our legacy web app, and the lack of
-control over the styling of components was a major obstacle for us.
+control over the styling of components was a deal breaker for us.
 
 We had to find an alternative approach.
 
@@ -131,16 +128,14 @@ reuse in other projects that don’t utilize Astro. For instance, our web
 component library currently includes the following elements: `button`, `input`,
 and `icon`.
 
-I’ll delve deeper into the pros and cons of using these components.
-
-### About web components in Astro
+### Note: about web components in Astro
 
 When you build web components using Lit and render them in Astro,
 [declarative shadow DOM](https://web.dev/articles/declarative-shadow-dom) is
 employed, which is fantastic. This feature enables the rendering of a shadow DOM
 without the need for JavaScript. This addresses our initial issue but introduces
 new challenges. Primarily, the HTML file size increases due to the output of CSS
-into the HTML. However, due to gzip compression and a sophisticated CSS parser,
+into the HTML. However, due to gzip compression and smartness from the CSS parser,
 this is supposedly not a significant concern. Nevertheless, the file size grows
 rapidly, especially if the shadow DOM contains approximately 150 lines of CSS.
 
@@ -170,14 +165,15 @@ shadow DOM. Wrapping them in another shadow DOM appears unnecessary.
 
 ## Conclusion
 
-In light of these considerations, we can draw the following conclusion: Creating
-a UI library using web components presents more challenges than it resolves.
+For my time with web components, I draw the following conclusion: Creating
+a UI library using web components gives us more problems than it solves.
 While the `input` element functions effectively, maintaining a Lit codebase for
 a single use case seems excessive. Perhaps when we have the need to support
-multiple frameworks, we’ll revisit this approach.
+multiple frameworks, we’ll revisit this approach or we will build web components
+without Lit.
 
 The concept of building a UI library with custom elements appears logical and
-appealing. However, we believe that the current web standards lack sufficient
+appealing. However, I believe that the current web standards lack sufficient
 support for this approach.
 
 I propose two primary reasons for this. The first relates to the distinction
