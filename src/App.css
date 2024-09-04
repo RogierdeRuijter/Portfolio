@@ -1,37 +1,31 @@
-/* TODO: add different font-size for mobile */
-#content-container {
+.nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.nav .list {
+  list-style-type: none;
   display: flex;
-  justify-content: center;
-  line-height: 1.6;
-  font-size: 1em;
-}
-
-@media (max-width: 768px) {
-  #content-container {
-    font-size: 1.125em;
-  }
-}
-
-#project-content {
-  /* 
-   * TODO: the max-width here is 800px because I do not want it to go bigger then that
-   * if it does it is possible that the iframes start scrolling. The width of the container is ultimatly 
-   * determined by widest iframe. But that logic is not really clear right now 
-   */
-  max-width: 800px;
-}
-
-.project-introduction #container {
-  margin-bottom: 18%;
-  max-width: 800px;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.project-introduction #title {
-  text-align: center;
-  font-size: max(4vw, 2rem);
-  font-weight: 400;
-  justify-content: center;
   align-items: center;
+  gap: 1rem;
+}
+
+.nav .list .item {
+  height: 44px;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: calc(0.5rem - 2px);
+  font-weight: 700;
+}
+
+.nav .list .item:hover {
+  background-color: hsl(240 4.8% 95.9%)
+}
+
+.nav .list .item > a {
+  color: inherit;
+  text-decoration: none;
 }

@@ -1,87 +1,102 @@
+import AllProjects from "./AllProjects";
+import { Routes, Route, Outlet, Link } from "react-router-dom";
+import AllBlogPosts from "./AllBlogPosts";
 import "./App.css";
-import CircleGame from "./projects/CircleGame/CircleGame";
-import FishRace from "./projects/FishRace/FishRace";
-import SleepingTumblrSeals from "./projects/SleepingSeals/SleepingSeals";
-import GetLow from "./projects/GetLow/GetLow";
-import Montepoeli from "./projects/Montepoeli/Montepoeli";
-import Acknowledgements from "./Acknowledgements/Acknowledgements";
-import Julia from "./projects/Julia/Julia";
-import Info from "./Info/Info";
-import { useEffect, useLayoutEffect } from "react";
-import DropItem from "./helpers/DropItem/DropItem";
+import { useLocation } from 'react-router-dom';
+import { useEffect, useState } from "react";
+
+const navTabel = [
+  { id: 'my-journey-with-web-components', navId: '2024-09-01' }
+];
 
 const App = () => {
-  useLayoutEffect(() => {
-    function getResizeMessage(event) {
-      const juliaIframe = document.getElementById("julia-iframe");
-      const iframes = [juliaIframe];
-      iframes.forEach((iframe) => {
-        if (iframe.contentWindow === event.source) {
-          iframe.classList.remove("default-height");
-          const height = Number(event.data.height);
+  const location = useLocation();
+  const [hasScrolled, setHasScrolled] = useState(false);
+  const [scrollToStart, setScrollToStart] = useState();
+  const [scrollId, setScrollId] = useState();
 
-          document
-            .getElementsByTagName("body")[0]
-            .style.setProperty("--julia-iframe-height", `${height}px`);
-          iframe.height = height;
-        }
-      });
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace('#', '');
+      const element = document.getElementById(scrollId);
+
+      setScrollId(id);
+
+      if (element) {
+        setTimeout(() => {
+          setScrollToStart(true);
+        }, 1500);
+      } else {
+        console.log('Element not found');
+      }
     }
+  }, [location]);
 
-    window.addEventListener("message", getResizeMessage, false);
+  useEffect(() => {
+    if (scrollId && !hasScrolled && !scrollToStart) {
+      const element = document.getElementById(navTabel.find(nav => nav.id === scrollId).navId);
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, [scrollToStart, hasScrolled, scrollId]);
+
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setHasScrolled(true);
+      window.removeEventListener('scroll', handleScroll);
+    };
+
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener("message", getResizeMessage);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
-  useEffect(() => {
-    if ("loading" in HTMLIFrameElement.prototype) {
-      const iframes = document.querySelectorAll('iframe[loading="lazy"]');
-
-      iframes.forEach((iframe) => {
-        iframe.src = iframe.dataset.src;
-      });
-    } else {
-      // Dynamically import the LazySizes library
-      const script = document.createElement("script");
-      script.src =
-        "https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js";
-      document.body.appendChild(script);
-    }
-
-    const listener = window.addEventListener("blur", () => {
-      const popoverApiSupported =
-        window.HTMLElement.prototype.hasOwnProperty("popover");
-      if (popoverApiSupported) {
-        document.querySelectorAll("[popover]").forEach((popover) => {
-          popover?.hidePopover();
-        });
-      }
-      window.removeEventListener("blur", listener);
-    });
-  }, []);
-
+  location.hash;
   return (
-    <div id="content-container">
-      <section id="project-content">
-        <DropItem />
-        <FishRace />
-        <DropItem />
-        <CircleGame />
-        <DropItem />
-        <Montepoeli />
-        <DropItem />
-        <GetLow />
-        <DropItem />
-        <SleepingTumblrSeals />
-        <DropItem />
-        <Julia />
-        <Acknowledgements />
-        <Info />
-      </section>
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<AllProjects />} />
+        <Route path="blog" element={<AllBlogPosts />} />
+
+        {/* Using path="*"" means "match anything", so this route
+                acts like a catch-all for URLs that we don't have explicit
+                routes for. */}
+        <Route path="*" element={<div />} />
+      </Route>
+    </Routes>
   );
 };
+
+function scrollToFirstH1(heading) {
+  // So ugly
+  setTimeout(() => {
+    const firstH1 = document.querySelector('#root').querySelector(heading);
+    if (firstH1) {
+      firstH1.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, 300);
+}
+
+function Layout() {
+  return (
+    <>
+      <nav className="nav">
+        <ul className="list">
+          <li className="item">
+            <Link to="/blog" onClick={() => scrollToFirstH1('h1')}>Blog</Link>
+          </li>
+          <li className="item">
+            <Link to="/" onClick={() => scrollToFirstH1('h2')}>Home</Link>
+          </li>
+        </ul>
+      </nav>
+
+      <hr />
+      <Outlet />
+    </>
+  );
+}
 
 export default App;
