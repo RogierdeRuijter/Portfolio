@@ -1,5 +1,5 @@
 .post {
-  padding: 0 2rem;
+  padding: 0 1rem;
   max-width: 60ch;
   margin: auto;
   line-height: 1.6;
@@ -9,7 +9,7 @@
 @media (min-width: 768px) {
   .post {
     font-size: 1.15rem;
-    padding: 0 1rem;
+    padding: 0 2rem;
   }
 }
 
