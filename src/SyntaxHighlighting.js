@@ -9,15 +9,7 @@ import rehypeSlug from 'rehype-slug';
 function SyntaxHighlighting({ title, children, date }) {
   return (
     <div
-      style={{
-        padding: "0 2rem",
-        maxWidth: "60ch",
-        margin: "auto",
-        lineHeight: 1.6,
-        fontSize: "1.15rem",
-      }}
     >
-      {date}
       <ReactMarkdown
         rehypePlugins={[rehypeRaw, rehypeSlug]}
         components={{

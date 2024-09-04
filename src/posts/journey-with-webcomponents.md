@@ -1,31 +1,31 @@
-# Our Journey with Web Components
+# My journey with web components
 
 **TL;DR**: Web components currently don't offer enough features to build a
-full-fledged UI library.
+full-fledged UI library with them. But there is hope...
 
-## Previous Approach
+## Previous approach
 
-My journey with web components has been an interesting one. When I started my
-current job at VPRO, they were already using web components.
+My journey with web components has been an intriguing one. When I joined VPRO,
+they were already utilizing web components.
 
-> Throughout this post, when I refer to web components, I mean custom elements
+> Throughout this post, when I refer to web components, I mean a custom element
 > with a shadow DOM attached to them.
 
-At the time, we were working on a legacy system that was difficult to modify.
-The idea was to create a full-fledged UI library built with web components.
+At the time, we were working on a legacy system that was challenging to modify.
+The objective was to construct a full-fledged UI library using web components.
 Since web components are independent of the rest of the page, we could use them
-without worrying about other CSS or JavaScript on the page. This approach
-allowed us to use these components within the legacy system and, once we
-transitioned away from it, easily move the UI library to a new frontend
-framework. The idea is still solid and, in my opinion, represents the true
-promise of web components.
+without being concerned about other CSS or JavaScript on the page. This approach
+enabled us to incorporate these components within the legacy system and, once we
+transitioned away from it, to effortlessly transfer the UI library to a new
+frontend framework. The concept remains solid, and in my opinion, it
+encapsulates the true potential of web components.
 
-This led us to try fitting both simple and complex UI patterns into a custom
-element with a shadow DOM. Let’s take a look at a complex UI pattern, such as a
-card. To pass data into the web component, we were using attributes on the
-custom element like this:
+This led us to attempt to accommodate both simple and intricate UI patterns
+within a custom element with a shadow DOM. Let’s examine a complex UI pattern,
+such as a card. To transmit data into the web component, we utilized attributes
+on the custom element in the following manner:
 
-\`\`\`html
+```html
 <my-card
   title="My Title"
   description="This is a description"
@@ -33,35 +33,52 @@ custom element like this:
   icon="arrowRight"
 >
 </my-card>
-\`\`\`
+```
 
 Within the custom element, we would map these attributes at runtime to the
 corresponding HTML elements within the Shadow DOM. The render function of the
-(Lit-powered) custom element would look something like this:
+([Lit](https://lit.dev/) powered) custom element would look something like this:
 
-\`\`\`javascript
-  render() {
-    return html\`
-      <div>
-        ${this.title ? html\`<h2>${this.headline}</h2>\` : html\`\`}
-        ${this.description ? html\`<p>${this.summary}</p>\` : html\`\`}
-        ${this.image ? html\`<my-image src=${this.image}></my-image>\` : html\`\`}
-        ${this.icon ? html\`<my-icon icon=${this.icon}></my-icon>\` : html\`\`}
-      </div>
-    \`;
-  }
-\`\`\`
+```javascript
+render() {
+  return html`
+    <div>
+      ${this.title ? html`<h2>${this.headline}</h2>` : html``}
+      ${this.description ? html`<p>${this.summary}</p>` : html``}
+      ${this.image ? html`<my-image src=${this.image}></my-image>` : html``}
+      ${this.icon ? html`<my-icon icon=${this.icon}></my-icon>` : html``}
+    </div>
+  `;
+}
+```
 
-This approach looks very similar to how frameworks like React and Astro render
-their components in the browser. However, it didn’t feel right that JavaScript
-needed to be enabled for the UI to function. Therefore, we tried exploring other
-options.
+This approach resembles how frameworks like React and Astro render their
+components in the browser. However, it felt inappropriate to require JavaScript
+for basic UI functionality. Additionally, the styles that need to be included in
+the Shadow DOM are more extensive than anticipated. For instance, in the
+provided example, we also need to include text styles that look something like
+this. That add an additional 15 - 50 lines of css depending on the amount of
+text styles.
 
-## A Possible Solution
+While these issues are not deal-breakers, we have built around 30 components,
+and there are some peculiar workarounds that you have to accept. However, it is
+definitely possible to overcome these challenges.
 
-So, we tried passing the HTML elements in a slot to the Shadow DOM, like this:
+## A Way Forward
 
-\`\`\`html
+About a year ago, we decided to rebuild the frontend applications to replace the
+legacy system. This gave us an opportunity to choose a new tech stack. We
+decided to go with Astro as our frontend meta framework and web components for
+our UI library. In this setting, we tried to find solutions to our above
+problems within our web component set up.
+
+### A Possible Solution
+
+To circumvent the requirement for JavaScript to render the user interface, we
+attempted to pass the HTML elements into a slot within the Shadow DOM, as
+illustrated below:
+
+```html
 <my-card>
   <h2>My Title</h2>
   <p>This is a description</p>
@@ -71,13 +88,13 @@ So, we tried passing the HTML elements in a slot to the Shadow DOM, like this:
   ></my-image>
   <my-icon name="arrowRight"></my-icon>
 </my-card>
-\`\`\`
+```
 
 This way, we could have a complete HTML file coming from the server. The idea
 was that we could style the elements passed in the slot from within the Shadow
 DOM, like so:
 
-\`\`\`css
+```css
 ::slotted(h2) {
   font-size: 1.4rem;
 }
@@ -85,102 +102,103 @@ DOM, like so:
 ::slotted(p) {
   font-size: 1.1rem;
 }
-\`\`\`
+```
 
-This approach kind of works, but there’s one big caveat: the light DOM styling
-will always override the Shadow DOM styling. So, if there is a global selector
-styling the \`h2\` element somewhere, the Shadow DOM styling will be overridden.
-This occurred many times in our legacy system, and not having control over the
-styling of the components was a dealbreaker for us.
+This approach is somewhat effective, but there’s a significant limitation: the
+light DOM styling will always override the Shadow DOM styling. Therefore, if
+there’s a global selector styling the `h2` element, the Shadow DOM styling will
+be overridden. This issue repeatedly arose in our legacy system, and the lack of
+control over the styling of components was a major obstacle for us.
 
-## A Way Forward
+We had to find an alternative approach.
 
-About a year ago, we decided to rebuild the frontend applications to replace the
-legacy system. This gave us an opportunity to choose a new tech stack. We
-decided to go with Astro as our frontend meta framework and web components for
-our UI library. This also gave us the opportunity to reevaluate our approach to
-web components.
+### Listening to experts
 
-After listening to podcasts and reading articles about web components, something
-dawned on me. When "web component advocates" discuss web components, they
-consistently, though not always explicitly, recommend using them primarily for
-leaf components—such as buttons, anchors, and inputs. This was very different
-from what we had been doing, which was trying to fit everything into a web
-component.
+After listening to podcasts and reading articles about web components, I
+realized something. When “web component advocates” discuss web components, they
+consistently, although not always explicitly, recommend using them primarily for
+leaf components—such as buttons, anchors, and inputs. This was quite different
+from our approach, which was to try and fit everything into a web component.
 
 To give web components the best chance of succeeding, we committed to using them
 only for leaf components and avoiding them for more complex UI patterns.
 
 ## Current Approach
 
-Therefore, our current approach is to use web components only for _some_ leaf
-components. These are leaf components that we want to brand and possibly reuse
-in other projects that do not use Astro. This currently includes the following
-elements in our web component library: \`my-button\`, \`my-input\`, and \`my-icon\`.
+Our current approach involves using web components exclusively for certain leaf
+components. These are leaf components that we intend to brand and potentially
+reuse in other projects that don’t utilize Astro. For instance, our web
+component library currently includes the following elements: `button`, `input`,
+and `icon`.
 
-I will go into more detail on what works and what doesn't work for these
-components.
+I’ll delve deeper into the pros and cons of using these components.
 
-### About Web Components in Astro
+### About web components in Astro
 
 When you build web components using Lit and render them in Astro,
 [declarative shadow DOM](https://web.dev/articles/declarative-shadow-dom) is
-used, which is really awesome. It makes it possible to render a shadow DOM
-without any JavaScript. This solves our initial problem but introduces some new
-ones. Mainly, the HTML file size increases because of the CSS outputted into the
-HTML. Due to gzip compression and smart CSS parsers, this is supposedly not a
-big issue. But the file size increases rapidly, especially if you have a shadow
-DOM that contains around 150 lines of CSS.
+employed, which is fantastic. This feature enables the rendering of a shadow DOM
+without the need for JavaScript. This addresses our initial issue but introduces
+new challenges. Primarily, the HTML file size increases due to the output of CSS
+into the HTML. However, due to gzip compression and a sophisticated CSS parser,
+this is supposedly not a significant concern. Nevertheless, the file size grows
+rapidly, especially if the shadow DOM contains approximately 150 lines of CSS.
 
 ### Button
 
-The button has many UI variants, such as primary, secondary, tertiary, and
-outline buttons. This results in 150 lines of CSS being output into the DOM for
-every button. This happens because Shadow DOM is not for scoping CSS but for
-_isolating_ it, a point I will return to later. This means that if there are 5
-buttons on a page, 750 lines of CSS will be output into the DOM. This gets out
-of hand quickly and results in HTML files between 200kb and 1mb.
+The button offers various UI variants, including primary, secondary, tertiary,
+and an outline button. Consequently, 150 lines of CSS are generated for each
+button. This occurs because Shadow DOM is not intended for scoping CSS but
+rather for _isolating_ it, a concept I’ll revisit later. This means that if
+there are five buttons on a page, 750 lines of CSS will be output into the DOM.
+This results in small pages being between 200kb and 1mb.
 
-### Input
+### Element
 
-The input works quite well within a Shadow DOM. There is a lot of JavaScript
-that dynamically shows and hides elements and validates the form elements. The
-isolation of DOM elements works well here. Additionally, interacting with forms
-has been greatly improved with the
+The input element functions quite effectively within a Shadow DOM. There’s a
+significant amount of JavaScript that dynamically displays and conceals elements
+and validations on the form element. The isolation of DOM elements is
+well-suited for this scenario. Moreover, interacting with forms has been
+significantly enhanced with the
 [Element Internals API](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/attachInternals).
 
 ### Icon
 
-The icon also works pretty well, but there is some question here about how much
-effect an additional shadow DOM has. SVGs already have their own shadow DOM.
-Wrapping them in another shadow DOM seems unnecessary.
+The icon also performs reasonably well, but there’s some uncertainty regarding
+the necessity of the additional shadow DOM. SVGs already possess their own
+shadow DOM. Wrapping them in another shadow DOM appears unnecessary.
 
-### Conclusion
+## Conclusion
 
-All of the above led us to the following conclusion: Web components give us more
-headaches than they solve. Yes, the \`input\` works nicely, but maintaining a Lit
-codebase for one use case seems a bit overkill. Maybe when we have a use case
-for multiple frameworks, we will come back to them.
+In light of these considerations, we can draw the following conclusion: Creating
+a UI library using web components presents more challenges than it resolves.
+While the `input` element functions effectively, maintaining a Lit codebase for
+a single use case seems excessive. Perhaps when we have the need to support
+multiple frameworks, we’ll revisit this approach.
 
-The idea of building a UI library with custom elements feels very logical and
-appealing, but we don't feel that the current web standards are there yet.
+The concept of building a UI library with custom elements appears logical and
+appealing. However, we believe that the current web standards lack sufficient
+support for this approach.
 
-I believe there are two main reasons for this. One has to do with isolation vs.
-scoping, and the other with the custom elements spec itself.
+I propose two primary reasons for this. The first relates to the distinction
+between isolation and scoping. The second relates to the implementation of
+custom elements specification.
 
-The isolation vs. scoping point has also been made by Keith J. Grant in
+The scoping versus isolation debate has also been discussed by Keith J. Grant in
 [this blog post](https://keithjgrant.com/posts/2023/08/scope-vs-shadow-dom/#shadow-dom-does-not-provide-what),
 where he argues that Shadow DOM offers isolation from the DOM, but not scoping.
-In essence, it lives next to the cascade. He argues that
-[\`@scope\`](https://developer.mozilla.org/en-US/docs/Web/CSS/@scope) offers a
-solution where the cascade is embraced and we have the ability to scope CSS to a
-specific element.
+Scoping, in essence, resides alongside the cascade. He contends that
+[`@scope`](https://developer.mozilla.org/en-US/docs/Web/CSS/@scope) provides a
+solution that embraces the cascade while allowing us to scope CSS to a specific
+element.
 
-The second argument is that Webkit is
-[not going to implement](https://github.com/WebKit/standards-positions/issues/97)
-the Customized Built-in Elements part of the custom element spec. Because of
-this, we have an even more limited toolbox to work with.
+The second argument is that WebKit is unlikely to implement the Customized
+built-in elements feature of the custom element specification. Consequently, we
+have an even more limited set of tools to work with.
 
-I love web components, and their promise is awesome. I hope to experiment with
-\`@scope\` soon and see if it’s the missing piece of the puzzle, enabling us to
-build a fully platform-agnostic UI library. It seems far away, but who knows!
+I am a big fan of web components, and their potential is truly remarkable. I
+eagerly anticipate experimenting with `@scope` soon to determine if it is the
+missing piece of the puzzle, enabling us to construct a fully platform-agnostic
+UI library.
+
+It would be surprising, but who knows!
