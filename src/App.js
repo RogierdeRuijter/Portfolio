@@ -5,7 +5,6 @@ import "./App.css";
 
 const App = () => {
   return (
-    <>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<AllProjects />} />
@@ -17,7 +16,6 @@ const App = () => {
           <Route path="*" element={<div />} />
         </Route>
       </Routes>
-    </>
   );
 };
 
