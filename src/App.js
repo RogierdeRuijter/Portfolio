@@ -16,8 +16,8 @@ const App = () => {
   const [scrollId, setScrollId] = useState();
 
   useEffect(() => {
-    if (location.hash) {
-      const id = location.hash.replace('#', '');
+    if (location.search) {
+      const id = location.search.replace('?post=', '');
       const element = document.getElementById(scrollId);
 
       setScrollId(id);
