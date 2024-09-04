@@ -1,32 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.c888fd77.chunk.css",
-    "main.js": "/static/js/main.b2190668.chunk.js",
-    "main.js.map": "/static/js/main.b2190668.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.73edcc54.js",
-    "runtime-main.js.map": "/static/js/runtime-main.73edcc54.js.map",
-    "static/js/2.2ef038dd.chunk.js": "/static/js/2.2ef038dd.chunk.js",
-    "static/js/2.2ef038dd.chunk.js.map": "/static/js/2.2ef038dd.chunk.js.map",
-    "static/js/3.23da861b.chunk.js": "/static/js/3.23da861b.chunk.js",
-    "static/js/3.23da861b.chunk.js.map": "/static/js/3.23da861b.chunk.js.map",
+    "main.css": "/static/css/main.f23dbb7b.css",
+    "main.js": "/static/js/main.36d73978.js",
+    "static/js/422.b46b8d3f.chunk.js": "/static/js/422.b46b8d3f.chunk.js",
+    "static/media/montepoeli_video_462 × 1000.mp4": "/static/media/montepoeli_video_462 × 1000.0a7b6f959856ca1aad47.mp4",
+    "static/media/comment-fish-race.mp3": "/static/media/comment-fish-race.1df8e3ad1d817fcc7627.mp3",
+    "static/media/comment-get-low.mp3": "/static/media/comment-get-low.a2f110fcadd3dc0550d1.mp3",
+    "static/media/comment-sleeping-seals.mp3": "/static/media/comment-sleeping-seals.00aaf74509017ed790d1.mp3",
+    "static/media/comment-circle-game.mp3": "/static/media/comment-circle-game.a0d531f01dc76d55aa47.mp3",
+    "static/media/comment-julia.mp3": "/static/media/comment-julia.e0a88f24fd0be1d84f9c.mp3",
+    "static/media/comment-montepoeli.mp3": "/static/media/comment-montepoeli.5873dec8a3bb0cde5a76.mp3",
+    "static/media/first_frame_montepoeli.jpeg": "/static/media/first_frame_montepoeli.290218872ef6cc672f67.jpeg",
     "index.html": "/index.html",
-    "static/css/main.c888fd77.chunk.css.map": "/static/css/main.c888fd77.chunk.css.map",
-    "static/js/2.2ef038dd.chunk.js.LICENSE.txt": "/static/js/2.2ef038dd.chunk.js.LICENSE.txt",
-    "static/media/comment-circle-game.a0d531f0.mp3": "/static/media/comment-circle-game.a0d531f0.mp3",
-    "static/media/comment-fish-race.1df8e3ad.mp3": "/static/media/comment-fish-race.1df8e3ad.mp3",
-    "static/media/comment-get-low.a2f110fc.mp3": "/static/media/comment-get-low.a2f110fc.mp3",
-    "static/media/comment-julia.e0a88f24.mp3": "/static/media/comment-julia.e0a88f24.mp3",
-    "static/media/comment-montepoeli.5873dec8.mp3": "/static/media/comment-montepoeli.5873dec8.mp3",
-    "static/media/comment-sleeping-seals.00aaf745.mp3": "/static/media/comment-sleeping-seals.00aaf745.mp3",
-    "static/media/envelope.03442720.svg": "/static/media/envelope.03442720.svg",
-    "static/media/first_frame_montepoeli.29021887.jpeg": "/static/media/first_frame_montepoeli.29021887.jpeg",
-    "static/media/github.50efb19f.svg": "/static/media/github.50efb19f.svg",
-    "static/media/montepoeli_video_462 × 1000.0a7b6f95.mp4": "/static/media/montepoeli_video_462 × 1000.0a7b6f95.mp4"
+    "static/media/github.svg": "/static/media/github.50efb19fc73b13f42b6874b9e5dd8b0e.svg",
+    "static/media/envelope.svg": "/static/media/envelope.0344272071fe1b4970c0a838bd64172c.svg",
+    "main.f23dbb7b.css.map": "/static/css/main.f23dbb7b.css.map",
+    "main.36d73978.js.map": "/static/js/main.36d73978.js.map",
+    "422.b46b8d3f.chunk.js.map": "/static/js/422.b46b8d3f.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.73edcc54.js",
-    "static/js/2.2ef038dd.chunk.js",
-    "static/css/main.c888fd77.chunk.css",
-    "static/js/main.b2190668.chunk.js"
+    "static/css/main.f23dbb7b.css",
+    "static/js/main.36d73978.js"
   ]
 }
