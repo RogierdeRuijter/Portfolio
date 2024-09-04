@@ -10,8 +10,8 @@ export default function FirstPost() {
   });
 
   return (
-    <div class="post">
-      {date}
+    <div className="post">
+      <time id="2024-09-01">{date}</time>
       <SyntaxHighlighting title="1">{post}</SyntaxHighlighting>
     </div>
   );

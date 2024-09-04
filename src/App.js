@@ -5,6 +5,10 @@ import "./App.css";
 import { useLocation } from 'react-router-dom';
 import { useEffect, useState } from "react";
 
+const navTabel = [
+  { id: 'my-journey-with-web-components', navId: '2024-09-01' }
+];
+
 const App = () => {
   const location = useLocation();
   const [hasScrolled, setHasScrolled] = useState(false);
@@ -21,7 +25,7 @@ const App = () => {
       if (element) {
         setTimeout(() => {
           setScrollToStart(true);
-        }, 2000);
+        }, 1500);
       } else {
         console.log('Element not found');
       }
@@ -30,7 +34,7 @@ const App = () => {
 
   useEffect(() => {
     if (scrollId && !hasScrolled && !scrollToStart) {
-      const element = document.getElementById(scrollId);
+      const element = document.getElementById(navTabel.find(nav => nav.id === scrollId).navId);
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }, [scrollToStart, hasScrolled, scrollId]);
