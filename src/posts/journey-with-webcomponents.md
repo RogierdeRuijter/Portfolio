@@ -11,11 +11,11 @@ they were already utilizing web components.
 > Throughout this post, when I refer to a web component, I mean a custom element
 > with a shadow DOM attached to them.
 
-At the time, we were working on a legacy system that was challenging to modify.
+At the time, we were working on a legacy web app that was challenging to modify.
 The objective was to construct a full-fledged UI library using web components.
 Since web components are independent of the rest of the page, we could use them
 without being concerned about other CSS or JavaScript on the page. This approach
-enabled us to incorporate these components within the legacy system and, once we
+enabled us to incorporate these components within the legacy web app and, once we
 transitioned away from it, to effortlessly transfer the UI library to a new
 frontend framework. The concept remains solid, and in my opinion, it
 encapsulates the true potential of web components.
@@ -67,7 +67,7 @@ definitely possible to overcome these challenges.
 ## A Way Forward
 
 About a year ago, we decided to rebuild the frontend applications to replace the
-legacy system. This gave us an opportunity to choose a new tech stack. We
+legacy web app. This gave us an opportunity to choose a new tech stack. We
 decided to go with Astro as our frontend meta framework and web components for
 our UI library. In this setting, we tried to find solutions to our above
 problems within our web component set up.
@@ -107,7 +107,7 @@ DOM, like so:
 This approach is somewhat effective, but there’s a significant limitation: the
 light DOM styling will always override the Shadow DOM styling. Therefore, if
 there’s a global selector styling the `h2` element, the Shadow DOM styling will
-be overridden. This issue repeatedly arose in our legacy system, and the lack of
+be overridden. This issue repeatedly arose in our legacy web app, and the lack of
 control over the styling of components was a major obstacle for us.
 
 We had to find an alternative approach.
