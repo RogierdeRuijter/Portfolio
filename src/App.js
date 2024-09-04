@@ -2,27 +2,73 @@ import AllProjects from "./AllProjects";
 import { Routes, Route, Outlet, Link } from "react-router-dom";
 import AllBlogPosts from "./AllBlogPosts";
 import "./App.css";
+import { useLocation } from 'react-router-dom';
+import { useEffect, useState } from "react";
 
 const App = () => {
-  return (
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<AllProjects />} />
-          <Route path="blog" element={<AllBlogPosts />} />
+  const location = useLocation();
+  const [hasScrolled, setHasScrolled] = useState(false);
+  const [scrollToStart, setScrollToStart] = useState();
+  const [scrollId, setScrollId] = useState();
 
-          {/* Using path="*"" means "match anything", so this route
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace('#', '');
+      const element = document.getElementById(scrollId);
+
+      setScrollId(id);
+
+      if (element) {
+        setTimeout(() => {
+          setScrollToStart(true);
+        }, 2000);
+      } else {
+        console.log('Element not found');
+      }
+    }
+  }, [location]);
+
+  useEffect(() => {
+    if (scrollId && !hasScrolled && !scrollToStart) {
+      const element = document.getElementById(scrollId);
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, [scrollToStart, hasScrolled, scrollId]);
+
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setHasScrolled(true);
+      window.removeEventListener('scroll', handleScroll);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  location.hash;
+  return (
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<AllProjects />} />
+        <Route path="blog" element={<AllBlogPosts />} />
+
+        {/* Using path="*"" means "match anything", so this route
                 acts like a catch-all for URLs that we don't have explicit
                 routes for. */}
-          <Route path="*" element={<div />} />
-        </Route>
-      </Routes>
+        <Route path="*" element={<div />} />
+      </Route>
+    </Routes>
   );
 };
 
 function scrollToFirstH1(heading) {
   // So ugly
   setTimeout(() => {
-      const firstH1 = document.querySelector('#root').querySelector(heading);
+    const firstH1 = document.querySelector('#root').querySelector(heading);
     if (firstH1) {
       firstH1.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
