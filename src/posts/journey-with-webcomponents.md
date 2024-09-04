@@ -8,7 +8,7 @@ full-fledged UI library with them. But there is hope...
 My journey with web components has been an intriguing one. When I joined VPRO,
 they were already utilizing web components.
 
-> Throughout this post, when I refer to web components, I mean a custom element
+> Throughout this post, when I refer to a web component, I mean a custom element
 > with a shadow DOM attached to them.
 
 At the time, we were working on a legacy system that was challenging to modify.
