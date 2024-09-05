@@ -4,6 +4,7 @@ import AllBlogPosts from "./AllBlogPosts";
 import "./App.css";
 import { useLocation } from 'react-router-dom';
 import { useEffect, useState } from "react";
+import FirstPost from "./posts/FirstPost";
 
 const navTabel = [
   { id: 'my-journey-with-web-components', navId: '2024-09-01' }
@@ -59,7 +60,6 @@ const App = () => {
       <Route path="/" element={<Layout />}>
         <Route index element={<AllProjects />} />
         <Route path="blog" element={<AllBlogPosts />} />
-
         {/* Using path="*"" means "match anything", so this route
                 acts like a catch-all for URLs that we don't have explicit
                 routes for. */}
