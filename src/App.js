@@ -4,7 +4,6 @@ import AllBlogPosts from "./AllBlogPosts";
 import "./App.css";
 import { useLocation } from 'react-router-dom';
 import { useEffect, useState } from "react";
-import FirstPost from "./posts/FirstPost";
 
 const navTabel = [
   { id: 'my-journey-with-web-components', navId: '2024-09-01' }
