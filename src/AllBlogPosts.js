@@ -5,6 +5,7 @@ export default function AllBlogPosts() {
   return (
     <>
       <SecondPost />
+      <hr />
       <FirstPost />
     </>
   );
