@@ -28,7 +28,10 @@ function Info() {
           onClick={() => {
             gtag("event", "generate_lead");
           }}
-          style={{ marginRight: "calc(15% - 8px)", fontWeight: "500" }}
+          style={{
+            marginRight: "calc(15% - 8px)",
+            fontWeight: "500",
+          }}
         >
           <img src={envelopeIcon} />
           Contact me

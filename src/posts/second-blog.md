@@ -8,24 +8,26 @@ TODO: write this about web components in Astro const markdown = `
 
 ## Previous approach
 
-My journey with web components has been an interesting one. When I started my
-current job at VPRO, they were already using web components. To be more
-specific, they were using custom elements in combination with Shadow DOM.
+My journey with web components has been an interesting one. When I
+started my current job at VPRO, they were already using web
+components. To be more specific, they were using custom elements in
+combination with Shadow DOM.
 
-> Throughout this post, I will name which parts of the webcomponent spec I am
-> referring to, as I believe this is a better way to discuss this topic.
-> Therefore, a webcomponent now refers to a custom element with a shadow DOM
-> attached to it. At the time, we were working on a legacy system that was
-> difficult to modify. The idea was to create a full-fledged UI library built
-> with custom elements and Shadow DOM. This approach allowed us to use these
-> components within the legacy system and, once we transitioned away from it, to
-> easily move the UI library to a new frontend framework. In my opinion, this is
-> the true promise of using web components. This resulted into us trying to fit
-> simple and complex UI patterns into a custom element with shadow DOM. For
-> example if we look at the UI pattern of a card. We were passing attribtes to
-> the custom element like this: \`\`\`html <my-card title="My Title"
-> description="This is a description" image="https://placekitten.com/200/300"
-> icon="arrowRight"
+> Throughout this post, I will name which parts of the webcomponent
+> spec I am referring to, as I believe this is a better way to discuss
+> this topic. Therefore, a webcomponent now refers to a custom element
+> with a shadow DOM attached to it. At the time, we were working on a
+> legacy system that was difficult to modify. The idea was to create a
+> full-fledged UI library built with custom elements and Shadow DOM.
+> This approach allowed us to use these components within the legacy
+> system and, once we transitioned away from it, to easily move the UI
+> library to a new frontend framework. In my opinion, this is the true
+> promise of using web components. This resulted into us trying to fit
+> simple and complex UI patterns into a custom element with shadow
+> DOM. For example if we look at the UI pattern of a card. We were
+> passing attribtes to the custom element like this: \`\`\`html
+> <my-card title="My Title" description="This is a description"
+> image="https://placekitten.com/200/300" icon="arrowRight"
 >
 > </my-card>
 > \`\`\`
@@ -44,15 +46,15 @@ specific, they were using custom elements in combination with Shadow DOM.
       </div>
     \`;
 
-} \`\`\` This approach looks very similar to how frameworks like React and Astro
-render their components in the browser. However, it didn’t feel right that
-JavaScript needed to be enabled for the UI to function. Therefore we looked
-tried to explore other options.
+} \`\`\` This approach looks very similar to how frameworks like React
+and Astro render their components in the browser. However, it didn’t
+feel right that JavaScript needed to be enabled for the UI to
+function. Therefore we looked tried to explore other options.
 
 ## A Possible Solution
 
-So, we tried passing the HTML elements in a slot to the Shadow DOM, like this:
-\`\`\`html <my-card>
+So, we tried passing the HTML elements in a slot to the Shadow DOM,
+like this: \`\`\`html <my-card>
 
   <h2>My Title</h2>
   <p>This is a description</p>

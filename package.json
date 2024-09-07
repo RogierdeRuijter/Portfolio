@@ -28,7 +28,7 @@
     "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prettier": "prettier --write --prose-wrap=always src/**/*.{js,css,md}"
+    "prettier": "prettier --write --prose-wrap=always --print-width 70 src/**/*.{js,css,md}"
   },
   "browserslist": {
     "production": [

@@ -5,8 +5,7 @@ import { tomorrow } from "react-syntax-highlighter/dist/esm/styles/prism";
 import rehypeRaw from "rehype-raw";
 import rehypeSlug from 'rehype-slug';
 
-
-function SyntaxHighlighting({ title, children, date }) {
+function SyntaxHighlighting({ title, children }) {
   return (
     <div
     >
@@ -32,6 +31,11 @@ function SyntaxHighlighting({ title, children, date }) {
             props.id = undefined;
 
             return (<h3 id={props.id} {...props} />)
+          },
+          iframe: ({ node, ...props }) => {
+            props.loading = "lazy";
+
+            return (<iframe {...props} style={{ width: "100%", height: "15rem" }} />);
           },
           code({ node, inline, className, children, ...props }) {
             const match = /language-(\w+)/.exec(className || "");

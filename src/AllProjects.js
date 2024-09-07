@@ -9,7 +9,6 @@ import Julia from "./projects/Julia/Julia";
 import Info from "./Info/Info";
 import { useEffect, useLayoutEffect } from "react";
 import DropItem from "./helpers/DropItem/DropItem";
-import AllBlogPosts from "./AllBlogPosts";
 
 const AllProjects = () => {
   useLayoutEffect(() => {

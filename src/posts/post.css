@@ -11,6 +11,10 @@
     font-size: 1.15rem;
     padding: 2rem;
   }
+
+  /* .post>div>pre {
+    margin-inline: -5ch;
+  } */
 }
 
 .post :is(p, blockquote) {
