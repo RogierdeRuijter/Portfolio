@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Anchored popover</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<body>
+  <main>
+    <my-anchored-popover>
+      <button slot="anchor">Click me</button>
+      <div slot="popover">
+        <p>This is a popover!</p>
+      </div>
+    </my-anchored-popover>
+  </main>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    main {
+      padding: 3rem;
+      display: flex;
+    }
+
+    button {
+      font-size: 1.25rem;
+    }
+
+    my-anchored-popover {
+      margin: auto;
+    }
+  </style>
+  <script>
+    document.querySelector("button").addEventListener("click", (e) => {
+      e.preventDefault();
+      document.querySelector("my-anchored-popover").showPopover();
+    });
+  </script>
+</body>
+
+<script>
+  class MyAnchoredPopover extends HTMLElement {
+    anchorElement;
+    popoverElement;
+    hasPopoverApiSupport = HTMLElement.prototype.hasOwnProperty("popover");
+
+    constructor() {
+      super();
+      this.attachShadow({mode: "open"});
+
+      this.shadowRoot.innerHTML = `
+        <div anchor>
+          <slot name="anchor"></slot>
+          <div popover="auto">
+            <slot name="popover"></slot>
+          </div>
+        </div>
+        <style>
+          [popover] {
+            position: absolute;
+            margin: 0;
+            top: calc(var(--bottom) + 1rem);
+            left: var(--left);
+          }
+
+          [popover]::backdrop {
+            background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.25));
+          }
+
+          @supports not selector([popover]:popover-open) {
+            [popover] {
+              display: none;
+            }
+
+            [anchor] {
+              position: relative;
+            }
+
+            .popover-fallback {
+              display: block;
+              z-index: 1;
+              border: 3px solid black;
+              margin-top: 1rem;
+              background: #fff;
+            }
+          }
+        </style>
+      `;
+    }
+
+    connectedCallback() {
+      this.anchorElement = this.shadowRoot.querySelector("[anchor]");
+      this.popoverElement = this.shadowRoot.querySelector("[popover]");
+    }
+
+    showPopover() {
+      if (this.hasPopoverApiSupport) {
+        this.popoverElement.showPopover();
+
+        const rect = this.anchorElement?.getBoundingClientRect();
+        this.popoverElement.style.setProperty(
+          "--bottom",
+          `${(rect?.bottom ?? 0) + document.documentElement.scrollTop}px`,
+        );
+        this.popoverElement.style.setProperty("--left", `${rect?.left}px`);
+      }
+      else {
+        this.popoverElement.classList.add("popover-fallback");
+      }
+    }
+
+    hidePopover() {
+      if (this.hasPopoverApiSupport) {
+        this.popoverElement.hidePopover();
+      }
+      else {
+        this.popoverElement.classList.remove("popover-fallback");
+      }
+    }
+  }
+
+  customElements.define('my-anchored-popover', MyAnchoredPopover);
+</script>
+
+</html>

@@ -2,7 +2,7 @@ import SyntaxHighlighting from "../SyntaxHighlighting";
 import post from "!!raw-loader!./journey-with-webcomponents.md";
 import "./post.css";
 
-export default function FirstPost() {
+export default function Post() {
   const date = new Date("2024-09-01").toLocaleString(undefined, {
     year: "numeric",
     month: "long",

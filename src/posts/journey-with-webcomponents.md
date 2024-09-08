@@ -12,17 +12,16 @@ they were already utilizing web components.
 > with a shadow DOM attached to it.
 
 At the time, we were working on a legacy web app that was challenging to modify.
-The idea was that if we created a UI library with web components, we would be able to
-still make progress on standardizing the UI while not having to worry about other parts 
-of the web app. Besides, and this might be the main reason, that when we decided to move
-away from the legacy app, we could reuse the UI library because web components
-are framework agnostic.
+The idea was that if we created a UI library with web components, we would be
+able to still make progress on standardizing the UI while not having to worry
+about other parts of the web app. Besides, and this might be the main reason,
+that when we decided to move away from the legacy app, we could reuse the UI
+library because web components are framework agnostic.
 
-This led us to attempt to accommodate both simple and complex UI patterns
-within a web component. Especially the complex patterns led to difficulties. 
-Let’s examine a complex UI pattern, such as a card. 
-To pass data into the web component, we utilized attributes on the custom 
-element in the following manner:
+This led us to attempt to accommodate both simple and complex UI patterns within
+a web component. Especially the complex patterns led to difficulties. Let’s
+examine a complex UI pattern, such as a card. To pass data into the web
+component, we utilized attributes on the custom element in the following manner:
 
 ```html
 <my-card
@@ -52,21 +51,22 @@ render() {
 ```
 
 This approach resembles how frameworks like React and Angular render their
-components in the browser. However, it felt strange to require JavaScript
-for basic UI functionality. Additionally, the styles that need to be included in
-the Shadow DOM are more extensive than anticipated. For instance, in the
-provided example, we also need to include text styles. That adds an additional 
-15 - 50 lines of CSS depending on the amount of text styles.
+components in the browser. However, it felt strange to require JavaScript for
+basic UI functionality. Additionally, the styles that need to be included in the
+Shadow DOM are more extensive than anticipated. For instance, in the provided
+example, we also need to include text styles. That adds an additional 15 - 50
+lines of CSS depending on the amount of text styles.
 
-While these issues are not deal-breakers, we have built around 30 components this way.
-There are peculiar workarounds that you have to do to get it to do what you want. 
+While these issues are not deal-breakers, we have built around 30 components
+this way. There are peculiar workarounds that you have to do to get it to do
+what you want.
 
 ## A Way Forward
 
 About a year ago, we decided to rebuild the frontend applications to replace the
 legacy web app. This gave us an opportunity to choose a new tech stack. We
-decided to go with Astro as our frontend framework and web components for
-our UI library. In this setting, we tried to find solutions to our problems above.
+decided to go with Astro as our frontend framework and web components for our UI
+library. In this setting, we tried to find solutions to our problems above.
 
 ### A Possible Solution
 
@@ -103,8 +103,8 @@ DOM, like so:
 This approach is somewhat effective, but there’s a significant limitation: the
 light DOM styling will always override the Shadow DOM styling. Therefore, if
 there’s a global selector styling the `h2` element, the Shadow DOM styling will
-be overridden. This issue repeatedly arose in our legacy web app, and the lack of
-control over the styling of components was a deal breaker for us.
+be overridden. This issue repeatedly arose in our legacy web app, and the lack
+of control over the styling of components was a deal breaker for us.
 
 We had to find an alternative approach.
 
@@ -117,16 +117,16 @@ leaf components—such as buttons, anchors, and inputs. This was quite different
 from our approach, which was to try and fit everything into a web component.
 
 To give web components the best chance of succeeding, we committed to using them
-only for leaf components and avoiding them for more complex UI patterns. The 
+only for leaf components and avoiding them for more complex UI patterns. The
 complex UI patterns would be built with Astro components.
 
 ## Current Approach
 
-Our current approach involves using web components exclusively for *certain* leaf
-components. These are leaf components that we intend to brand and potentially
-reuse in other projects that don’t utilize Astro. For instance, our web
-component library currently includes the following elements: `button`, `input`,
-and `icon`.
+Our current approach involves using web components exclusively for _certain_
+leaf components. These are leaf components that we intend to brand and
+potentially reuse in other projects that don’t utilize Astro. For instance, our
+web component library currently includes the following elements: `button`,
+`input`, and `icon`.
 
 ### Note: about web components in Astro
 
@@ -135,9 +135,10 @@ When you build web components using Lit and render them in Astro,
 employed, which is fantastic. This feature enables the rendering of a shadow DOM
 without the need for JavaScript. This addresses our initial issue but introduces
 new challenges. Primarily, the HTML file size increases due to the output of CSS
-into the HTML. However, due to gzip compression and smartness from the CSS parser,
-this is supposedly not a significant concern. Nevertheless, the file size grows
-rapidly, especially if the shadow DOM contains approximately 150 lines of CSS.
+into the HTML. However, due to gzip compression and smartness from the CSS
+parser, this is supposedly not a significant concern. Nevertheless, the file
+size grows rapidly, especially if the shadow DOM contains approximately 150
+lines of CSS.
 
 ### Button
 
@@ -165,12 +166,12 @@ shadow DOM. Wrapping them in another shadow DOM appears unnecessary.
 
 ## Conclusion
 
-From my time with web components, I draw the following conclusion: Creating
-a UI library using web components gives us more problems than it solves.
-While the `input` element functions effectively, maintaining a Lit codebase for
-a single use case seems excessive. Perhaps when we have the need to support
-multiple frameworks, we’ll revisit this approach or we will build web components
-without Lit.
+From my time with web components, I draw the following conclusion: Creating a UI
+library using web components gives us more problems than it solves. While the
+`input` element functions effectively, maintaining a Lit codebase for a single
+use case seems excessive. Perhaps when we have the need to support multiple
+frameworks, we’ll revisit this approach or we will build web components without
+Lit.
 
 The concept of building a UI library with custom elements appears logical and
 appealing. However, I believe that the current web standards lack sufficient
@@ -198,4 +199,3 @@ missing piece of the puzzle, enabling us to construct a fully platform-agnostic
 UI library.
 
 It would be surprising, but who knows!
-
