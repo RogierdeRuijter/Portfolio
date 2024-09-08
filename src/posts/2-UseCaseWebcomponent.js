@@ -3,7 +3,7 @@ import post from "!!raw-loader!./i-found-a-usecase-for-a-webcomponent.md";
 import "./post.css";
 
 export default function Post() {
-  const dateString = "2024-09-06";
+  const dateString = "2024-09-09";
   const postNumber = 2;
 
   const date = new Date(dateString).toLocaleString(undefined, {

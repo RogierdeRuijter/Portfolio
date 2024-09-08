@@ -180,7 +180,7 @@ to the elements it was close to before. This is a blessing and curse.
 
 There will be a more elegant solution for this in the future, known as
 [`CSS anchoring`](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_anchor_positioning).
-However, until the specification is stable, WebKit has not indicated its support
+However, until the specification is stable, WebKit has not indicated [its support](https://github.com/WebKit/standards-positions/issues/167#issuecomment-1708871010)
 for the current version, I will not implement CSS anchoring as a progressive
 enhancement.
 
