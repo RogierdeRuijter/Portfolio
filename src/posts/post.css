@@ -6,19 +6,11 @@
   font-size: 1.1rem;
 }
 
-.odd-background {
-  /* background-color: rgb(241, 240, 223); */
-}
-
 @media (min-width: 768px) {
   .post {
     font-size: 1.15rem;
     padding: 2rem;
   }
-
-  /* .post>div>pre {
-    margin-inline: -5ch;
-  } */
 }
 
 .post :is(p, blockquote) {
