@@ -57,12 +57,14 @@ I opted to use an anchor element because I believe it’s a good practice to
 display situation information, such as an error message, close to the element
 that triggered the situation. This is a specific example of how to utilize a
 popover. However, there are several valid reasons why you might not want to use
-an anchor element. Now, let’s discuss a more general aspect of how this web
-component is constructed. There’s a lot of customization you can add to this web
-component. For instance, you can specify the relative positioning of the popover
-with respect to the anchor element. You can choose options like top, bottom,
-etc. While I didn’t include this feature in my design, it’s certainly something
-you can do if you wish.
+an anchor element.
+
+Let’s discuss a more general aspect of how this web component is constructed.
+There’s a lot of customization you can add to this web component. For instance,
+you can specify the relative positioning of the popover with respect to the
+anchor element. You can choose options like top, bottom, etc. While I didn’t
+include this feature in my design, it’s certainly something you can do if you
+wish.
 
 ```javascript
 class MyAnchoredPopover extends HTMLElement {
@@ -179,18 +181,22 @@ tell you how the positioning of the popover works and how the fallback works.
 
 The positioning of the popover is achieved using 2 custom properties, -—bottom
 and -—left. These custom properties are set in JavaScript and represent the
-pixel values of the anchor element. We align the bottom of the anchor with the
-top of the popover, this way it appears underneath the anchor element.
+pixel values of the anchor element on the viewport. We align the bottom of the
+anchor with the top of the popover, this way it appears underneath the anchor
+element.
 
 Most likely, you would want to use relative positioning for this issue, but
 unfortunately, we cannot do so because the popover resides in the
 [top layer](https://developer.mozilla.org/en-US/docs/Glossary/Top_layer). The
 top layer is indepedent of the document layer, therefore it lacks any connection
-to the elements it was close to before. This is a blessing and curse.
+to the elements it was close to before. This is good because the z-index issues
+that once plagued us are no longer a problem, but it also means that positioning
+becomes more challenging.
 
 ##### CSS anchoring
 
-There will be a more elegant solution for this in the future, known as
+There is good news for the positioning issue related to the top layer, there
+will be a more elegant solution for this in the future, known as
 [`CSS anchoring`](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_anchor_positioning).
 However, until the specification is stable, WebKit has not indicated
 [its support](https://github.com/WebKit/standards-positions/issues/167#issuecomment-1708871010)
@@ -257,15 +263,16 @@ showPopover() {
 
 ## Conclusion
 
-Using a web component in conjunction with the popover API appears to be an ideal
-use case. The very nature of the problem makes it a suitable candidate. Our goal
-is to display a popover on the screen, and to achieve this, we require a
-combination of HTML, CSS, and JavaScript to provide the necessary functionality.
-In addition to that the functionality is independent of the appearance of the
-popover or its anchor.
+Using a web component to encapsulate the functionality of the Popover API that is
+anchored to an element seems to be a great use case. The very nature of the problem
+makes it a suitable candidate. To sum it up:
 
-I hope to find more browser APIs that require a fallback and write web
-components from them.
+- Our goal is to display an item on the screen that is anchored to an element.
+- We require a combination of HTML, CSS, and JavaScript to achieve this.
+- The functionality is independent of the appearance of the popover or its anchor.
+
+I hope to find similar structures in our code base that would benefit from this
+type of encapsulation.
 
 ## A working example
 
