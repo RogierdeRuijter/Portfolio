@@ -19,10 +19,10 @@ component. _Our goal is to encapsulate a piece of functionality that is
 independent of the content._
 
 Let’s go into more detail about what I mean by this. With _functionality_, I
-refer to behavior on the website. For example, showing and hiding a popover or
-adding a fade-in animation on an image when it appears on the screen. By
-_content_, I refer to a section of HTML and CSS that displays, for example, a
-button or a form for a newsletter.
+refer to behavior on the website. For example, showing and hiding a popover or a
+fade-in animation on an image when it appears on the screen. By _content_, I
+refer to a piece of HTML and CSS that displays, for example, a button or a form
+for a newsletter.
 
 Because working with the Popover API and its fallback requires a combination of
 HTML, CSS, and JavaScript, it is a perfect candidate for a custom element with a
@@ -31,13 +31,14 @@ Shadow DOM.
 ## The code
 
 Below, you’ll find the code for using the web component and the JavaScript that
-demonstrates its construction. Subsequently, we’ll delve deeper into the
+demonstrates its construction. After that, we’ll delve deeper into the
 intricacies of the HTML, CSS, and JavaScript of the web component.
 
 ### How to use it
 
-In this example we use a form as an anchor and a fictional error message as the
-popover.
+The web component API has an anchor slot and a popover slot. The anchor is used
+to position the popover element underneath. In this example we use a form as an
+anchor and a fictional error message as the popover.
 
 ```html
 <my-anchored-popover>
@@ -51,6 +52,17 @@ popover.
 ```
 
 ### How it is build
+
+I opted to use an anchor element because I believe it’s a good practice to
+display situation information, such as an error message, close to the element
+that triggered the situation. This is a specific example of how to utilize a
+popover. However, there are several valid reasons why you might not want to use
+an anchor element. Now, let’s discuss a more general aspect of how this web
+component is constructed. There’s a lot of customization you can add to this web
+component. For instance, you can specify the relative positioning of the popover
+with respect to the anchor element. You can choose options like top, bottom,
+etc. While I didn’t include this feature in my design, it’s certainly something
+you can do if you wish.
 
 ```javascript
 class MyAnchoredPopover extends HTMLElement {
@@ -180,7 +192,8 @@ to the elements it was close to before. This is a blessing and curse.
 
 There will be a more elegant solution for this in the future, known as
 [`CSS anchoring`](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_anchor_positioning).
-However, until the specification is stable, WebKit has not indicated [its support](https://github.com/WebKit/standards-positions/issues/167#issuecomment-1708871010)
+However, until the specification is stable, WebKit has not indicated
+[its support](https://github.com/WebKit/standards-positions/issues/167#issuecomment-1708871010)
 for the current version, I will not implement CSS anchoring as a progressive
 enhancement.
 
