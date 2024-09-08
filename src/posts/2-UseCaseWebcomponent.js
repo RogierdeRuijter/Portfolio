@@ -13,7 +13,7 @@ export default function Post() {
   });
 
   return (
-    <div className="post">
+    <div className="post odd-background">
       <time id={dateString}>{date}</time>
       <SyntaxHighlighting title={postNumber}>
         {post}
