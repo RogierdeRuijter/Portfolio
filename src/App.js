@@ -6,7 +6,8 @@ import { useLocation } from 'react-router-dom';
 import { useEffect, useState } from "react";
 
 const navTabel = [
-  { id: 'my-journey-with-web-components', navId: '2024-09-01' }
+  { id: 'my-journey-with-web-components', navId: '2024-09-01' },
+  { id: 'i-found-a-fantastic-use-case-for-a-web-component-the-popover-api', navId: '2024-09-09' }
 ];
 
 const App = () => {
