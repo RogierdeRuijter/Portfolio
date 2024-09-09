@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.3408027d.css",
-    "main.js": "/static/js/main.dbd0b43e.js",
+    "main.js": "/static/js/main.f1b00eb8.js",
     "static/js/422.b46b8d3f.chunk.js": "/static/js/422.b46b8d3f.chunk.js",
     "static/media/montepoeli_video_462 × 1000.mp4": "/static/media/montepoeli_video_462 × 1000.0a7b6f959856ca1aad47.mp4",
     "static/media/comment-fish-race.mp3": "/static/media/comment-fish-race.1df8e3ad1d817fcc7627.mp3",
@@ -15,11 +15,11 @@
     "static/media/github.svg": "/static/media/github.50efb19fc73b13f42b6874b9e5dd8b0e.svg",
     "static/media/envelope.svg": "/static/media/envelope.0344272071fe1b4970c0a838bd64172c.svg",
     "main.3408027d.css.map": "/static/css/main.3408027d.css.map",
-    "main.dbd0b43e.js.map": "/static/js/main.dbd0b43e.js.map",
+    "main.f1b00eb8.js.map": "/static/js/main.f1b00eb8.js.map",
     "422.b46b8d3f.chunk.js.map": "/static/js/422.b46b8d3f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3408027d.css",
-    "static/js/main.dbd0b43e.js"
+    "static/js/main.f1b00eb8.js"
   ]
 }
