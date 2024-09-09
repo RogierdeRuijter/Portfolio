@@ -1,7 +1,7 @@
 # I found a fantastic use case for a web component: The Popover API
 
-I believe I’ve discovered a fantastic use case for a web component. Displaying
-a popover positioned below an anchor element. To do this, we utilize the
+I believe I’ve discovered a fantastic use case for a web component. Displaying a
+popover positioned below an anchor element. To do this, we utilize the
 [Popover API](https://developer.chrome.com/blog/introducing-popover-api/) and a
 fallback mechanism for browsers that lack support for the Popover API.
 
@@ -38,8 +38,8 @@ CSS, and JavaScript of it.
 ### How to use it
 
 The web component API has an anchor slot and a popover slot. The anchor is used
-by the popover to position itself underneath it. In this example, we use a form as an
-anchor and a fictional error message as the popover.
+by the popover to position itself underneath it. In this example, we use a form
+as an anchor and a fictional error message as the popover.
 
 ```html
 <my-anchored-popover>
@@ -56,11 +56,11 @@ anchor and a fictional error message as the popover.
 
 I opted to use an anchor element because I believe it’s a good practice to
 display situation information, such as an error message, close to the element
-that triggered the situation. 
+that triggered the situation.
 
 This web component could be extended with a lot of configurations. For instance,
-you can add an option that allows you to also position the popover at the top of the
-element. While I didn’t include this feature in my design, it’s certainly
+you can add an option that allows you to also position the popover at the top of
+the element. While I didn’t include this feature in my design, it’s certainly
 something you can incorporate if you desire.
 
 ```javascript
@@ -140,7 +140,6 @@ class MyAnchoredPopover extends HTMLElement {
 }
 
 customElements.define("my-anchored-popover", MyAnchoredPopover);
-
 ```
 
 ### The HTML
@@ -178,18 +177,17 @@ tell you how the positioning of the popover works and how the fallback works.
 ```
 
 The positioning of the popover is achieved using 2 custom properties, —bottom
-and —left. These custom properties are set in JavaScript and represent the
-pixel values of the anchor element on the viewport. We align the bottom of the
-anchor with the top of the popover; this way, it appears underneath the anchor
-element.
+and —left. These custom properties are set in JavaScript and represent the pixel
+values of the anchor element on the viewport. We align the bottom of the anchor
+with the top of the popover; this way, it appears underneath the anchor element.
 
 Most likely, you would want to use relative positioning for this issue, but
 unfortunately, we cannot do so because the popover resides in the
 [top layer](https://developer.mozilla.org/en-US/docs/Glossary/Top_layer). The
-top layer is independent of the document layer; therefore, it lacks any connection
-to the elements it was close to before. This is good because the z-index issues
-that once plagued us are no longer a problem, but it also means that positioning
-becomes more challenging.
+top layer is independent of the document layer; therefore, it lacks any
+connection to the elements it was close to before. This is good because the
+z-index issues that once plagued us are no longer a problem, but it also means
+that positioning becomes more challenging.
 
 ##### CSS anchoring
 
@@ -234,8 +232,8 @@ from the Popover API.
 The JavaScript handles showing the popover and positioning the element relative
 to the anchor. To get the popover positioned under the chosen anchor element, we
 use the `getBoundingClientRect` method to get the pixel of the anchor. And set
-the `--bottom` and `--left` custom properties. To eventually show the popover, we
-call the `showPopover` method on the popover element.
+the `--bottom` and `--left` custom properties. To eventually show the popover,
+we call the `showPopover` method on the popover element.
 
 For the fallback, we add the `popover-fallback` class to the popover element.
 
