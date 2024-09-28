@@ -63,24 +63,42 @@ const AllProjects = () => {
   }, []);
 
   return (
-    <div id="content-container">
-      <section id="project-content">
-        <DropItem />
-        <FishRace />
-        <DropItem />
-        <CircleGame />
-        <DropItem />
-        <Montepoeli />
-        <DropItem />
-        <GetLow />
-        <DropItem />
-        <SleepingTumblrSeals />
-        <DropItem />
-        <Julia />
-        <Acknowledgements />
-        <Info />
-      </section>
-    </div>
+    <>
+      <div id="welcome-wrapper">
+        <div id="welcome-content-container">
+          <header id="welcome-container">
+            <h1 id="my-introduction">Rogier</h1>
+            <div id="welcome-video-container">
+              <video autoplay playsinline muted loop width="600" preload="auto">
+                <source src="Film.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div id="scroll-down-element">
+              <span class="scroll-down-element-line"></span>
+              <span id="scroll-down-element-text">Scroll</span>
+            </div>
+          </header>
+        </div>
+      </div>
+      <div id="content-container">
+        <section id="project-content">
+          <DropItem />
+          <FishRace />
+          <DropItem />
+          <CircleGame />
+          <DropItem />
+          <Montepoeli />
+          <DropItem />
+          <GetLow />
+          <DropItem />
+          <SleepingTumblrSeals />
+          <DropItem />
+          <Julia />
+          <Acknowledgements />
+          <Info />
+        </section>
+      </div>
+    </>
   );
 };
 

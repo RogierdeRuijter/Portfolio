@@ -20,7 +20,6 @@ const App = () => {
     if (location.search) {
       const id = location.search.replace('?post=', '');
       const element = document.getElementById(scrollId);
-
       setScrollId(id);
 
       if (element) {
@@ -36,6 +35,7 @@ const App = () => {
   useEffect(() => {
     if (scrollId && !hasScrolled && !scrollToStart) {
       const element = document.getElementById(navTabel.find(nav => nav.id === scrollId).navId);
+
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }, [scrollToStart, hasScrolled, scrollId]);
@@ -54,7 +54,6 @@ const App = () => {
     };
   }, []);
 
-  location.hash;
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
@@ -69,31 +68,19 @@ const App = () => {
   );
 };
 
-function scrollToFirstH1(heading) {
-  // So ugly
-  setTimeout(() => {
-    const firstH1 = document.querySelector('#root').querySelector(heading);
-    if (firstH1) {
-      firstH1.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  }, 300);
-}
-
 function Layout() {
   return (
     <>
       <nav className="nav">
         <ul className="list">
           <li className="item">
-            <Link to="/blog" onClick={() => scrollToFirstH1('h1')}>Blog</Link>
+            <Link to="/blog">Blog</Link>
           </li>
           <li className="item">
-            <Link to="/" onClick={() => scrollToFirstH1('h2')}>Home</Link>
+            <Link to="/">Home</Link>
           </li>
         </ul>
       </nav>
-
-      <hr />
       <Outlet />
     </>
   );
