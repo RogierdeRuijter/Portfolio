@@ -1,6 +1,8 @@
 import AllProjects from "./AllProjects";
 import { Routes, Route, Outlet, Link } from "react-router-dom";
 import AllBlogPosts from "./AllBlogPosts";
+import JourneyWebcomponents from "./posts/1-FirstPost";
+import PopoverApiWebcomponent from "./posts/2-UseCaseWebcomponent";
 import "./App.css";
 import { useLocation } from 'react-router-dom';
 import { useEffect, useState } from "react";
@@ -59,6 +61,8 @@ const App = () => {
       <Route path="/" element={<Layout />}>
         <Route index element={<AllProjects />} />
         <Route path="blog" element={<AllBlogPosts />} />
+        <Route path={`blog/${navTabel[0].id}`} element={<JourneyWebcomponents />} />
+        <Route path={`blog/${navTabel[1].id}`} element={<PopoverApiWebcomponent />} />
         {/* Using path="*"" means "match anything", so this route
                 acts like a catch-all for URLs that we don't have explicit
                 routes for. */}
