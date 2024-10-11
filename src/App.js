@@ -3,13 +3,15 @@ import { Routes, Route, Outlet, Link } from "react-router-dom";
 import AllBlogPosts from "./AllBlogPosts";
 import JourneyWebcomponents from "./posts/1-FirstPost";
 import PopoverApiWebcomponent from "./posts/2-UseCaseWebcomponent";
+import DetailCanIUse from "./posts/3-one-detail-can-i-use";
 import "./App.css";
 import { useLocation } from 'react-router-dom';
 import { useEffect, useState } from "react";
 
 const navTabel = [
   { id: 'my-journey-with-web-components', navId: '2024-09-01' },
-  { id: 'i-found-a-fantastic-use-case-for-a-web-component-the-popover-api', navId: '2024-09-09' }
+  { id: 'i-found-a-fantastic-use-case-for-a-web-component-the-popover-api', navId: '2024-09-09' },
+  { id: '1-very-important-detail-about-caniusecom', navId: '2024-10-12' }
 ];
 
 const App = () => {
@@ -63,6 +65,7 @@ const App = () => {
         <Route path="blog" element={<AllBlogPosts />} />
         <Route path={`blog/${navTabel[0].id}`} element={<JourneyWebcomponents />} />
         <Route path={`blog/${navTabel[1].id}`} element={<PopoverApiWebcomponent />} />
+        <Route path={`blog/${navTabel[2].id}`} element={<DetailCanIUse />} />
         {/* Using path="*"" means "match anything", so this route
                 acts like a catch-all for URLs that we don't have explicit
                 routes for. */}
