@@ -22,15 +22,15 @@ This statistic is not accurate. Many older Android devices don’t support the
 latest version of Chrome. Therefore, we can’t trust 44% of the user support
 statistics.
 
-Let’s consider an example. When we search for container queries on caniuse.com,
-we notice that it claims global support of approximately 91% of users. However,
-it’s important to note that a significant portion of this 91%, around 44%, is
-uncertain. Almost half of the devices that support container queries may not
-actually support them 🤯
+Let’s consider an example. When we search for
+[container queries](https://caniuse.com/?search=container%20query) on
+caniuse.com, we notice that it claims global support of approximately 91% of
+users. However, it’s crucial to acknowledge that a substantial portion (44%) of
+this 91% remains uncertain whether it genuinely supports container queries 🤯
 
-Knowing this it is important to always provide fallbacks for ‘relatively new’
+Knowing this, it is important to always provide fallbacks for ‘relatively new’
 browser features. The web was built for progressive enhancements. Ship them and
 deliver better websites.
 
-For more reading about this issue, look here: Why Can I Use can’t give version
-numbers for Android
+For more reading about this issue, look here:
+[Why Can I Use can’t give version numbers for Chrome on Android](https://github.com/Fyrd/caniuse/issues/2413)
