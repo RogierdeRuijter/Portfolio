@@ -18,7 +18,7 @@
   height: 80lvh;
 }
 
-figcaption {
+ #montepoeli-content >figcaption {
   margin-top: -9px;
   line-height: 0;
 }
