@@ -1,6 +1,6 @@
 # 1 very important detail about caniuse.com
 
-TLDR: 44% of the user global support statistics are not reliable.
+_TLDR:_ 44% of the user global support statistics are not reliable.
 
 There’s a crucial detail that’s often overlooked when discussing user support
 statistics for a specific feature on [caniuse.com](https://caniuse.com).
