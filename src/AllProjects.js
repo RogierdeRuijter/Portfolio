@@ -9,20 +9,9 @@ import Julia from "./projects/Julia/Julia";
 import Info from "./Info/Info";
 import { useEffect, useLayoutEffect } from "react";
 import DropItem from "./helpers/DropItem/DropItem";
+import { appendMetaTag, metaTagExists } from "./helpers/meta-tags";
 
 const AllProjects = () => {
-
-  function metaTagExists(property) {
-    return document.querySelector(`meta[property='${property}']`) !== null;
-  }
-
-  // Function to append meta tags dynamically
-  function appendMetaTag(property, content) {
-    const metaTag = document.createElement('meta');
-    metaTag.setAttribute('property', property);
-    metaTag.setAttribute('content', content);
-    document.head.appendChild(metaTag);
-  }
 
   if (!metaTagExists('og:title')) {
     appendMetaTag('og:title', 'My portfolio of personal projects');
