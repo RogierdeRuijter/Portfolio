@@ -3,7 +3,7 @@ import { Routes, Route, Outlet, Link } from "react-router-dom";
 import AllBlogPosts from "./AllBlogPosts";
 import JourneyWebcomponents from "./posts/1-FirstPost";
 import PopoverApiWebcomponent from "./posts/2-UseCaseWebcomponent";
-import DetailCanIUse from "./posts/3-one-detail-can-i-use";
+import PageDetailCanIUse from "./posts/page/OneDetailCanIUseDetail";
 import "./App.css";
 import { useLocation } from 'react-router-dom';
 import { useEffect, useState } from "react";
@@ -65,7 +65,7 @@ const App = () => {
         <Route path="blog" element={<AllBlogPosts />} />
         <Route path={`blog/${navTabel[0].id}`} element={<JourneyWebcomponents />} />
         <Route path={`blog/${navTabel[1].id}`} element={<PopoverApiWebcomponent />} />
-        <Route path={`blog/${navTabel[2].id}`} element={<DetailCanIUse />} />
+        <Route path={`blog/${navTabel[2].id}`} element={<PageDetailCanIUse />} />
         {/* Using path="*"" means "match anything", so this route
                 acts like a catch-all for URLs that we don't have explicit
                 routes for. */}
