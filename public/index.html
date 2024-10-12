@@ -1,30 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" style="background-color: #fcfbea">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Portfolio Rogier de Ruijter" />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/apple-touch-icon.png" />
-    <meta name="theme-color" content="#fcfbea" />
-    <meta property="og:title" content="My portfolio of personal projects" />
-    <meta
-      property="og:description"
-      content="Personal projects of a frontend developer done by me together with friends."
-    />
-    <meta
-      property="og:image"
-      content="https://rogierderuijter.com/foto-van-intro.png"
-    />
-    <meta property="og:image:width" content="2880" />
-    <meta property="og:image:height" content="1636" />
 
-    <!--
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio Rogier de Ruijter" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/apple-touch-icon.png" />
+  <meta name="theme-color" content="#fcfbea" />
+
+  <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -33,132 +23,128 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>Rogier de Ruijter</title>
+  <title>Rogier de Ruijter</title>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-MG9RL470BY"
-    ></script>
-    <script defer src="%PUBLIC_URL%/popover-api-fallback.js"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MG9RL470BY"></script>
+  <script defer src="%PUBLIC_URL%/popover-api-fallback.js"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-      function gtag() {
-        if (window.location.href.includes("rogierderuijter")) {
-          dataLayer.push(arguments);
-        } else {
-          console.groupCollapsed("gtag arguments");
-          console.log(arguments);
-          console.groupEnd();
-        }
+    function gtag() {
+      if (window.location.href.includes("rogierderuijter")) {
+        dataLayer.push(arguments);
+      } else {
+        console.groupCollapsed("gtag arguments");
+        console.log(arguments);
+        console.groupEnd();
+      }
+    }
+
+    gtag("consent", "default", {
+      ad_storage: "denied",
+    });
+
+    gtag("js", new Date());
+
+    gtag("config", "G-MG9RL470BY", {
+      anonymize_ip: true,
+    });
+  </script>
+</head>
+
+<body style="margin: 0">
+  <script>
+    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+    let vh = window.innerHeight * 0.01;
+    // Then we set the value in the --vh custom property to the root of the document
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+  </script>
+  <style>
+    body {
+      box-sizing: border-box;
+      color: #303030;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    #root {
+      margin-bottom: calc(100vh - calc(var(--vh, 1vh) * 100));
+    }
+
+    @supports not selector([popover]:popover-open) {
+      [popover] {
+        position: fixed;
+        background-color: white;
+        top: 40%;
       }
 
-      gtag("consent", "default", {
-        ad_storage: "denied",
-      });
-
-      gtag("js", new Date());
-
-      gtag("config", "G-MG9RL470BY", {
-        anonymize_ip: true,
-      });
-    </script>
-  </head>
-  <body style="margin: 0">
-    <script>
-      // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-      let vh = window.innerHeight * 0.01;
-      // Then we set the value in the --vh custom property to the root of the document
-      document.documentElement.style.setProperty("--vh", `${vh}px`);
-    </script>
-    <style>
-      body {
-        box-sizing: border-box;
-        color: #303030;
-        -webkit-font-smoothing: antialiased;
+      [popover]::before {
+        content: none;
       }
 
-      #root {
-        margin-bottom: calc(100vh - calc(var(--vh, 1vh) * 100));
+      [popover]:not([open]) {
+        display: none;
       }
+    }
 
-      @supports not selector([popover]:popover-open) {
-        [popover] {
-          position: fixed;
-          background-color: white;
-          top: 40%;
-        }
-
-        [popover]::before {
-          content: none;
-        }
-
-        [popover]:not([open]) {
-          display: none;
-        }
-      }
-
-      /* TODO: move this style to the montepoeli video tag */
-      video {
-        max-width: 100%;
-      }
-
-    </style>
-    <div id="root">
-      <!-- Loading indicator before react is loaded into the browser -->
-      <div
-        style="
+    /* TODO: move this style to the montepoeli video tag */
+    video {
+      max-width: 100%;
+    }
+  </style>
+  <div id="root">
+    <!-- Loading indicator before react is loaded into the browser -->
+    <div style="
           width: 100vw;
           height: 100vh;
           background-color: #fcfbea;
-        "
-      >
-      </div>
+        ">
     </div>
-    <script>
-      /*
-       * Inject the image only when it is fully loaded. Therefore we avoid the
-       * 'dropping down' behaviour when the image is being loaded.
-       */
-      const onImageLoaded = (img) => {
-        document.getElementById(
-          "welcome-video-container"
-        ).style.backgroundImage = 'url("first_frame.jpg")';
+  </div>
+  <script>
+    /*
+     * Inject the image only when it is fully loaded. Therefore we avoid the
+     * 'dropping down' behaviour when the image is being loaded.
+     */
+    const onImageLoaded = (img) => {
+      document.getElementById(
+        "welcome-video-container"
+      ).style.backgroundImage = 'url("first_frame.jpg")';
+    };
+
+    const preloadImage = (src) => {
+      var img = new Image();
+      img.onload = function () {
+        onImageLoaded(this);
       };
+      img.src = src;
+    };
 
-      const preloadImage = (src) => {
-        var img = new Image();
-        img.onload = function () {
-          onImageLoaded(this);
-        };
-        img.src = src;
-      };
+    preloadImage("first_frame.jpg");
+  </script>
+  <script>
+    /*
+     * Script to calculate what the difference is between a vh unit with the browser
+     * header or without. The is mainly need for in-app browser where vh units are
+     * not stable
+     */
+    // TODO: When svh and lvh is supported in android as well this script can be removed.
+    //  The progress can be tracked here: https://caniuse.com/?search=svh
+    var p = document.getElementById("root");
+    var style = p.currentStyle || window.getComputedStyle(p);
 
-      preloadImage("first_frame.jpg");
-    </script>
-    <script>
-      /*
-       * Script to calculate what the difference is between a vh unit with the browser
-       * header or without. The is mainly need for in-app browser where vh units are
-       * not stable
-       */
-      // TODO: When svh and lvh is supported in android as well this script can be removed.
-      //  The progress can be tracked here: https://caniuse.com/?search=svh
-      var p = document.getElementById("root");
-      var style = p.currentStyle || window.getComputedStyle(p);
+    const hiddenScreenPixels = Number(style.marginBottom.slice(0, -2));
+    const fullScreenVh = (window.innerHeight + hiddenScreenPixels) * 0.01;
 
-      const hiddenScreenPixels = Number(style.marginBottom.slice(0, -2));
-      const fullScreenVh = (window.innerHeight + hiddenScreenPixels) * 0.01;
+    document.documentElement.style.setProperty(
+      "--full-screen-vh",
+      `${fullScreenVh}px`
+    );
 
-      document.documentElement.style.setProperty(
-        "--full-screen-vh",
-        `${fullScreenVh}px`
-      );
+    // Reset it
+    p.style.marginBottom = 0;
+  </script>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+</body>
 
-      // Reset it
-      p.style.marginBottom = 0;
-    </script>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-  </body>
 </html>

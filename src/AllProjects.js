@@ -11,6 +11,27 @@ import { useEffect, useLayoutEffect } from "react";
 import DropItem from "./helpers/DropItem/DropItem";
 
 const AllProjects = () => {
+
+  function metaTagExists(property) {
+    return document.querySelector(`meta[property='${property}']`) !== null;
+  }
+
+  // Function to append meta tags dynamically
+  function appendMetaTag(property, content) {
+    const metaTag = document.createElement('meta');
+    metaTag.setAttribute('property', property);
+    metaTag.setAttribute('content', content);
+    document.head.appendChild(metaTag);
+  }
+
+  if (!metaTagExists('og:title')) {
+    appendMetaTag('og:title', 'My portfolio of personal projects');
+    appendMetaTag('og:description', 'Personal projects of a frontend developer done by me together with friends.');
+    appendMetaTag('og:image', 'https://rogierderuijter.com/foto-van-intro.png');
+    appendMetaTag('og:image:width', '2880');
+    appendMetaTag('og:image:height', '1636');
+  }
+
   useLayoutEffect(() => {
     function getResizeMessage(event) {
       const juliaIframe = document.getElementById("julia-iframe");
