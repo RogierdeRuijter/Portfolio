@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.9741994d.css",
-    "main.js": "/static/js/main.4c476cbc.js",
+    "main.css": "/static/css/main.5bfcac3b.css",
+    "main.js": "/static/js/main.33f22534.js",
     "static/js/422.b46b8d3f.chunk.js": "/static/js/422.b46b8d3f.chunk.js",
     "static/media/montepoeli_video_462 × 1000.mp4": "/static/media/montepoeli_video_462 × 1000.0a7b6f959856ca1aad47.mp4",
     "static/media/comment-fish-race.mp3": "/static/media/comment-fish-race.1df8e3ad1d817fcc7627.mp3",
@@ -11,15 +11,16 @@
     "static/media/comment-julia.mp3": "/static/media/comment-julia.e0a88f24fd0be1d84f9c.mp3",
     "static/media/comment-montepoeli.mp3": "/static/media/comment-montepoeli.5873dec8a3bb0cde5a76.mp3",
     "static/media/first_frame_montepoeli.jpeg": "/static/media/first_frame_montepoeli.290218872ef6cc672f67.jpeg",
+    "static/media/first_frame.jpg": "/static/media/first_frame.feebda5727d235a12cfc.jpg",
     "index.html": "/index.html",
     "static/media/github.svg": "/static/media/github.50efb19fc73b13f42b6874b9e5dd8b0e.svg",
     "static/media/envelope.svg": "/static/media/envelope.0344272071fe1b4970c0a838bd64172c.svg",
-    "main.9741994d.css.map": "/static/css/main.9741994d.css.map",
-    "main.4c476cbc.js.map": "/static/js/main.4c476cbc.js.map",
+    "main.5bfcac3b.css.map": "/static/css/main.5bfcac3b.css.map",
+    "main.33f22534.js.map": "/static/js/main.33f22534.js.map",
     "422.b46b8d3f.chunk.js.map": "/static/js/422.b46b8d3f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9741994d.css",
-    "static/js/main.4c476cbc.js"
+    "static/css/main.5bfcac3b.css",
+    "static/js/main.33f22534.js"
   ]
 }
