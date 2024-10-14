@@ -9,6 +9,9 @@
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/apple-touch-icon.png" />
   <meta name="theme-color" content="#fcfbea" />
 
+  <link rel="preload" as="image" href="first_frame.jpg" />
+
+
   <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -101,27 +104,6 @@
         ">
     </div>
   </div>
-  <script>
-    /*
-     * Inject the image only when it is fully loaded. Therefore we avoid the
-     * 'dropping down' behaviour when the image is being loaded.
-     */
-    const onImageLoaded = (img) => {
-      document.getElementById(
-        "welcome-video-container"
-      ).style.backgroundImage = 'url("first_frame.jpg")';
-    };
-
-    const preloadImage = (src) => {
-      var img = new Image();
-      img.onload = function () {
-        onImageLoaded(this);
-      };
-      img.src = src;
-    };
-
-    preloadImage("first_frame.jpg");
-  </script>
   <script>
     /*
      * Script to calculate what the difference is between a vh unit with the browser
