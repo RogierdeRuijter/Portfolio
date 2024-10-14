@@ -79,12 +79,12 @@ const AllProjects = () => {
           <header id="welcome-container">
             <h1 id="my-introduction">Rogier</h1>
             <div id="welcome-video-container">
-              <video autoplay playsinline muted loop width="600" preload="auto">
+              <video autoPlay playsInline muted loop width="600" preload="auto">
                 <source src="Film.mp4" type="video/mp4" />
               </video>
             </div>
             <div id="scroll-down-element">
-              <span class="scroll-down-element-line"></span>
+              <span className="scroll-down-element-line"></span>
               <span id="scroll-down-element-text">Scroll</span>
             </div>
           </header>
