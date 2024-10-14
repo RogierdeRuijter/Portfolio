@@ -2,8 +2,8 @@
 
 _TLDR:_ the usage static is not reliable for Chrome on Android.
 
-There’s a crucial detail that’s often overlooked when discussing the usage statistic
-for a specific feature on [caniuse.com](https://caniuse.com).
+There’s a crucial detail that’s often overlooked when discussing the usage
+statistic for a specific feature on [caniuse.com](https://caniuse.com).
 
 Can I Use can’t display user usage per Chrome version for Android devices.
 That’s why it shows all Chrome for Android usage up to the latest version of
@@ -18,8 +18,8 @@ Android. You can see this in the image below.
   <figcaption>All Chrome for Android usage is displayed as if it was the latest version</figcaption>
 </figure>
 
-This statistic is not accurate. Many Android devices don’t run on the
-latest version of Chrome. Therefore, we can’t trust 44% of the usage static.
+This statistic is not accurate. Many Android devices don’t run on the latest
+version of Chrome. Therefore, we can’t trust 44% of the usage static.
 
 Let’s consider an example. When we search for
 [container queries](https://caniuse.com/?search=container%20query) on
