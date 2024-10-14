@@ -103,6 +103,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   overflow: hidden;
+  background: url("../public/first_frame.jpg");
 }
 
 /* TODO: add different font-size for mobile */
