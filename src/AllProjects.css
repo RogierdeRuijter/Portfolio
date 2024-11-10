@@ -99,11 +99,11 @@
   width: 100%;
   max-width: 600px;
   aspect-ratio: 16/9;
+  background: url("../public/first_frame.jpg");
   background-color: lightgray;
   background-repeat: no-repeat;
   background-size: contain;
   overflow: hidden;
-  background: url("../public/first_frame.jpg");
 }
 
 /* TODO: add different font-size for mobile */
