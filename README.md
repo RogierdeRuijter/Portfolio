@@ -1,3 +1,6 @@
 # Portfolio website 
 
-Listing all the project I have done. Protfolio build with React.
+- Showcase of the projects I have build with peers
+- Blog posts about fronted development
+
+Build with React
